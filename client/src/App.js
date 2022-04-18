@@ -22,6 +22,7 @@ function App() {
         <ul>
           <ol> Follow Us </ol>
           <ol> Contact Us </ol>
+          <ol> About Us </ol>
         </ul>
       </footer>
     </div>
