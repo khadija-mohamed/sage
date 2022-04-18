@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+index.pack
+0.pack
 /.pnp
 .pnp.js
 
