@@ -6,7 +6,7 @@
 .App-logo {
   height: 5rem;
   pointer-events: none;
-  border: 3px solid rgb(24, 148, 127);
+  border: 2px solid rgb(24, 148, 127);
   border-radius: 50%;
   background-color: white;
   padding: 1em
@@ -19,17 +19,18 @@
 }
 
 .App-header {
-  background-color: #7ca58d;
+  background-image: linear-gradient(to bottom right,rgb(239, 255, 245),rgb(73, 158, 144), rgb(9, 97, 82));
   position: fixed;
-  width: 200px;
+  width: 175px;
   height: 100%;
   padding: 35px ;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 17px;
+  font-weight:300;
   color: rgb(255, 254, 254);
-  border-right: 3px solid rgb(24, 148, 127)
+  border-right: 1px solid rgb(24, 148, 127)
 }
 
 .App-header ul ol {
@@ -41,21 +42,30 @@
 
 .main {
   justify-content: center;
-
+  display: flex;
+  background-color: rgb(102, 102, 49);
+}
+.main h1 {
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {
   width: 100%;
+  height: 90px;
   display: flex;
   position: fixed;
   bottom: 0;
-  border-top: 3px solid rgb(24, 148, 127);
+  border-top: 1px solid rgb(24, 148, 127);
   background-color: white;
 }
 
-.footer ul li {
+.footer ul {
   align-items: center;
+  align-self: center;
+  display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 
