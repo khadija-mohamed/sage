@@ -2,9 +2,12 @@
 
 # dependencies
 /node_modules
+<<<<<<< HEAD
 .eslintcache
+=======
 index.pack
 0.pack
+>>>>>>> 0376c4ad632cc6659f00474eb6079806d7cbca61
 /.pnp
 .pnp.js
 
@@ -20,9 +23,8 @@ index.pack
 .env.development.local
 .env.test.local
 .env.production.local
+.eslintcache
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-.eslintcache
