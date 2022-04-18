@@ -15,13 +15,13 @@ function App() {
         </ul>
         </div>
       </header>
-      <section className="main">
+      <div className="main">
         <h1>Sage</h1>
-        </section>      
+        </div>      
         <footer className="footer">
         <ul>
-          <li> Follow Us </li>
-          <li> Contact Us </li>
+          <ol> Follow Us </ol>
+          <ol> Contact Us </ol>
         </ul>
       </footer>
     </div>
