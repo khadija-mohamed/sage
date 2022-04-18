@@ -1,6 +1,7 @@
 -- schema/02_categories_skills.sql
 DROP TABLE IF EXISTS categories CASCADE;
 DROP TABLE IF EXISTS skills CASCADE;
+DROP TABLE IF EXISTS categories CASCADE;
 
 -- CREATE categories
 CREATE TABLE categories (
