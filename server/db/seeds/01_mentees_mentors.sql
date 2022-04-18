@@ -1,6 +1,14 @@
 -- seeds/01_mentees_mentors.sql
 -- mentees seeds
-INSERT INTO mentees (id, first_name, last_name, email, password, photo_url, description, skill_id) VALUES ();
+INSERT INTO mentees (first_name, last_name, email, password, photo_url, description, skill_id) VALUES ("Carmen", "Kuang", "carmen@email.com", "12345", "https://i.pinimg.com/originals/b3/4c/93/b34c93e00c171542d09bea554db84ce6.jpg", "student at Lighthouse Labs", 2);
+INSERT INTO mentees (first_name, last_name, email, password, photo_url, description, skill_id) VALUES ("Khadija", "Mohamed", "khadija@email.com", "12345", "https://i.pinimg.com/550x/79/8a/60/798a60ba073aca5b5f241ed2f8fbef1b.jpg", "student at Lighthouse Labs", 3);
+INSERT INTO mentees (first_name, last_name, email, password, photo_url, description, skill_id) VALUES ("Ashley", "Smith", "ashley@email.com", "12345", "https://i.pinimg.com/564x/0a/b7/24/0ab724207bfccd198416e3e7737b2f73.jpg", "student at Lighthouse Labs", 3);
+INSERT INTO mentees (first_name, last_name, email, password, photo_url, description, skill_id) VALUES ("Josh", "Richards", "josh@email.com", "12345", "https://i.pinimg.com/564x/23/4d/b5/234db51f1c1b36344f79c22ee8d0b0e6.jpg", "student at Lighthouse Labs", 1);
+INSERT INTO mentees (first_name, last_name, email, password, photo_url, description, skill_id) VALUES ("Louis", "Orange", "louis@email.com", "12345", "https://i.pinimg.com/originals/b3/4c/93/b34c93e00c171542d09bea554db84ce6.jpg", "student at Lighthouse Labs", 2);
 
 -- mentors seeds
-INSERT INTO mentors (id, first_name, last_name, email, password, photo_url, description, skill_id) VALUES ();
+INSERT INTO mentors (first_name, last_name, email, password, photo_url, description, skill_id) VALUES ("Sasu", "Osayande", "sasu@gmail.com", "12345", "https://images.unsplash.com/photo-1649389763689-58bfb960e4da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80", "apple employee", 1);
+INSERT INTO mentors (first_name, last_name, email, password, photo_url, description, skill_id) VALUES ("Alice", "K", "alice@gmail.com", "12345", "https://images.unsplash.com/photo-1649132062307-38f97bfaea64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80", "amazon employee", 2);
+INSERT INTO mentors (first_name, last_name, email, password, photo_url, description, skill_id) VALUES ("Mark", "H", "mark@gmail.com", "56789", "https://images.unsplash.com/photo-1648708230364-b37c7ba10036?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80", "apple employee", 3);
+INSERT INTO mentors (first_name, last_name, email, password, photo_url, description, skill_id) VALUES ("Rachel", "Greens", "rachel@gmail.com", "12345", "https://images.unsplash.com/photo-1648745999279-cb71e69f103d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=910&q=80", "apple employee", 3);
+INSERT INTO mentors (first_name, last_name, email, password, photo_url, description, skill_id) VALUES ("Joe", "L", "joe@gmail.com", "00000", "https://images.unsplash.com/photo-1629186383291-2015c9227a4a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80", "funder", 1);
