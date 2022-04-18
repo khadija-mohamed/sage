@@ -1,10 +1,11 @@
 -- schema/02_categories_skills.sql
+DROP TABLE IF EXISTS categories CASCADE;
 DROP TABLE IF EXISTS skills CASCADE;
 
 -- CREATE categories
 CREATE TABLE categories (
   id SERIAL PRIMARY KEY NOT NULL,
-  name VARCHAR(255) NOT NULL,
+  name VARCHAR(255) NOT NULL
 );
 
 -- CREATE skills
