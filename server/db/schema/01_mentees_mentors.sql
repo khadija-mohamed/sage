@@ -11,7 +11,7 @@ CREATE TABLE mentees (
   password VARCHAR(255) NOT NULL,
   photo_url TEXT NOT NULL,
   description VARCHAR(500) NOT NULL,
-  skill_id INTEGER REFERENCES skills(id) ON DELETE CASCADE
+  skill VARCHAR(1000) NOT NULL
 );
 
 -- CREATE mentors
@@ -23,5 +23,5 @@ CREATE TABLE mentors (
   password VARCHAR(255) NOT NULL,
   photo_url TEXT NOT NULL,
   description VARCHAR(500) NOT NULL,
-  skill_id INTEGER REFERENCES skills(id) ON DELETE CASCADE
+  skill VARCHAR(1000) NOT NULL
 );
