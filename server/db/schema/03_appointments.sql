@@ -7,5 +7,5 @@ CREATE TABLE appointments (
   time TIMESTAMP,
   created_at TIMESTAMP,
   mentee_id INTEGER REFERENCES mentees(id) ON DELETE CASCADE,
-  mentor_id INTEGER REFERENCES mentors(id) ON DELETE CASCADE,
+  mentor_id INTEGER REFERENCES mentors(id) ON DELETE CASCADE
 );
