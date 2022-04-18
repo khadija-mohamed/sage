@@ -2,6 +2,9 @@
 
 # dependencies
 /node_modules
+.eslintcache
+index.pack
+0.pack
 /.pnp
 .pnp.js
 
