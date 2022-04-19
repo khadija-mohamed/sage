@@ -34,7 +34,7 @@ function App() {
           <div nav>
             <ul>
               <ol> About Us </ol>
-              <ol> <a href="/login">Login</a></ol>
+              <ol> <a href="/login"> Login</a></ol>
               <ol> <a href="/register"> Register</a></ol>
             </ul>
           </div>
