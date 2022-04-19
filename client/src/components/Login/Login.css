@@ -6,11 +6,12 @@
     align-self: center;
     margin-left: 40%;
     padding: 5em;
-    padding-left: 7em;
-    padding-right: 7em;
+    padding-left: 10em;
+    padding-right: 10em;
     border: solid 0.5px;
     border-radius: 3%;
     margin-top: 10%;
+    background-image: url(https://images.unsplash.com/photo-1504198266287-1659872e6590?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
 }
 .login-wrapper h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -88,3 +89,5 @@ button:not(:disabled):active {
 button:disabled {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
+
+

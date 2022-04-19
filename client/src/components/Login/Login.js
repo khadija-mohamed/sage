@@ -29,6 +29,9 @@ export default function Login({ setToken }) {
 
   return(
     <div className="login-wrapper">
+      <div>
+        
+      </div>
       <h1>Sage</h1>
       <small>Please log in</small>
       <form onSubmit={handleSubmit}>
@@ -41,7 +44,7 @@ export default function Login({ setToken }) {
           <input type="password" onChange={e => setPassword(e.target.value)}/>
         </label>
         <div>
-          <button type="submit">Submit</button>
+        <form method="get" action="/dashboard"><button type="submit">Sage</button></form>
         </div>
       </form>
     </div>
