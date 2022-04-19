@@ -5,7 +5,7 @@ import './Register.css';
 
 export default function Register() {
   return(
-    <div className="login-wrapper">
+    <div className="register-wrapper">
       <h1>Welcome to Sage</h1>
       <form>
         <label>
