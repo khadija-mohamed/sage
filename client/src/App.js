@@ -30,8 +30,8 @@ function App() {
           <div nav>
             <ul>
               <ol> About Us </ol>
-              <ol> Login </ol>
-              <ol> Register </ol>
+              <ol> <a href="/login">Login</a></ol>
+              <ol> <a href="/register"> Register</a></ol>
             </ul>
           </div>
         </header>

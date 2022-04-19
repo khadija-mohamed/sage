@@ -29,7 +29,8 @@ export default function Login({ setToken }) {
 
   return(
     <div className="login-wrapper">
-      <h1>Sage Log In</h1>
+      <h1>Sage</h1>
+      <small>Please log in</small>
       <form onSubmit={handleSubmit}>
         <label>
           <p>Email</p>
