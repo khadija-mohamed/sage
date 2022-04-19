@@ -6,6 +6,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "../src/components/Dashboard/Dashboard";
 import Login from "../src/components/Login/Login";
 import Register from "../src/components/Register/Register";
+import Sage from "./components/Register/Sage";
+import Sagee from "./components/Register/Sagee";
+
+
 
 function App() {
 
@@ -43,6 +47,9 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/register" element={<Register />}></Route>
+            <Route path="/register/sage" element={<Sage />}></Route>
+            <Route path="/register/sagee" element={<Sagee />}></Route>
+
           </Routes>
         </BrowserRouter>
         <footer className="footer">
