@@ -36,6 +36,15 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.use("/", indexRouter);
+
+app.use('/login', (req, res) => {
+  res.send({
+    token: 'test123'
+  });
+});
+
+// app.listen(8080, () => console.log('API is running on http://localhost:8080/login'));
+
 app.use("/mentees", menteesRouter(db));
 app.use("/mentors", mentorsRouter(db));
 // app.use('/appointments', appointmentsRouter(db));
