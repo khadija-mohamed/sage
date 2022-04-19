@@ -6,7 +6,16 @@ export default function Register() {
   return(
     <div className="register-wrapper">
       <h1>Welcome to Sage</h1>
+      <small>Sign up as either a Mentor or a Mentee </small>
       <form>
+      <label class="checkmarked">Sage
+      <input type="checkbox" checked="checked"/>
+        </label>
+        <label class="checkmarked">Sagee
+        <input type="checkbox" checked="checked"/>
+    
+          </label>
+
         <label>
           <p>First Name</p>
           <input type="text" id="input" />
