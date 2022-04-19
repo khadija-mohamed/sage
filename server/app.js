@@ -10,6 +10,7 @@ const db = require("./configs/db.config");
 const indexRouter = require("./routes/index");
 const menteesRouter = require("./routes/mentees");
 const mentorsRouter = require("./routes/mentors");
+const authRouter = require("./routes/auth");
 // const appointmentsRouter = require('./routes/appointments');
 
 const app = express();
@@ -37,16 +38,11 @@ app.use(express.static(path.join(__dirname, "public")));
 // Routes
 app.use("/", indexRouter);
 
-app.use('/login', (req, res) => {
-  res.send({
-    token: 'test123'
-  });
-});
-
-// app.listen(8080, () => console.log('API is running on http://localhost:8080/login'));
+app.listen(8080, () => console.log('API is running on http://localhost:8080'));
 
 app.use("/mentees", menteesRouter(db));
 app.use("/mentors", mentorsRouter(db));
+app.use("/login", authRouter(db));
 // app.use('/appointments', appointmentsRouter(db));
 
 module.exports = app;
