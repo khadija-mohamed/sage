@@ -19,11 +19,11 @@ function App() {
     });
   });
 
-  // const [token, setToken] = useState();
+  const [token, setToken] = useState();
 
-  // if(!token) {
-  //   return <Login setToken={setToken} />
-  // }
+  if(!token) {
+    return <Login setToken={setToken} />
+  }
 
   return (
     <div className="wrapper">
@@ -31,6 +31,8 @@ function App() {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p> Sage </p>
+
+    { true ?
           <div nav>
             <ul>
               <ol> About Us </ol>
@@ -38,6 +40,14 @@ function App() {
               <ol> <a href="/register"> Register</a></ol>
             </ul>
           </div>
+:
+          <div nav>
+            <ul>
+              <ol> My Profile </ol>
+            </ul>
+          </div>
+
+    }
         </header>
         <div className="main">
           <h1>Sage</h1>
