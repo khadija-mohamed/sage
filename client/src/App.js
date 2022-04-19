@@ -1,18 +1,25 @@
 import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "../src/components/Dashboard/Dashboard";
 import Login from "../src/components/Login/Login";
 import Register from "../src/components/Register/Register";
 
 function App() {
+
   useEffect(() => {
     axios.get("http://localhost:8080/").then((response) => {
       console.log("Response:", response);
     });
   });
+
+  // const [token, setToken] = useState();
+
+  // if(!token) {
+  //   return <Login setToken={setToken} />
+  // }
 
   return (
     <div className="wrapper">
