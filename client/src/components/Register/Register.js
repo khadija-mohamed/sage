@@ -9,35 +9,37 @@ export default function Register() {
       <form>
         <label>
           <p>First Name</p>
-          <input type="text" />
+          <input type="text" id="input" />
         </label>
         <label>
           <p>Last Name</p>
-          <input type="text" />
+          <input type="text" id='input' />
         </label>
         <label>
           <p>Email</p>
-          <input type="email" />
+          <input type="email" id='input'/>
         </label>
         <label>
           <p>Password</p>
-          <input type="password" />
+          <input type="password" id="input"/>
         </label>
         <label>
           <p>Confirm Password</p>
-          <input type="password" />
+          <input type="password" id="input"/>
         </label>
         <label>
           <p>Upload a Photo</p>
-          <input type="text" />
+          <div class="imgbutton">
+          <input type="file" id="img"/>
+          </div>
         </label>
         <label>
           <p>About</p>
-          <input type="text" />
+          <input type="text" id="input" />
         </label>
         <label>
           <p>Skills</p>
-          <input type="text" />
+          <input type="text" id='input' />
         </label>
         <div>
           <button type="submit">Submit</button>
