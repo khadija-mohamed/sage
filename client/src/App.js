@@ -1,8 +1,26 @@
-import logo from './logo.svg';
+import React, {Component} from "react"
 import './App.css';
+import logo from './logo.svg';
 
-function App() {
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { apiResponse: "" };
+}
+
+callAPI() {
+    fetch("http://localhost:9000/testAPI")
+        .then(res => res.text())
+        .then(res => this.setState({ apiResponse: res }));
+}
+
+componentWillMount() {
+    this.callAPI();
+}
+
+render () {
   return (
+
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -25,8 +43,9 @@ function App() {
           <ol> About Us </ol>
         </ul>
       </footer>
-    </div>
+      </div>
   );
+}
 }
 
 export default App;
