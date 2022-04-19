@@ -7,53 +7,11 @@ export default function Register() {
     <div className="register-wrapper">
       <h1>Welcome to Sage</h1>
       <small>Sign up as either a Mentor or a Mentee </small>
-      <form>
-      <label class="checkmarked">Sage
-      <input type="checkbox" checked="checked"/>
-        </label>
-        <label class="checkmarked">Sagee
-        <input type="checkbox" checked="checked"/>
-    
-          </label>
-
-        <label>
-          <p>First Name</p>
-          <input type="text" id="input" />
-        </label>
-        <label>
-          <p>Last Name</p>
-          <input type="text" id='input' />
-        </label>
-        <label>
-          <p>Email</p>
-          <input type="email" id='input'/>
-        </label>
-        <label>
-          <p>Password</p>
-          <input type="password" id="input"/>
-        </label>
-        <label>
-          <p>Confirm Password</p>
-          <input type="password" id="input"/>
-        </label>
-        <label>
-          <p>Upload a Photo</p>
-          <div class="imgbutton">
-          <input type="file" id="img"/>
-          </div>
-        </label>
-        <label>
-          <p>About</p>
-          <input type="text" id="input" />
-        </label>
-        <label>
-          <p>Skills</p>
-          <input type="text" id='input' />
-        </label>
-        <div>
-          <button type="submit">Submit</button>
+      <div>
+      <form method="get" action="/register/sage"><button type="submit">Sage</button></form>
         </div>
-      </form>
+        <form method="get" action="/register/sagee"><button type="submit">Sagee</button></form>
     </div>
   )
 }
+
