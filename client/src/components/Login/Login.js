@@ -24,6 +24,7 @@ export default function Login({ setToken }) {
       email,
       password
     });
+    console.log("Token:", token)
     setToken(token);
   }
 
@@ -44,7 +45,7 @@ export default function Login({ setToken }) {
           <input type="password" onChange={e => setPassword(e.target.value)}/>
         </label>
         <div>
-        <form method="get" action="/dashboard"><button type="submit">Sage</button></form>
+        <button type="submit">Submit</button>
         </div>
       </form>
     </div>
