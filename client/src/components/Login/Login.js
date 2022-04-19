@@ -44,7 +44,7 @@ export default function Login({ setToken }) {
           <input type="password" onChange={e => setPassword(e.target.value)}/>
         </label>
         <div>
-        <form method="get" action="/dashboard"><button type="submit">Sage</button></form>
+        <form method="get" action="/dashboard"><button type="submit">Login</button></form>
         </div>
       </form>
     </div>
