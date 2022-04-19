@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Dashboard from "../src/components/Dashboard/Dashboard";
 import Login from "../src/components/Login/Login";
 import Register from "../src/components/Register/Register";
 
@@ -31,13 +32,12 @@ function App() {
           <h1>Sage</h1>
         </div>
         <BrowserRouter>
-            <Routes>
-              <Route path="/login" element={<Login />}>
-              </Route>
-              <Route path="/register" element={<Register />}>
-              </Route>
-            </Routes>
-          </BrowserRouter>
+          <Routes>
+            <Route path="/dashboard" element={<Dashboard />}></Route>
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/register" element={<Register />}></Route>
+          </Routes>
+        </BrowserRouter>
         <footer className="footer">
           <ul>
             <ol> Follow Us </ol>
