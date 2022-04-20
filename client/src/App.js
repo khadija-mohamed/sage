@@ -26,11 +26,11 @@ function App() {
     });
   });
 
-  const [token, setToken] = useState();
+  // const [token, setToken] = useState();
 
-  if(!token) {
-    return <Login setToken={setToken} />
-  }
+  // if(!token) {
+  //   return <Login setToken={setToken} />
+  // }
 
   return (
     <div className="wrapper">
@@ -60,20 +60,19 @@ function App() {
           <h1>Sage</h1>
         </div>
           <Routes>
-            <Route path="/dashboard" element={<Dashboard />}></Route>
-            <Route path="/landing" element={<Landing />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/register" element={<Register />}></Route>
-            <Route path="/register/sage" element={<Sage />}></Route>
-            <Route path="/register/sagee" element={<Sagee />}></Route>
-            <Route path="/dashboard/menteefeed" element={<Menteefeed />}></Route>
-            <Route path="/dashboard/menteeprofile" element={<Menteeprofile />}></Route>
-            <Route path="/dashboard/menteefind" element={<Menteefind />}></Route>
-            <Route path="/landing" element={<Logout />}></Route>
-            <Route path="/dashboard/mentorconnect" element={<Mentorconnect />}></Route>
-            <Route path="/dashboard/mentorfeed" element={<Mentorfeed />}></Route>
-            <Route path="/dashboard/mentorprofile" element={<Mentorprofile />}></Route>
-
+            <Route path="/dashboard" index element={<Dashboard />}/>
+            <Route path="/landing" element={<Landing />}/>
+            <Route path="/login" element={<Login />}/>
+            <Route path="/register" element={<Register />}/>
+            <Route path="/register/sage" element={<Sage />}/>
+            <Route path="/register/sagee" element={<Sagee />}/>
+            <Route path="/dashboard/menteefeed" element={<Menteefeed />}/>
+            <Route path="/dashboard/menteeprofile" element={<Menteeprofile />}/>
+            <Route path="/dashboard/menteefind" element={<Menteefind />}/>
+            <Route path="/landing" element={<Logout />}/>
+            <Route path="/dashboard/mentorconnect" element={<Mentorconnect />}/>
+            <Route path="/dashboard/mentorfeed" element={<Mentorfeed />}/>
+            <Route path="/dashboard/mentorprofile" element={<Mentorprofile />}/>
           </Routes>
         <footer className="footer">
           <ul>
