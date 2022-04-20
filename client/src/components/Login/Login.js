@@ -18,7 +18,7 @@ async function loginUser(credentials) {
     .catch(err => console.log("Error:", err))
  }
 
-export default function Login() {
+export default function Login({setToken}) {
   const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -42,9 +42,9 @@ export default function Login() {
       email,
       password
     });
-    navigate('/dashboard');
+    // navigate('/dashboard');
     console.log("Token:", token)
-    // setToken(token);
+    setToken(token);
   }
 
   return(
