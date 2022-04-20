@@ -2,12 +2,9 @@
 
 # dependencies
 /node_modules
-<<<<<<< HEAD
 .eslintcache
-=======
 index.pack
 0.pack
->>>>>>> 0376c4ad632cc6659f00474eb6079806d7cbca61
 /.pnp
 .pnp.js
 
