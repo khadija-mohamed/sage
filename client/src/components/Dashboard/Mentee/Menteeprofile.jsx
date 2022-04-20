@@ -1,15 +1,12 @@
 import React from 'react';
-
 import './Menteeprofile.css';
+import Dashboard from '../Dashboard';
 
-export default function Dashboard() {
+export default function Menteeprofile() {
   return(
-    <div className="dashboard-wrapper">
-       <h1>Meet the Sages</h1>
-      <header>
-
-</header>
-   
+    <div className="menteeprofile-wrapper">
+     <Dashboard/>
+     
     </div>
   )
 }
