@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // Routes
 app.use("/", indexRouter);
 
-app.listen(8080, () => console.log('API is running on http://localhost:8080'));
+// app.listen(8080, () => console.log('API is running on http://localhost:8080'));
 
 app.use("/mentees", menteesRouter(db));
 app.use("/mentors", mentorsRouter(db));
