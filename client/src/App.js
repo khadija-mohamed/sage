@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Dashboard from "../src/components/Dashboard/Dashboard";
 import Login from "../src/components/Login/Login";
 import Register from "../src/components/Register/Register";
@@ -52,16 +52,13 @@ function App() {
         <div className="main">
           <h1>Sage</h1>
         </div>
-        <BrowserRouter>
           <Routes>
-            <Route path="/dashboard" element={<Dashboard />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/register" element={<Register />}></Route>
-            <Route path="/register/sage" element={<Sage />}></Route>
-            <Route path="/register/sagee" element={<Sagee />}></Route>
-
+            <Route path="/dashboard" element={<Dashboard />}/>
+            <Route path="/login" element={<Login />}/>
+            <Route path="/register" element={<Register />}/>
+            <Route path="/register/sage" element={<Sage />}/>
+            <Route path="/register/sagee" element={<Sagee />}/>
           </Routes>
-        </BrowserRouter>
         <footer className="footer">
           <ul>
             <ol> Follow Us </ol>
