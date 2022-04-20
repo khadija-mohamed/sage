@@ -25,3 +25,4 @@ CREATE TABLE mentors (
   description VARCHAR(500) NOT NULL,
   skill VARCHAR(1000) NOT NULL
 );
+
