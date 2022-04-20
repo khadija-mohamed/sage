@@ -1,29 +1,22 @@
 import React from 'react';
+import logo from "./logo.svg";
 
 import './Dashboard.css';
 
 export default function Dashboard() {
   return(
-    <div className="dashboard-wrapper">
-       <h1>Meet the Sages</h1>
-      <header>
-
-</header>
-
-
-    <div class="gallery-item" tabindex="0">
-
-      <img src="https://st2.depositphotos.com/1054749/6808/i/600/depositphotos_68088663-stock-photo-portrait-of-a-young-african.jpg" class="gallery-image" alt=""/>
-      </div>
-      <div class="gallery-item" tabindex="0">
-
-      <img src="https://t4.ftcdn.net/jpg/02/19/63/31/360_F_219633151_BW6TD8D1EA9OqZu4JgdmeJGg4JBaiAHj.jpg" class="gallery-image" alt=""/>
-      </div>
-
-      <div class="gallery-item" tabindex="0">
-      <img src="https://images.pexels.com/photos/3789888/pexels-photo-3789888.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="gallery-image" alt=""/>
-      </div>
-   
+    <div className='sidebar'>
+    <img src={logo} className="logo" alt="logo" />
+      <div nav>
+      <h1>Sage</h1>
+          <ul>
+          <form method="get" action="/dashboard/menteeprofile"><button id="dashboard-button" type="submit">My Profile</button></form>
+          <form method="get" action="/dashboard/menteefeed"><button id="dashboard-button" type="submit">Feed</button></form>
+          <form method="get" action="/dashboard/menteefind"><button id="dashboard-button" type="submit">Find a Sage</button></form>
+          <form method="get" action="/"><button type="submit" id="dashboard-button" >Logout</button></form>
+            </ul>
+          </div> 
     </div>
-  )
-}
+  );
+
+  }

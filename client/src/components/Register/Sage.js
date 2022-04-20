@@ -3,7 +3,7 @@ import './Sage.css';
 
 export default function Sage() {
   return(
-    <div className="register-wrapper">
+    <div className="sage-wrapper">
       <h1>Welcome to Sage</h1>
       <small> Hello Future Sage! </small>
       <form>
