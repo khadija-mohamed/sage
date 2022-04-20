@@ -1,6 +1,5 @@
 import React from 'react';
-
-import './Register.css';
+import "./Register.css"
 
 export default function Register() {
   return(
@@ -10,8 +9,9 @@ export default function Register() {
       <div>
       <form method="get" action="/register/sage"><button type="submit">Sage</button></form>
         </div>
+        <div>
         <form method="get" action="/register/sagee"><button type="submit">Sagee</button></form>
+        </div>
     </div>
   )
 }
-
