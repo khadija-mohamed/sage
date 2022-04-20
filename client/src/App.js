@@ -8,7 +8,14 @@ import Login from "../src/components/Login/Login";
 import Register from "../src/components/Register/Register";
 import Sage from "./components/Register/Sage";
 import Sagee from "./components/Register/Sagee";
-
+import Menteefeed from "./components/Dashboard/Mentee/Menteefeed";
+import Menteeprofile from "./components/Dashboard/Mentee/Menteeprofile"
+import Menteefind from "./components/Dashboard/Mentee/Menteefind"
+import Logout from "./components/Logout/Logout"
+import Landing from "./components/Landing/Landing"
+import Mentorconnect from "./components/Dashboard/Mentor/Mentorconnect"
+import Mentorfeed from "./components/Dashboard/Mentor/Mentorfeed"
+import Mentorprofile from "./components/Dashboard/Mentor/Mentorprofile"
 
 
 function App() {
@@ -36,7 +43,7 @@ function App() {
           <div nav>
             <ul>
               <ol> About Us </ol>
-              <ol> <a href="/login"> Login</a></ol>
+              <ol> <a href="/login"> Login </a></ol>
               <ol> <a href="/register"> Register</a></ol>
             </ul>
           </div>
@@ -53,11 +60,20 @@ function App() {
           <h1>Sage</h1>
         </div>
           <Routes>
-            <Route path="/dashboard" element={<Dashboard />}/>
-            <Route path="/login" element={<Login />}/>
-            <Route path="/register" element={<Register />}/>
-            <Route path="/register/sage" element={<Sage />}/>
-            <Route path="/register/sagee" element={<Sagee />}/>
+            <Route path="/dashboard" element={<Dashboard />}></Route>
+            <Route path="/landing" element={<Landing />}></Route>
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/register" element={<Register />}></Route>
+            <Route path="/register/sage" element={<Sage />}></Route>
+            <Route path="/register/sagee" element={<Sagee />}></Route>
+            <Route path="/dashboard/menteefeed" element={<Menteefeed />}></Route>
+            <Route path="/dashboard/menteeprofile" element={<Menteeprofile />}></Route>
+            <Route path="/dashboard/menteefind" element={<Menteefind />}></Route>
+            <Route path="/landing" element={<Logout />}></Route>
+            <Route path="/dashboard/mentorconnect" element={<Mentorconnect />}></Route>
+            <Route path="/dashboard/mentorfeed" element={<Mentorfeed />}></Route>
+            <Route path="/dashboard/mentorprofile" element={<Mentorprofile />}></Route>
+
           </Routes>
         <footer className="footer">
           <ul>
