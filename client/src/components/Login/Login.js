@@ -1,50 +1,62 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 import './Login.css';
 
-async function loginUser(credentials) {
-
-  return fetch('http://localhost:8080/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(credentials)
-  })
-    .then(data => data.json())
-    .catch(err => console.log("Error:", err))
- }
-
-export default function Login({setToken}) {
+export default function Login(props) {
+  // const { setIsLoggedIn, onUpdate } = props;
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
 
-  const handleSubmit = async e => {
+  // const params = useParams();
+  // const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     navigate('/dashboard');
+  //   }, 2000);
+  // }, [navigate]);
+
+  // useEffect(() => {
+
+  // }, [params.id]);
+
+  const validateForm = () => {
+    if (!email) {
+      setError("Email cannot be blank");
+      return false;
+    }
+    setError("");
+    if (!password) {
+      setError("Password cannot be blank");
+      return false;
+    }
+    return true;
+  }
+
+  const handleSubmit = e => {
     e.preventDefault();
-    // try {
-    //   let response = await axios({
-    //     method: 'post',
-    //     url: 'http://localhost:8080/login',
-    //     data: {
-    //       email: email,
-    //       password: password
-    //     },
-    //   })
-    //   return response
-    // } catch(error) {
-    //   console.log(error)
-    // }
-    const token = await loginUser({
-      email,
-      password
-    });
-    // navigate('/dashboard');
-    console.log("Token:", token)
-    setToken(token);
+
+    if (validateForm) {
+      axios.post(
+        'http://localhost:8080/login/login', { email: email, password: password }
+      ).then(() => {
+        navigate('/dashboard');
+        // setIsLoggedIn(true);
+        // onUpdate(true);
+      }).catch(err => err);
+    }
+    
+    // const token = await loginUser({
+    //   email,
+    //   password
+    // });
+    // // navigate('/dashboard');
+    // console.log("Token:", token)
+    // setToken(token);
   }
 
   return(
@@ -71,6 +83,6 @@ export default function Login({setToken}) {
   )
 }
 
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired
-}
+// Login.propTypes = {
+//   setToken: PropTypes.func.isRequired
+// }
