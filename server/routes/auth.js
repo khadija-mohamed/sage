@@ -1,108 +1,141 @@
 const router = require("express").Router({
-  mergeParams: true
+  mergeParams: true,
 });
 const pool = require("../configs/db.config");
 const bcrypt = require("bcrypt");
 
 module.exports = (db) => {
-
-
-  // all routes will go here
-  const potentialLogin = async (email, password) => {
-  const result = await pool.query(
-    "SELECT id AS mentee_id, email, password FROM mentees UNION SELECT id AS mentor_id, email, password FROM mentors WHERE email=$1 AND password=$2", [email, password]);
+  const registerNewUser = async (user) => {
+    const result = await pool.query(
+      "INSERT INTO mentees(first_name, last_name, email, password, photo_url, description, skill) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING email",
+      [user.first_name, user.last_name, user.email, user.password, user.photo_url, user.description, user.skill]
+    );
     return result.rows[0];
-  }
+  };
 
-  router.post("/", async (req, res) => {
-    const user = await potentialLogin(req.body.email, req.body.password)
-    req.session.email = user.id
-    res.json({status: 'all good'})
+  
 
-  });
-    // const formData = req.body;
-    // formSchema
-    //   .validate(formData)
-    //   .catch((err) => {
-    //     res.status(422).send();
-    //     console.log(err.errors);
-    //   })
-    //   .then((valid) => {
-    //     if (valid) {
-    //       console.log("form is good");
-    //     }
-    //   });
-
-    // const potentialLogin = await pool.query(
-    //   "SELECT id, email, password FROM mentees u WHERE u.email=$1", [req.body.email]);
-
-    //   if (potentialLogin.rowCount > 0) {
-    //     const isSamePass = await bcrypt.compare(
-    //       req.body.password,
-    //       potentialLogin.rows[0].password
-    //     );
-    //     if (isSamePass) {
-    //       req.session.user = {
-    //         email: req.body.email,
-    //         id: potentialLogin.rows[0].id,
-    //       };
-    //       res.json({ loggedIn: true, email: req.body.email });
-    //     } else {
-    //       res.json({ loggedIn: false, status: "Wrong email or password!" });
-    //       console.log("not good");
-    //     }
-    //   } else {
-    //     console.log("not good");
-    //     res.json({ loggedIn: false, status: "Wrong email or password!" });
-    //   }
-
-    // res.send({
-    //   token: "test123",
-    // });
-
-  router.post("/register", async (req, res) => {
-    // const formData = req.body;
-    // formSchema
-    //   .validate(formData)
-    //   .catch((err) => {
-    //     res.status(422).send();
-    //     console.log(err.errors);
-    //   })
-    //   .then((valid) => {
-    //     if (valid) {
-    //       console.log("form is good");
-    //     }
-    //   });
-
-    const existingUser = await pool.query(
-      "SELECT email FROM mentees WHERE email=$1",
-      [req.body.email]
+  const potentialLogin = async (email, password) => {
+    console.log("Email and password:", email, password);
+    const result = await pool.query(
+      "SELECT id AS mentee_id, email, password FROM mentees UNION SELECT id AS mentor_id, email, password FROM mentors WHERE email=$1 AND password=$2",
+      [email, password]
     );
 
-    if (existingUser.rowCount === 0) {
-      const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    const actualUser = result.rows.filter((item) => item.password === password && item.email === email);
 
-      const newUserQuery = await pool.query(
-        "INSERT INTO mentees(first_name, last_name, email, password, photo_url, description, skill) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING id, email",
-        [
-          req.body.first_name,
-          req.body.last_name,
-          req.body.email,
-          hashedPassword,
-          req.body.photo_url,
-          req.body.description,
-          req.body.skill,
-        ]
-      );
-      req.session.user = {
-        email,
-        id: newUserQuery.rows[0].id,
-      }
-      res.json({ loggedIn: true, email });
-    } else {
-      res.json({ loggedIn: false, status: "Email already in use" });
+    return actualUser[0];
+  };
+
+  // all routes will go here
+
+  router.post("/register/sagee", async (req, res) => {
+    let templateVars = {
+      user: req.session,
+    };
+
+    const { first_name, last_name, email, password, photo_url, description, skill } = req.body;
+    if (!first_name || !last_name || !email || !password || !photo_url || !description || !skill) {
+      let templateVars = {
+        message: "Input fields cannot be blank",
+      };
+      return res.status(400).json(templateVars);
     }
+    const input = {
+      first_name,
+      last_name,
+      email,
+      password,
+      photo_url,
+      description,
+      skill
+    }
+    try {
+    await registerNewUser(input)
+        let templateVars = {
+          message: "all good",
+        };
+        // if (!user) {
+        //   let templateVars = {
+        //     message: "Email is registered",
+        //     user: req.session,
+        //   };
+        req.session.email = input.email;
+       res.status(200).json(templateVars);
+        } 
+      catch(err) {
+        console.log(err);
+        res.status(500).send("error");
+      }
+      });
+
+
+  router.post("/login", (req, res) => {
+    console.log("Request:", req.session);
+    let templateVars = {
+      message: "Email or password is incorrect",
+      user: req.session,
+    };
+    const { email, password } = req.body;
+    if (!email || !password) {
+      let templateVars = {
+        message: "Input fields cannot be blank",
+        user: req.session,
+      };
+      return res.status(400).json(templateVars);
+    }
+
+    potentialLogin(email, password)
+      .then((user) => {
+        if (!user) {
+          let templateVars = {
+            message: "Email is not registered",
+            user: req.session,
+          };
+          return res.status(400).json(templateVars);
+        } else if (user.password !== password) {
+          return res.status(400).json(templateVars);
+        } else {
+          req.session["user_id"] = user.id;
+          return res.json({});
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(500).end();
+      });
+    // const user = await potentialLogin(req.body.email, req.body.password)
+    // req.session.email = user.id
+    // res.json({status: 'all good'})
   });
+
+  // res.send({
+  //   token: "test123",
+  // });
+
+    // if (existingUser.rowCount === 0) {
+    //   const hashedPassword = await bcrypt.hash(req.body.password, 10);
+
+    //   const newUserQuery = await pool.query(
+    //     "INSERT INTO mentees(first_name, last_name, email, password, photo_url, description, skill) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING id, email",
+    //     [
+    //       req.body.first_name,
+    //       req.body.last_name,
+    //       req.body.email,
+    //       hashedPassword,
+    //       req.body.photo_url,
+    //       req.body.description,
+    //       req.body.skill,
+    //     ]
+    //   );
+    //   req.session.user = {
+    //     email,
+    //     id: newUserQuery.rows[0].id,
+    //   };
+    //   res.json({ loggedIn: true, email });
+    // } else {
+    //   res.json({ loggedIn: false, status: "Email already in use" });
+    // }
 
   return router;
 };
