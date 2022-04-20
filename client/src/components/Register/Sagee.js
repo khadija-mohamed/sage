@@ -1,14 +1,12 @@
 import React from 'react';
-
 import './Sagee.css';
 
 export default function Sagee() {
   return(
-    <div className="register-wrapper">
+    <div className="sagee-wrapper">
       <h1>Welcome to Sage</h1>
       <small> Hello Future Sagee! </small>
       <form>
-
         <label>
           <p>First Name</p>
           <input type="text" id="input" />
