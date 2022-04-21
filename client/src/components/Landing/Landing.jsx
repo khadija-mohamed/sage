@@ -1,6 +1,7 @@
-import react from "react";
+// import react from "react";
 import logo from "./logo.svg";
-import './Landing.css'
+import './Landing.css';
+// import {Link} from "react-router-dom";
 
 
 const Landing = () => {
@@ -18,6 +19,8 @@ const Landing = () => {
       <div className="options">
         <h2>Please Register or Login to proceed</h2>
         <div className="buttons">
+        {/* <form method="get" action="/register"><button type="submit">Register</button></form>
+        <form method="get" action="/login"><button type="submit">Login</button></form> */}
         <form method="get" action="/register"><button type="submit">Register</button></form>
         <form method="get" action="/login"><button type="submit">Login</button></form>
         </div>

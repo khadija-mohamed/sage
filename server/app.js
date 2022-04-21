@@ -11,6 +11,8 @@ const indexRouter = require("./routes/index");
 const menteesRouter = require("./routes/mentees");
 const mentorsRouter = require("./routes/mentors");
 const authRouter = require("./routes/auth");
+const searchRouter = require("./routes/search");
+
 // const appointmentsRouter = require('./routes/appointments');
 
 const app = express();
@@ -43,6 +45,7 @@ app.use("/", indexRouter);
 app.use("/mentees", menteesRouter(db));
 app.use("/mentors", mentorsRouter(db));
 app.use("/login", authRouter(db));
+app.use("/search",searchRouter(db));
 // app.use('/appointments', appointmentsRouter(db));
 
 module.exports = app;
