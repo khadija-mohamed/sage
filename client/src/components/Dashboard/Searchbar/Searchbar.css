@@ -1,3 +1,6 @@
+.search {
+  position: absolute;
+}
 .search-logo {
   margin-top: 9px;
   height: 25px;

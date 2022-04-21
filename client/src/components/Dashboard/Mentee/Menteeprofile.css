@@ -1,0 +1,63 @@
+.mentee-profile {
+  position: absolute;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  top: 0;
+  width: 100%;
+  margin: auto 0;
+  height: 100%;
+  margin-top: 3.5em;
+  margin-left: 250px;
+}
+
+.mentee-profile .person {
+  display: flex;
+  margin: auto 0;
+  height: 200px;
+  width: 200px;
+  margin-top: 4%;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  width: 50%;
+}
+
+.grid {
+  display: flex;
+  position: absolute;
+  margin-bottom: 50px ;
+  top: 0;
+  margin-left: 150px;
+  display: grid;
+  height: 25vh;
+  width: 150vh;
+  padding: 2em;
+  border: solid 0.2px black;
+
+}
+
+.grid-2{
+  position: absolute;
+  margin-bottom: 250px ;
+  margin-top: 400px;
+  margin-left: 150px;
+  display: grid;
+  height: 40px;
+  width: 150vh;
+  padding: 3em;
+  border: solid 0.2px black;
+}
+
+.grid-2  {
+  position: relative;
+  display: flex;
+  height: 60px;
+  top: 0;
+  margin-bottom: 400px ;
+}
+
+.light {
+display: inline-block;
+height: 60px;
+margin-top: 55vh;
+margin-left: 170px;
+}

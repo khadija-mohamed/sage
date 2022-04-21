@@ -17,10 +17,9 @@ body {
   padding: 1rem
 }
 
-
 .sidebar {
   position: absolute;
-  background-color:rgb(23, 124, 94);
+  background-color:rgb(9, 73, 57);
   color: white;
   top: 3px;
   margin-top: 50px;

@@ -8,6 +8,7 @@ export default function Booking() {
     <div className="booking">
     <Searchbar/>
     <Dashboard/>
+    
     </div>
   )
 }
