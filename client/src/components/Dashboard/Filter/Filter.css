@@ -1,0 +1,18 @@
+.filter #filter_input {
+  position: absolute;
+  margin-top: 100px;
+  width: 200px;
+  margin-left: 1150px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  border: solid 0.2px black;
+}
+
+.filter_button {
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 1250px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  border: solid 0.2px black;
+}
