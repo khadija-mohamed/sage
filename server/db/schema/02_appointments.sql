@@ -7,6 +7,7 @@ CREATE TABLE appointments (
   appointment_date DATE,
   appointment_time VARCHAR(255) NOT NULL,
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  message VARCHAR(1000) NOT NULL,
   mentee_id INTEGER REFERENCES mentees(id) ON DELETE CASCADE,
   mentor_id INTEGER REFERENCES mentors(id) ON DELETE CASCADE
 );
