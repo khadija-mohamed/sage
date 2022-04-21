@@ -1,4 +1,6 @@
-const router = require("express").Router();
+const router = require("express").Router({
+  mergeParams: true,
+});
 const pool = require("../configs/db.config");
 
 const getAllMentees = (db, options) => {
@@ -18,10 +20,9 @@ const getAllMentees = (db, options) => {
       console.log(err.message);
     });
 };
-exports.getAllMentees = getAllMentees;
 
 module.exports = (db) => {
-  router.get("/dashboard/menteefind", (req, res) => {
+  router.get("/dashboard/mentee/menteefind", (req, res) => {
     getAllMentees(db, req.url)
       .then((values) => res.send({ values }))
       .catch((err) => {
