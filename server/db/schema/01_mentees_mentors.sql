@@ -15,7 +15,7 @@ CREATE TABLE mentees (
   skill VARCHAR(1000) NOT NULL,
   isActive Boolean DEFAULT true,
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-);
+  );
 
 -- CREATE mentors
 CREATE TABLE mentors (
