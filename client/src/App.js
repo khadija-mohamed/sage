@@ -43,14 +43,14 @@ function App() {
             <Route path="/register" element={<Register />}/>
             <Route path="/register/sage" element={<Sage />}/>
             <Route path="/register/sagee" element={<Sagee />}/>
-            <Route path="/dashboard/menteefeed" element={<Menteefeed />}/>
-            <Route path="/dashboard/menteeprofile" element={<Menteeprofile />}/>
-            <Route path="/dashboard/menteefind" element={<Menteefind />}/>
+            <Route path="/dashboard/mentee/menteefeed" element={<Menteefeed />}/>
+            <Route path="/dashboard/mentee/menteeprofile" element={<Menteeprofile />}/>
+            <Route path="/dashboard/mentee/menteefind" element={<Menteefind />}/>
             <Route path="/landing" element={<Logout />}/>
-            <Route path="/dashboard/mentorconnect" element={<Mentorconnect />}/>
-            <Route path="/dashboard/mentorfeed" element={<Mentorfeed />}/>
-            <Route path="/dashboard/mentorprofile" element={<Mentorprofile />}/>
-            <Route path="/dashboard/booking" element={Booking}></Route>
+            <Route path="/dashboard/mentor/mentorconnect" element={<Mentorconnect />}/>
+            <Route path="/dashboard/mentor/mentorfeed" element={<Mentorfeed />}/>
+            <Route path="/dashboard/mentor/mentorprofile" element={<Mentorprofile />}/>
+            <Route path="/dashboard/booking" element={<Booking />}/>
           </Routes>
       </div>
   );
