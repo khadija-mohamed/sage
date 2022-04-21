@@ -46,7 +46,7 @@ function App() {
             <Route path="/dashboard/mentee/menteefeed" element={<Menteefeed />}/>
             <Route path="/dashboard/mentee/menteeprofile" element={<Menteeprofile />}/>
             <Route path="/dashboard/mentee/menteefind" element={<Menteefind />}/>
-            <Route path="/landing" element={<Logout />}/>
+            {/* <Route path="/" element={<Logout />}/> */}
             <Route path="/dashboard/mentor/mentorconnect" element={<Mentorconnect />}/>
             <Route path="/dashboard/mentor/mentorfeed" element={<Mentorfeed />}/>
             <Route path="/dashboard/mentor/mentorprofile" element={<Mentorprofile />}/>
