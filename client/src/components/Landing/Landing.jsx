@@ -1,36 +1,34 @@
-import react from "react";
+import React from "react";
 import logo from "./logo.svg";
 import './Landing.css'
+import Navbar from "../NavBar/NavBar"
 
 
 const Landing = () => {
   return  (
-    <div className="wrapper">
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1> Welcome to Sage </h1>
-        </header>
-        <div className="main">
-          <h1>Sage</h1>
-        </div>
-      <div className="main-wrapper">
-      <div className="options">
-        <h2>Please Register or Login to proceed</h2>
-        <div className="buttons">
-        <form method="get" action="/register"><button type="submit">Register</button></form>
-        <form method="get" action="/login"><button type="submit">Login</button></form>
-        </div>
   
+    <div className="main-div">
+      <Navbar />
+      <div className="orange-main">
+        <div className="transparent-text">
         </div>
+        <div className="sage-block">
+          <h1 className="head-main">
+            <span className="head-left"> S</span>
+            <img className="o3" src={logo} alt="logo"/>
+            <span className="head-right">GE</span>
+            <h4>Please login or register to proceed.</h4>
+            <div className="buttons">
+              <button class="button-52"> <a href="/login">Login</a></button>
+              <div class="space"></div>
+              <button class="button-52"><a href="/register">Register</a></button>
+            </div>       
+          </h1>
         </div>
-
-        <footer className="footer">
-
-        </footer>
       </div>
     </div>
   );
 }
+
 
 export default Landing

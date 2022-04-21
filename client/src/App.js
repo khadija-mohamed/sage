@@ -16,6 +16,8 @@ import Landing from "./components/Landing/Landing"
 import Mentorconnect from "./components/Dashboard/Mentor/Mentorconnect"
 import Mentorfeed from "./components/Dashboard/Mentor/Mentorfeed"
 import Mentorprofile from "./components/Dashboard/Mentor/Mentorprofile"
+import Booking from "./components/Dashboard/Booking/Booking";
+
 
 
 function App() {
@@ -48,6 +50,7 @@ function App() {
             <Route path="/dashboard/mentorconnect" element={<Mentorconnect />}/>
             <Route path="/dashboard/mentorfeed" element={<Mentorfeed />}/>
             <Route path="/dashboard/mentorprofile" element={<Mentorprofile />}/>
+            <Route path="/dashboard/booking" element={Booking}></Route>
           </Routes>
       </div>
   );
