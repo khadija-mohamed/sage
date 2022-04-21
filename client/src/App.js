@@ -1,7 +1,7 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+// import axios from "axios";
+// import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Dashboard from "../src/components/Dashboard/Dashboard";
 import Login from "../src/components/Login/Login";
@@ -16,15 +16,20 @@ import Landing from "./components/Landing/Landing"
 import Mentorconnect from "./components/Dashboard/Mentor/Mentorconnect"
 import Mentorfeed from "./components/Dashboard/Mentor/Mentorfeed"
 import Mentorprofile from "./components/Dashboard/Mentor/Mentorprofile"
+
 import Booking from "./components/Dashboard/Booking/Booking";
 
 
 
+
+
+
 function App() {
+  //  const { mentorState} = useApplicationData();
 
   // useEffect(() => {
   //   axios.get("http://localhost:8080/").then((response) => {
-  //     console.log("Response:", response);
+    // console.log("Response:", response);
   //   });
   // });
 
@@ -32,6 +37,7 @@ function App() {
 
   // if(!token) {
   //   return <Login setToken={setToken} />
+
   // }
 
   return (
@@ -46,7 +52,11 @@ function App() {
             <Route path="/dashboard/mentee/menteefeed" element={<Menteefeed />}/>
             <Route path="/dashboard/mentee/menteeprofile" element={<Menteeprofile />}/>
             <Route path="/dashboard/mentee/menteefind" element={<Menteefind />}/>
+<<<<<<< HEAD
             {/* <Route path="/" element={<Logout />}/> */}
+=======
+             <Route path="/" element={<Logout />}/> 
+>>>>>>> 8f59eb0f518d4c1926e1b15affca0e5bbe9e3489
             <Route path="/dashboard/mentor/mentorconnect" element={<Mentorconnect />}/>
             <Route path="/dashboard/mentor/mentorfeed" element={<Mentorfeed />}/>
             <Route path="/dashboard/mentor/mentorprofile" element={<Mentorprofile />}/>

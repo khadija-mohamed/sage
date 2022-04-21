@@ -6,6 +6,7 @@ import Navbar from "../NavBar/NavBar"
 
 const Landing = () => {
   return  (
+   
   
     <div className="main-div">
       <Navbar />
