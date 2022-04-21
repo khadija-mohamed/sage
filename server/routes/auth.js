@@ -13,8 +13,6 @@ module.exports = (db) => {
     return result.rows[0];
   };
 
-  
-
   const potentialLogin = async (email, password) => {
     console.log("Email and password:", email, password);
     const result = await pool.query(
