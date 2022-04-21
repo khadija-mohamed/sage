@@ -16,7 +16,7 @@ export default function Filter() {
 
     useEffect(() => {
       Promise.all([
-        axios.get('http://localhost:8080/filter/dashboard/menteefind')
+        axios.get('http://localhost:8080/filter/dashboard/mentee/menteefind')
       ]).then((all) => {
         setState((prev) => ({
           ...prev,
