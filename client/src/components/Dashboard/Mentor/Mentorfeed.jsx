@@ -10,7 +10,6 @@ export default function Mentorfeed() {
 
 </header>
 
-
     <div class="gallery-item" tabindex="0">
 
       <img src="https://st2.depositphotos.com/1054749/6808/i/600/depositphotos_68088663-stock-photo-portrait-of-a-young-african.jpg" class="gallery-image" alt=""/>
