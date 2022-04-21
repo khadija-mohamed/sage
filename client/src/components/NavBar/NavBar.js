@@ -1,0 +1,13 @@
+import React from 'react';
+
+function NavBar({openSidebar}) {
+  return (
+  <div className="Navbar"> 
+  <div className='menu' onClick={openSidebar}>
+  <i class="fa-solid fa-bars"></i>
+  </div>
+  <div classname="title">Sage</div>
+  </div>
+)}
+
+export default NavBar;

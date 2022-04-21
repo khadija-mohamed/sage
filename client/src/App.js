@@ -3,7 +3,6 @@ import "./App.css";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-
 import Dashboard from "../src/components/Dashboard/Dashboard";
 import Login from "../src/components/Login/Login";
 import Register from "../src/components/Register/Register";
