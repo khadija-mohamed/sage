@@ -6,7 +6,7 @@ function NavBar({openSidebar}) {
   <div className='menu' onClick={openSidebar}>
   <i class="fa-solid fa-bars"></i>
   </div>
-  <div classname="title">Sage</div>
+  <div className="title">Sage</div>
   </div>
 )}
 

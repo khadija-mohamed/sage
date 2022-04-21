@@ -35,7 +35,6 @@ export default function Grid(props) {
 
   return (
     <section>
-      <h1>hello</h1>
       <ul>{menteeList}</ul>
     </section>
   );
