@@ -14,7 +14,6 @@ module.exports = (db) => {
   };
 
   const potentialLogin = async (email, password) => {
-    console.log("Email and password:", email, password);
     const result = await pool.query(
       "SELECT id AS mentee_id, email, password FROM mentees UNION SELECT id AS mentor_id, email, password FROM mentors WHERE email=$1 AND password=$2",
       [email, password]
@@ -67,9 +66,7 @@ module.exports = (db) => {
       }
       });
 
-
   router.post("/login", (req, res) => {
-    console.log("Request:", req.session);
     let templateVars = {
       message: "Email or password is incorrect",
       user: req.session,
