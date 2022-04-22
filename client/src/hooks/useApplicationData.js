@@ -21,7 +21,7 @@ export default function useApplicationData(props) {
       //   mentors: all[0].data
       //   }));
       setState((prev) => {
-        console.log("prev",prev)
+        // console.log("prev",prev)
         return {...prev,
         mentors: all[0].data}
         });
@@ -35,7 +35,7 @@ export default function useApplicationData(props) {
   
 
   return {
-    state
-   
+    state,
+    setState
   };
 }
