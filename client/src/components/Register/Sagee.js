@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import logo from './logo.svg'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 import "./Sagee.css";
+import NavBar from "../NavBar/NavBar";
 
 export default function Sagee() {
   const [email, setEmail] = useState("");
@@ -51,9 +53,17 @@ export default function Sagee() {
 
   return (
     <div className="register-wrapper">
-      <h1>Welcome to Sage</h1>
-      <small> Hello Future Sagee! </small>
-      <form onSubmit={handleSubmit}>
+      <NavBar />
+      <div className="orange-main">
+      <div className="transparent-text">
+      </div>
+      <div className="sage-block">
+        <h1 className="head-main">
+          <span className="head-left"> S</span>
+          <img className="o3" src={logo} alt="logo"/>
+          <span className="head-right">GE</span>
+          <h4> Please register as a Sagee to proceed.
+          <form onSubmit={handleSubmit}>
         <label>
           <p>First Name</p>
           <input
@@ -94,17 +104,7 @@ export default function Sagee() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <label>
-          <p>Upload a Photo</p>
-          {/* <div class="imgbutton">
-          <input type="file" id="img"/>
-          </div> */}
-          <input
-            type="text"
-            id="input"
-            onChange={(e) => setPhotourl(e.target.value)}
-          />
-        </label>
+  
         <label>
           <p>About</p>
           <input
@@ -121,10 +121,25 @@ export default function Sagee() {
             onChange={(e) => setSkill(e.target.value)}
           />
         </label>
+        <label for="file" class="button">
+          <p>Upload a Photo</p>
+          {/* <div class="imgbutton">
+          <input type="file" id="img"/>
+          </div> */}
+          <input
+            type="file"
+            id="input"
+            onChange={(e) => setPhotourl(e.target.value)}
+          />
+        </label>
         <div>
-          <button type="submit">Submit</button>
+        <button class="button-52" type="submit">Submit</button>
         </div>
       </form>
+      </h4>  
+        </h1>
+      </div>
+    </div>
     </div>
   );
 }

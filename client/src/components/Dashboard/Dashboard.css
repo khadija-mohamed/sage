@@ -1,11 +1,8 @@
-.Dashboard {
-  width:100vw ;
-  height: 100vh;
-}
 
 body {
   margin: 0;
   padding: 0;
+  position: sticky;
 }
 
 .Navbar {
@@ -24,7 +21,7 @@ body {
   top: 3px;
   margin-top: 50px;
   left: 0;
-  height: 100vh;
+  height: 175vh;
   width: 250px;
   transform: translateX(-100%);
   transition: all 0.4s;
