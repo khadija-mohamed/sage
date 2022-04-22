@@ -25,7 +25,7 @@ import MentorListItem from '../Mentor/MentorListItem';
 //   )
 // }
 export default function Menteefeed(props) {
-  const { state} = useApplicationData();
+  const { state } = useApplicationData();
   const data = state.mentors;
   const [allData, setData] = useState(data);
   console.log("props",props)
@@ -64,24 +64,22 @@ export default function Menteefeed(props) {
     });
 
     setData(filteredData);
-  };
-
-  
+  };  
 
   return (
     <div className="menteefeed-wrapper"> 
     <div className="container">
       <div className="row">
         <div className="col-sm-3">
-          <Searchbar
+          {/* <Dashboard /> */}
+          <Searchbar 
             locations={generateLocationDataForDropdown()}
             onNameFilter={handleFilterName}
             onSkillFilter={handleFilterSkill}
-            onLocationFilter={handleFilterLocation}
-           
+            onLocationFilter={handleFilterLocation} 
           />
         </div>
-        <Quotes />
+        {/* <Quotes /> */}
         <div className="col-sm-9">
           <div className="row mt-5">
             {allData.map((item) => (
@@ -93,5 +91,4 @@ export default function Menteefeed(props) {
     </div>
     </div>
   );
-
 }
