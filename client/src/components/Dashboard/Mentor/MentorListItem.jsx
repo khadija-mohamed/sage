@@ -4,7 +4,6 @@ import "./MentorListItem.css";
 
 export default function MentorListItem(props) {
  
-
   return (
     <div className='card'>
       <div className="card_photo">
