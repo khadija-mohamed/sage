@@ -20,15 +20,11 @@ import Mentordetail from "./components/Dashboard/Mentor/Mentordetail"
 import Booking from "./components/Dashboard/Booking/Booking";
 import Calendar from "./components/Calendar";
 import useApplicationData from "./hooks/useApplicationData";
-
-
-
-
-
-
+import Video from "./components/Video/Video";
+// import Calendar from "./components/Calendar";
 
 function App() {
-  const { state} = useApplicationData();
+  const { state } = useApplicationData();
 
   // useEffect(() => {
   //   axios.get("http://localhost:8080/").then((response) => {
@@ -61,7 +57,7 @@ function App() {
             <Route path="/dashboard/mentor/mentorfeed" element={<Mentorfeed state ={state}/>} />
             <Route path="/dashboard/mentor/mentorprofile" element={<Mentorprofile />}/>
             <Route path="/dashboard/booking" element={<Booking />}/>
-          
+            <Route path="/dashboard/video" element={<Video />}/>
           </Routes>
       </div>
   );

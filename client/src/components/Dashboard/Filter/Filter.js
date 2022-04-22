@@ -34,12 +34,14 @@
 
 //   return (
 //     <div class="filter">
-//       <form id="filter_form" onSubmit={handleSubmit}>
+//       <div>
+//       {/* <form id="filter_form" onSubmit={handleSubmit}>
 //         <input id="filter_input" type="text" name="skill" placeholder="Enter a skill"></input>
 //       <div>
 //         <button id="filter_button" type="submit">Filter</button>
 //       </div>
-//       </form>
+//       </form> */}
+//       </div>
 //     </div>
 //   )
 // }
