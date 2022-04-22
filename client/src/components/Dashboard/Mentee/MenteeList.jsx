@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./MentorList.css";
+import "./MenteeList.css";
 import MenteeListItem from "./MenteeListItem";
 
 

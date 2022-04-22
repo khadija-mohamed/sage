@@ -12,6 +12,12 @@ export default function Filter() {
 
   const handleSubmit = e => {
     e.preventDefault();
+    if (true) {
+      axios.post(
+        'http://localhost:8080/dashboard/mentee/menteefind'
+      ).then(() => {
+      }).catch(err => err);
+    }
   }
 
     useEffect(() => {
