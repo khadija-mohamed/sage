@@ -64,21 +64,19 @@ export default function Menteefeed(props) {
     });
 
     setData(filteredData);
-  };
-
-  
+  };  
 
   return (
     <div className="menteefeed-wrapper"> 
     <div className="container">
       <div className="row">
         <div className="col-sm-3">
+        {/* <Dashboard /> */}
           <Searchbar
             locations={generateLocationDataForDropdown()}
             onNameFilter={handleFilterName}
             onSkillFilter={handleFilterSkill}
             onLocationFilter={handleFilterLocation}
-           
           />
         </div>
         {/* <Quotes /> */}
@@ -93,5 +91,4 @@ export default function Menteefeed(props) {
     </div>
     </div>
   );
-
 }

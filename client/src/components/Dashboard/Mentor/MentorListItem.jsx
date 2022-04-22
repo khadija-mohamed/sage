@@ -7,9 +7,9 @@ export default function MentorListItem({item}) {
   return (
     <div className='card'>
       <div className="card_photo">
-        <img src={item?.photo_url}></img>
+        <img style={{height: "20em"}} src={item?.photo_url}></img>
       </div>
-        <h3>{item?.first_name} {item?.last_name}</h3>
+        <b>{item?.first_name} {item?.last_name}</b>
 
       <div className="card_description">
         <p>{item?.description}</p>
