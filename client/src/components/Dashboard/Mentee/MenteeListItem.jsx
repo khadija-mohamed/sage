@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./MentorListItem.css";
+import "./MenteeListItem.css";
 
-export default function MentorListItem(props) {
+export default function MenteeListItem(props) {
  
   return (
     <div className='card'>
