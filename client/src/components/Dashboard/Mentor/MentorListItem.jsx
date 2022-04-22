@@ -1,9 +1,12 @@
 import React from "react";
 
 import "./MentorListItem.css";
+import {Link} from 'react-router-dom';
+import { useState } from "react";
 
 export default function MentorListItem({item}) {
  
+  const mentorid = item?.id;
   return (
     <div className='card'>
       <div className="card_photo">
@@ -25,7 +28,10 @@ export default function MentorListItem({item}) {
       </div>
 
       <div>
-        <button className="card_btn">view profile</button>
+        <Link to={`/dashboard/mentee/mentordetail/${mentorid}`}>
+          <button className="card_btn"
+                  >view profile</button>
+        </Link>
       </div>
 
     </div>
