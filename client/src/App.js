@@ -11,14 +11,14 @@ import Sagee from "./components/Register/Sagee";
 import Menteefeed from "./components/Dashboard/Mentee/Menteefeed";
 import Menteeprofile from "./components/Dashboard/Mentee/Menteeprofile"
 import Menteefind from "./components/Dashboard/Mentee/Menteefind"
-import Logout from "./components/Logout/Logout"
+// import Logout from "./components/Logout/Logout"
 import Landing from "./components/Landing/Landing"
 import Mentorconnect from "./components/Dashboard/Mentor/Mentorconnect"
 import Mentorfeed from "./components/Dashboard/Mentor/Mentorfeed"
 import Mentorprofile from "./components/Dashboard/Mentor/Mentorprofile"
 
 import Booking from "./components/Dashboard/Booking/Booking";
-import Calendar from "./components/Calendar";
+// import Calendar from "./components/Calendar";
 
 
 
