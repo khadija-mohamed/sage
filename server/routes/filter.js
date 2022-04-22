@@ -30,16 +30,16 @@ module.exports = (db) => {
       });
   });
 
-  // router.post("/users", (req, res) => {
-  //   const userId = req.session.userId;
-  //   const options = req.body;
+  router.post("/users", (req, res) => {
+    const userId = req.session.userId;
+    const options = req.body;
     
-  //   getAllMentees(db, req.url)
-  //     .then((values) => res.send({ values }))
-  //     .catch((e) => {
-  //       console.error(e);
-  //       res.send(e);
-  //     });
-  // });
+    getAllMentees(db, req.url)
+      .then((values) => res.send({ values }))
+      .catch((e) => {
+        console.error(e);
+        res.send(e);
+      });
+  });
   return router;
 };
