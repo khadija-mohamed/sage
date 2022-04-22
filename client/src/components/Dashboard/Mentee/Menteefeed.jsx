@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './Menteefeed.css';
-import Dashboard from '../Dashboard';
+// import Dashboard from '../Dashboard';
 import Searchbar from '../Searchbar/Searchbar';
-import Filter from '../Filter/Filter';
-import useApplicationData from "../../../hooks/useApplicationData.js";
-import MentorList from '../Mentor/MentorList';
+// import Filter from '../Filter/Filter';
+// import useApplicationData from "../../../hooks/useApplicationData.js";
+// import MentorList from '../Mentor/MentorList';
 import MentorListItem from '../Mentor/MentorListItem';
 import Header from '../../NavBar/Header';
 import Quotes from '../Quotes/Quotes';
@@ -15,7 +15,7 @@ export default function Menteefeed(props) {
   const data = props.state.mentors;
   const [allData, setData] = useState(data);
   
-
+ console.log("feeddata",data)
   
 
   const generateLocationDataForDropdown = () => {
