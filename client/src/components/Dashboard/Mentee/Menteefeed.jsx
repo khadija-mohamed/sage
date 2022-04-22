@@ -6,7 +6,8 @@ import Filter from '../Filter/Filter';
 import useApplicationData from "../../../hooks/useApplicationData.js";
 import MentorList from '../Mentor/MentorList';
 import MentorListItem from '../Mentor/MentorListItem';
-import Booking from '../Booking/Booking';
+import Header from '../../NavBar/Header';
+import Quotes from '../Quotes/Quotes';
 
 
 export default function Menteefeed(props) {
@@ -53,20 +54,25 @@ export default function Menteefeed(props) {
   };  
 
   return (
+   <div className='menteefeed'>
+    <div>
+      <Header/>
+    </div>
+    <div>
+      <Quotes/>
+    </div>
     <div className="menteefeed-wrapper"> 
-    <div className="container">
-      <div className="row">
-        <div className="col-sm-3">
-         <Dashboard />
-         <Searchbar 
-            locations={generateLocationDataForDropdown()}
-            onNameFilter={handleFilterName}
-            onSkillFilter={handleFilterSkill}
-            onLocationFilter={handleFilterLocation} 
-          /> 
-          <Booking />
-        </div>
-        {/* <Quotes /> */}
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-3">
+            <Searchbar 
+              locations={generateLocationDataForDropdown()}
+              onNameFilter={handleFilterName}
+              onSkillFilter={handleFilterSkill}
+              onLocationFilter={handleFilterLocation} 
+            />
+          </div>
+        
         <div className="col-sm-9">
           <div className="mentor-container">
             {allData.map((item) => (
@@ -75,6 +81,7 @@ export default function Menteefeed(props) {
           </div>
         </div>
       </div>
+    </div>
     </div>
     </div>
   );
