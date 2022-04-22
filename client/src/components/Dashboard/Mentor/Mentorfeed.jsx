@@ -1,6 +1,6 @@
 import React from 'react';
 import './Mentorfeed.css';
-import Dashboard from '../Dashboard';
+import MentorDashboard from '../MentorDashboard';
 import Searchbar from '../Searchbar/Searchbar';
 import Grid from '../Grid/Grid';
 import Filter from '../Filter/Filter';
@@ -16,7 +16,7 @@ export default function Mentorfeed() {
         <Grid />
         <Filter />
         <Block/>
-        <Dashboard/>
+        <MentorDashboard/>
         <h1>Meet the Sagees</h1>
         <MenteeList mentees = {state.mentees}/>
     </div>

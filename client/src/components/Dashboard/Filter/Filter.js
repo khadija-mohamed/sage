@@ -8,14 +8,15 @@ export default function Filter() {
     menteeList: {},
   })
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = e => {
     e.preventDefault();
     if (true) {
       axios.post(
-        'http://localhost:8080/dashboard/mentee/menteefind'
+        'http://localhost:8080/filter/dashboard/mentee/menteefind'
       ).then(() => {
+        navigate('/dashboard/mentee/menteefind');
       }).catch(err => err);
     }
   }
