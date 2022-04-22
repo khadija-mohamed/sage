@@ -10,12 +10,11 @@ import Booking from '../Booking/Booking';
 
 
 export default function Menteefeed(props) {
-  
-  const data = props.state.mentors;
-  const [allData, setData] = useState(data);
-  
 
+  const { state } = useApplicationData();
   
+  const data = state.mentors;
+  const [allData, setData] = useState(data);
 
   const generateLocationDataForDropdown = () => {
     return [...new Set(data.map((item) => item.location))];
@@ -66,7 +65,6 @@ export default function Menteefeed(props) {
           /> 
           <Booking />
         </div>
-        {/* <Quotes /> */}
         <div className="col-sm-9">
           <div className="mentor-container">
             {allData.map((item) => (
