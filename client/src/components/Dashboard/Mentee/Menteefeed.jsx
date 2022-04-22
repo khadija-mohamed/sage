@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import './Menteefeed.css';
 import Dashboard from '../Dashboard';
 import Searchbar from '../Searchbar/Searchbar';
-import Filter from '../Filter/Filter';
 import useApplicationData from "../../../hooks/useApplicationData.js";
 import MentorList from '../Mentor/MentorList';
 import MentorListItem from '../Mentor/MentorListItem';
-import Booking from '../Booking/Booking';
+
 
 
 export default function Menteefeed(props) {
@@ -64,7 +63,7 @@ export default function Menteefeed(props) {
             onSkillFilter={handleFilterSkill}
             onLocationFilter={handleFilterLocation} 
           /> 
-          <Booking />
+    
         </div>
         {/* <Quotes /> */}
         <div className="col-sm-9">
