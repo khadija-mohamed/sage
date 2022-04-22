@@ -1,33 +1,33 @@
 import React from "react";
 
-import "./MentorListItem.css";
+import "./MenteeListItem.css";
 
-export default function MentorListItem({item}) {
+export default function MenteeListItem(props) {
  
   return (
     <div className='card'>
       <div className="card_photo">
-        <img src={item?.photo}></img>
+        <img src={props.photo}></img>
       </div>
-        <h3>{item?.firstname} {item?.lastname}</h3>
-
+        <h3>{props.firstname} {props.lastname}</h3>
+      
       <div className="card_description">
-        <p>{item?.description}</p>
-
+        <p>{props.description}</p>
+        
       </div>
       <div className="card_tag">
-        <p>{item?.skill}</p>
-
+        <p>{props.skill}</p>
+        
       </div>
       <div className="card_tag">
-        <p>{item?.location}</p>
-
+        <p>{props.location}</p>
+        
       </div>
-
+        
       <div>
         <button className="card_btn">view profile</button>
       </div>
-
+      
     </div>
   );
 }
