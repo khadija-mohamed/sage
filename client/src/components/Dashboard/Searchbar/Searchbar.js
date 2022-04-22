@@ -33,20 +33,17 @@
 
 import { useState } from "react";
 
-
-
 const Searchbar = ({
   locations,
   onNameFilter,
+  onSkillFilter,
   onLocationFilter,
-  onSkillFilter
   
-}) => {
+}, item) => {
   const [filters, setFilters] = useState({
     name: "",
     skill: "",
-    Location: ""
-    
+    location: "",
   });
 
   const handleInput = (field) => (event) => {
@@ -64,7 +61,7 @@ const Searchbar = ({
       case "skill":
         onSkillFilter(value);
         break;
-      case "Location":
+      case "location":
         onLocationFilter(value);
         break;
       
@@ -85,6 +82,12 @@ const Searchbar = ({
           value={filters.name}
           onChange={handleInput("name")}
         />
+      </div>
+      <div>
+        <img src={item.photo}></img>
+      </div>
+      <div>
+        <p>{item.description}</p>
       </div>
 
       <div className="col-sm-12 my-2">
