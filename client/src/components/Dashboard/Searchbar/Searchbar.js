@@ -6,7 +6,7 @@ const Searchbar = ({
   onNameFilter,
   onSkillFilter,
   onLocationFilter,
-  
+
 }, item) => {
   const [filters, setFilters] = useState({
     name: "",
@@ -32,7 +32,7 @@ const Searchbar = ({
       case "location":
         onLocationFilter(value);
         break;
-      
+
     }
   };
 
@@ -75,7 +75,7 @@ const Searchbar = ({
           id="location"
           onChange={handleInput("location")}
         >
-          <option value="">Select</option>
+          <option value=""> Select </option>
           {locations.map((location) => (
             <option value={location} key={location}>
               {location}
@@ -84,7 +84,7 @@ const Searchbar = ({
         </select>
       </div>
 
-      
+
     </div>
   );
 };
