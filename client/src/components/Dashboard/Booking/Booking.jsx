@@ -1,14 +1,12 @@
-import React from "react";
-import Dashboard from '../Dashboard';
-import Searchbar from '../Searchbar/Searchbar';
+import React from 'react';
+import NavBar from '../../NavBar/NavBar';
+
 
 
 export default function Booking() {
   return(
-    <div className="booking">
-    <Searchbar/>
-    <Dashboard/>
-    
-    </div>
+    <div className="Booking">
+      <NavBar />
+</div>
   )
 }
