@@ -21,7 +21,8 @@ const Searchbar = ({
       ...filters,
       [field]: value,
     });
-
+    
+    if(value) {
     switch (field) {
       case "name":
         onNameFilter(value);
@@ -32,8 +33,11 @@ const Searchbar = ({
       case "location":
         onLocationFilter(value);
         break;
+      default:
+        break;
       
     }
+  }
   };
 
   return (
