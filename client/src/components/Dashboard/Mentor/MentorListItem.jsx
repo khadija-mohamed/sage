@@ -4,14 +4,12 @@ import "./MentorListItem.css";
 
 export default function MentorListItem(props) {
  
-
   return (
     <div className='card'>
       <div className="card_photo">
-        <img src={props.photo_url} 
-              alt=''/>
+        <img src={props.photo}></img>
       </div>
-        <h3>{props.first_name} {props.last_name}</h3>
+        <h3>{props.firstname} {props.lastname}</h3>
       
       <div className="card_description">
         <p>{props.description}</p>
