@@ -1,37 +1,5 @@
-// import React from 'react';
-// import search from "./search.svg";
-// import './Searchbar.css';
-// import { useState } from 'react';
-
-// export default function Searchbar() {
-//   const{searchname, setSearch} = useState('');
-//   const searchText = (event) =>{
-//     setSearch(event.target.value);
-//   }
-//   let dataSearch = state.mentors.filter( item => {
-//     return Object.keys(item).some(key => 
-//       item[key].toString().toLowerCase().include(searchname.toString().toLowerCase()))
-
-//   })
-//   console.warn(searchname)
-//   return(
-//     <div className="search">
-//     <img src={search} className="search-logo" alt="search" />
-//     <input 
-//       type="text"
-//       id='input'
-//       placeholder='Search By Name...' 
-//       value={searchname}
-//       onChange = {searchText.bind(this)}
-//     />
-
-    
-//     </div>
-//   )
-// }
-
-
 import { useState } from "react";
+import './Searchbar.css'
 
 const Searchbar = ({
   locations,
@@ -69,7 +37,7 @@ const Searchbar = ({
   };
 
   return (
-    <div className="row my-5">
+    <div className="row-my-5">
       <div className="col">
         <h4 className="border-bottom">Filters</h4>
       </div>

@@ -25,12 +25,13 @@ const eventEndTime = new Date()
 eventEndTime.setDate(eventEndTime.getDay() + 23)
 eventEndTime.setMinutes(eventEndTime.getMinutes() + 25)
 
+
 // Create a dummy event for temp uses in our calendar
 const event = {
-  summary: `Meeting with Sage group`,
-  location: `Discord`,
+  summary: title + `Hanthala`,
+  location: `Perth`,
   description: `Get this ridiculous project out the way.`,
-  colorId: 1,
+  colorId: 5,
   start: {
     dateTime: eventStartTime,
     timeZone: 'America/Denver',
@@ -41,7 +42,7 @@ const event = {
   },
 }
 
-const sage = '83f4i6cd807d82eiok2q56bu3k@group.calendar.google.com'
+// const sage = '83f4i6cd807d82eiok2q56bu3k@group.calendar.google.com'
 // Check if we a busy and have an event on our calendar for the same time.
 calendar.freebusy.query(
   {
@@ -49,21 +50,22 @@ calendar.freebusy.query(
       timeMin: eventStartTime,
       timeMax: eventEndTime,
       timeZone: 'America/Denver',
-      items: [{ id: sage }],
+      items: [{ id: 'primary' }],
     },
   },
+  
   (err, res) => {
     // Check for errors in our query and log them if they exist.
     if (err) return console.error('Free Busy Query Error: ', err)
 
     // Create an array of all events on our calendar during that time.
-    const eventArr = res.data.calendars[sage].busy
+    const eventArr = res.data.calendars.primary.busy
 
     // Check if event array is empty which means we are not busy
     if (eventArr.length === 0)
       // If we are not busy create a new calendar event.
       return calendar.events.insert(
-        { calendarId: sage, resource: event },
+        { calendarId: 'primary', resource: event },
         err => {
           // Check for errors and log them if they exist.
           if (err) return console.error('Error Creating Calender Event:', err)

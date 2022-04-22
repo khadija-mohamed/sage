@@ -1,9 +1,11 @@
-.search {
-  position: absolute;
+.row-my-5{
+  width: 25em;
+  margin: 1em auto;
+  margin-left: 5em;
+  float: right;
+  border: 2px solid black;
 }
-.search-logo {
-  margin-top: 9px;
-  height: 25px;
-  margin-left: 570px;
-  position: absolute;
+
+.skill{
+  font: bold;
 }
