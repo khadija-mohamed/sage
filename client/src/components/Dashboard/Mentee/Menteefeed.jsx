@@ -71,15 +71,13 @@ export default function Menteefeed(props) {
     <div className="container">
       <div className="row">
         <div className="col-sm-3">
-          {/* <Dashboard />
-          <Filter /> */}
+          {/* <Dashboard /> */}
           <Searchbar 
             locations={generateLocationDataForDropdown()}
             onNameFilter={handleFilterName}
             onSkillFilter={handleFilterSkill}
             onLocationFilter={handleFilterLocation} 
           />
-          <MentorList />
         </div>
         {/* <Quotes /> */}
         <div className="col-sm-9">
