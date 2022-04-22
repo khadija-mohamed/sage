@@ -72,12 +72,12 @@ export default function Login(props) {
           <span className="head-left"> S</span>
           <img className="o3" src={logo} alt="logo"/>
           <span className="head-right">GE</span>
-          <h4>Sign up as a Sagee or Sage
-          <form action="">
+          <h4> Please enter email and Password to proceed.
+          <form onSubmit={handleSubmit} action="">
   <label for=""></label>
   <input type="text" name="" id="" placeholder="email" class="email" onChange={e => setEmail(e.target.value)}></input>
   <label for=""></label>
-  <input type="password" name="" id="" placeholder="password" class="pass"onChange={e => setPassword(e.target.value)}></input>
+  <input type="password" name="" id="" placeholder="password" class="pass" onChange={e => setPassword(e.target.value)}></input>
   <button class="button-52" type="submit">Submit</button>
 </form>
 </h4>  
