@@ -2,12 +2,12 @@ import React from 'react';
 import logo from "./logo.svg"
 import light from "./light.svg"
 import './Menteeprofile.css';
-import Dashboard from '../Dashboard';
+import Header from '../../NavBar/Header';
 
 export default function Menteeprofile() {
   return(
     <div className="menteeprofile-wrapper">
-     <Dashboard/>
+     <Header/>
      <div className='mentee-profile'>
      <img className="person" src={logo} alt="logo"/>
      <div class="grid">
