@@ -1,7 +1,14 @@
-.card {
-  margin-top: auto;
+.card-photo {
+  margin: auto 0;
 }
 
-/* .card_photo {
-  height: 20em;
-} */
+.mentor-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 150vh;
+  position: sticky;
+} 
+
+

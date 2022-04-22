@@ -1,37 +1,99 @@
-.sagee-wrapper {
-  display: flex;
-  flex-direction: column;
+#bg {
+  position: fixed;
+  width: 100%;
+  height: 100%; 
+}
+
+form {
+  position: relative;
+  width: 250px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px 22px;
+}
+
+form input, form button {
+  width: 212px;
+  background-repeat: no-repeat;
+  padding: 8px 24px 8px 10px;
+  font: inherit;
+  letter-spacing: .075em;
+  color: rgb(0, 0, 0);
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  margin-bottom: 19px;
+}
+/* CSS */
+.button-52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-52:after {
+  content: "";
+  background-color: rgb(9, 73, 57);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+}
+
+.buttons {
   align-items: center;
   justify-content: center;
-  width: 80vh;
-  height: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+
+h4 {
+  font-size: 14px;
+  width: 25rem;
+  height: auto;
   margin: 0 auto;
-  margin-top: 6%;
-  border: solid 0.5px;
-  border-radius: 3%;
-  background-image: url(https://images.unsplash.com/photo-1506543730435-e2c1d4553a84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
-  background-size:     cover;                      
-  background-repeat:   no-repeat;
-  background-position: center center;  
+  margin-top: 10px;
 }
 
-.sagee-wrapper h1 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: 300;
+.space{
+  width: 7rem;
+  height: auto;
+  display: inline-block;
 }
 
-input  {
-  position: relative;
-  padding: 10px 0 0;
-  width: 50%;
-  font-family: inherit;
-  width: 100%;
-  border: 0;
-  border-bottom: 1px solid gray;
-  outline: 0;
-  font-size: 1.3rem;
-  color: rgb(0, 0, 0);
-  padding: 5px 0;
-  background: transparent;
+a:link{
+  color:white;
+  text-decoration: none;
+}
 
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
 }
