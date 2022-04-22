@@ -16,14 +16,9 @@ import Landing from "./components/Landing/Landing"
 import Mentorconnect from "./components/Dashboard/Mentor/Mentorconnect"
 import Mentorfeed from "./components/Dashboard/Mentor/Mentorfeed"
 import Mentorprofile from "./components/Dashboard/Mentor/Mentorprofile"
-
 import Booking from "./components/Dashboard/Booking/Booking";
+import Video from "./components/Video/Video";
 // import Calendar from "./components/Calendar";
-
-
-
-
-
 
 function App() {
   //  const { mentorState} = useApplicationData();
@@ -58,7 +53,7 @@ function App() {
             <Route path="/dashboard/mentor/mentorfeed" element={<Mentorfeed />}/>
             <Route path="/dashboard/mentor/mentorprofile" element={<Mentorprofile />}/>
             <Route path="/dashboard/booking" element={<Booking />}/>
-          
+            <Route path="/dashboard/video" element={<Video />}/>
           </Routes>
       </div>
   );
