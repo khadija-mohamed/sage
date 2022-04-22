@@ -18,6 +18,7 @@ import Mentorfeed from "./components/Dashboard/Mentor/Mentorfeed"
 import Mentorprofile from "./components/Dashboard/Mentor/Mentorprofile"
 
 import Booking from "./components/Dashboard/Booking/Booking";
+import Calendar from "./components/Calendar";
 
 
 
@@ -57,6 +58,7 @@ function App() {
             <Route path="/dashboard/mentor/mentorfeed" element={<Mentorfeed />}/>
             <Route path="/dashboard/mentor/mentorprofile" element={<Mentorprofile />}/>
             <Route path="/dashboard/booking" element={<Booking />}/>
+          
           </Routes>
       </div>
   );
