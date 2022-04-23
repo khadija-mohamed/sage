@@ -3,17 +3,16 @@ import './Menteefeed.css';
 import Dashboard from '../Dashboard';
 import Searchbar from '../Searchbar/Searchbar';
 import useApplicationData from "../../../hooks/useApplicationData.js";
-import MentorList from '../Mentor/MentorList';
-import MentorListItem from '../Mentor/MentorListItem';
-
-
+import MentorListItem from '../Mentor/MentorListItem'
 
 export default function Menteefeed(props) {
-  
-  const data = props.state.mentors;
-  const [allData, setData] = useState(data);
-  
 
+  const { state } = useApplicationData();
+
+  console.log("State:", state.mentors);
+  
+  const data = state.mentors;
+  const [allData, setData] = useState(data);
 
   const generateLocationDataForDropdown = () => {
     return [...new Set(data.map((item) => item.location))];
@@ -62,15 +61,21 @@ export default function Menteefeed(props) {
             onSkillFilter={handleFilterSkill}
             onLocationFilter={handleFilterLocation} 
           /> 
-    
         </div>
-        {/* <Quotes /> */}
         <div className="col-sm-9">
+      { allData.length === 0 ?
+        <div className="mentor-container">
+            {data.map((item) => (
+              <MentorListItem item={item} key={item.id} />
+            ))}
+          </div>
+      :
           <div className="mentor-container">
             {allData.map((item) => (
               <MentorListItem item={item} key={item.id} />
             ))}
           </div>
+      }
         </div>
       </div>
     </div>
