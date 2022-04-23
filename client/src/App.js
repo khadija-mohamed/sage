@@ -24,7 +24,7 @@ import Video from "./components/Video/Video";
 // import Calendar from "./components/Calendar";
 
 function App() {
-  const { state } = useApplicationData();
+  const { state , setState} = useApplicationData();
 
   // useEffect(() => {
   //   axios.get("http://localhost:8080/").then((response) => {
@@ -39,12 +39,13 @@ function App() {
 
   // }
 
+
   return (
     <div>
           <Routes>
-            <Route path="/dashboard" index element={<Dashboard />}/>
+            <Route path="/dashboard" index element={<Dashboard/>}/>
             <Route path="/" element={<Landing />}/>
-            <Route path="/login" element={<Login />}/>
+            <Route path="/login" element={<Login  state = {state}/>} />
             <Route path="/register" element={<Register />}/>
             <Route path="/register/sage" element={<Sage />}/>
             <Route path="/register/sagee" element={<Sagee />}/>

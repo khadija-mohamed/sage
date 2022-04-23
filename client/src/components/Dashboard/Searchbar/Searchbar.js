@@ -6,7 +6,7 @@ const Searchbar = ({
   onNameFilter,
   onSkillFilter,
   onLocationFilter,
-  
+  defaultData
 }, item) => {
   const [filters, setFilters] = useState({
     name: "",
@@ -22,21 +22,22 @@ const Searchbar = ({
       [field]: value,
     });
     
-    if(value) {
-    switch (field) {
-      case "name":
-        onNameFilter(value);
-        break;
-      case "skill":
-        onSkillFilter(value);
-        break;
-      case "location":
-        onLocationFilter(value);
-        break;
-      default:
-        break;
+    
+  switch (field) {
+    case "name":
+      onNameFilter(value);
+      break;
+    case "skill":
+      onSkillFilter(value);
+      break;
+    case "location":
+      onLocationFilter(value);
+      break;
+    default:
+      defaultData(value);
+      break;
       
-    }
+    
   }
   };
 
@@ -55,12 +56,12 @@ const Searchbar = ({
           onChange={handleInput("name")}
         />
       </div>
-      <div>
-        <img src={item.photo}></img>
-      </div>
-      <div>
+       {/* <div>
+        <img src={item.photo_url} alt=''></img>
+      </div> 
+       <div>
         <p>{item.description}</p>
-      </div>
+      </div>  */}
 
       <div className="col-sm-12 my-2">
         <label htmlFor="skill">Skills</label>
