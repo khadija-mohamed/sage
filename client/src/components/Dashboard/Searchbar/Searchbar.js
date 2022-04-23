@@ -1,13 +1,11 @@
-import { useState } from "react";
-import './Searchbar.css'
+import React, { useState } from "react";
+import "./Searchbar.scss";
 
-const Searchbar = ({
-  locations,
-  onNameFilter,
-  onSkillFilter,
-  onLocationFilter,
+const Searchbar = (
 
-}, item) => {
+  { locations, onNameFilter, onSkillFilter, onLocationFilter },
+  item
+) => {
   const [filters, setFilters] = useState({
     name: "",
     skill: "",
@@ -15,6 +13,7 @@ const Searchbar = ({
   });
 
   const handleInput = (field) => (event) => {
+    event.preventDefault();
     const { value } = event.target;
 
     setFilters({
@@ -32,14 +31,24 @@ const Searchbar = ({
       case "location":
         onLocationFilter(value);
         break;
-
     }
   };
+
+  // use handleFilter in form for form submission
+  // const handleFilter = (event) => {
+  //   event.preventDefault();
+  //   const { value } = event.target;
+
+  //   setFilters((field) => ({
+  //     ...filters,
+  //     [field]: value,
+  //   }));
+  // };
 
   return (
     <div className="row-my-5">
       <div className="col">
-        <h2>Find a Sage</h2>
+        <h4 className="border-bottom"></h4>
       </div>
       <div className="col-sm-12 my-2">
         <label htmlFor="name">Search by Name</label>
@@ -83,10 +92,8 @@ const Searchbar = ({
           ))}
         </select>
       </div>
-
     </div>
   );
 };
-
 
 export default Searchbar;
