@@ -3,7 +3,7 @@ import './Menteefeed.css';
 import Dashboard from '../Dashboard';
 import Searchbar from '../Searchbar/Searchbar';
 import useApplicationData from "../../../hooks/useApplicationData.js";
-import MentorListItem from '../Mentor/MentorListItem';
+import MentorListItem from '../Mentor/MentorListItem'
 
 export default function Menteefeed(props) {
 
@@ -13,9 +13,6 @@ export default function Menteefeed(props) {
   
   const data = state.mentors;
   const [allData, setData] = useState(data);
-
-  console.log("All Data:", allData);
-  console.log("Data:", data);
 
   const generateLocationDataForDropdown = () => {
     return [...new Set(data.map((item) => item.location))];

@@ -51,7 +51,7 @@ const Searchbar = (
         <h4 className="border-bottom"></h4>
       </div>
       <div className="col-sm-12 my-2">
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Search by Name</label>
         <input
           type="text"
           className="form-control"
@@ -68,7 +68,7 @@ const Searchbar = (
       </div>
 
       <div className="col-sm-12 my-2">
-        <label htmlFor="skill">Skills</label>
+        <label htmlFor="skill">Search by Skills</label>
         <input
           type="text"
           className="form-control"
@@ -77,14 +77,14 @@ const Searchbar = (
         />
       </div>
 
-      <div className="col-sm-12 my-2">
-        <label htmlFor="location">Location</label>
+      <div className="col-sm-12-my-2">
+        <label htmlFor="location"> Search by location </label>
         <select
-          className="form-control"
+          className="form-control-button"
           id="location"
           onChange={handleInput("location")}
         >
-          <option value="">Select</option>
+          <option value=""> Select </option>
           {locations.map((location) => (
             <option value={location} key={location}>
               {location}

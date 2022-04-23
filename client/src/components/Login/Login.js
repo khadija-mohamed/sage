@@ -69,6 +69,7 @@ export default function Login(props) {
       <NavBar />
       {/* <div id="bg"></div> */}
       <div className="orange-main">
+<<<<<<< HEAD
         <div className="transparent-text"></div>
         <div className="sage-block">
           <h1 className="head-main">
@@ -104,6 +105,25 @@ export default function Login(props) {
             </h4>
           </h1>
         </div>
+=======
+      <div className="transparent-text">
+      </div>
+      <div className="sage-block">
+        <h1 className="head-main">
+          <span className="head-left"> S</span>
+          <img className="o3" src={logo} alt="logo"/>
+          <span className="head-right">GE</span>
+          <h4> Please enter email and password to proceed.
+          <form onSubmit={handleSubmit} action="">
+  <label for=""></label>
+  <input type="text" name="" id="" placeholder="email" class="email" onChange={e => setEmail(e.target.value)}></input>
+  <label for=""></label>
+  <input type="password" name="" id="" placeholder="password" class="pass" onChange={e => setPassword(e.target.value)}></input>
+  <button class="button-52" type="submit">Submit</button>
+</form>
+</h4>  
+        </h1>
+>>>>>>> 05587d60e943b6306eeab5762a3a6812a38de7b2
       </div>
     </div>
   );
