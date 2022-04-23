@@ -4,13 +4,19 @@ import Dashboard from '../Dashboard';
 import Searchbar from '../Searchbar/Searchbar';
 import useApplicationData from "../../../hooks/useApplicationData.js";
 import MentorListItem from '../Mentor/MentorListItem';
+import MentorList from '../Mentor/MentorList';
 
 export default function Menteefeed(props) {
 
   const { state } = useApplicationData();
+
+  console.log("State:", state.mentors);
   
   const data = state.mentors;
   const [allData, setData] = useState(data);
+
+  console.log("All Data:", allData);
+  console.log("Data:", data);
 
   const generateLocationDataForDropdown = () => {
     return [...new Set(data.map((item) => item.location))];
@@ -61,11 +67,19 @@ export default function Menteefeed(props) {
           /> 
         </div>
         <div className="col-sm-9">
+      { allData.length === 0 ?
+        <div className="mentor-container">
+            {data.map((item) => (
+              <MentorListItem item={item} key={item.id} />
+            ))}
+          </div>
+      :
           <div className="mentor-container">
             {allData.map((item) => (
               <MentorListItem item={item} key={item.id} />
             ))}
           </div>
+      }
         </div>
       </div>
     </div>
