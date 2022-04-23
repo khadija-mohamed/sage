@@ -1,9 +1,8 @@
+import { useState } from 'react';
 import logo from './logo.svg'
 import Axios from 'axios'
 import NavBar from '../../NavBar/NavBar';
 import './booking.scss'
-import { useState } from 'react';
-
 
 
 export default function Booking(props) {
