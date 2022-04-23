@@ -4,6 +4,7 @@ import logo from "./logo.svg"
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import NavBar from '../NavBar/NavBar';
+import Header from '../NavBar/Header';
 
 export default function Login(props) {
   // const { setIsLoggedIn, onUpdate } = props;
@@ -11,6 +12,7 @@ export default function Login(props) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const [user, setUser] = useState("");
 
   // const params = useParams();
   // const navigate = useNavigate();
@@ -46,6 +48,7 @@ export default function Login(props) {
         'http://localhost:8080/login/login', { email: email, password: password }
       ).then(() => {
         navigate('/dashboard');
+        setUser(email);
         // setIsLoggedIn(true);
         // onUpdate(true);
       }).catch(err => err);
@@ -62,7 +65,7 @@ export default function Login(props) {
 
   return(
     <div className="login-wrapper">
-      <NavBar />
+       { setUser.length === 0 ? <Header /> : <Header user = {email} /> }
       {/* <div id="bg"></div> */}
       <div className="orange-main">
       <div className="transparent-text">

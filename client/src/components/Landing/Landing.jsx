@@ -9,7 +9,7 @@ const Landing = () => {
    
   
     <div className="main-div">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="orange-main">
         <div className="transparent-text">
         </div>

@@ -7,9 +7,9 @@ export default function MenteeListItem(props) {
   return (
     <div className='card'>
       <div className="card_photo">
-        <img src={props.photo}></img>
+        <img src={props.photo_utl} alt=""/>
       </div>
-        <h3>{props.firstname} {props.lastname}</h3>
+        <h3>{props.first_name} {props.last_name}</h3>
       
       <div className="card_description">
         <p>{props.description}</p>

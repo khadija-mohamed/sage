@@ -1,17 +1,19 @@
 
 import React, { useState } from 'react';
 
-function Header() {
+function Header(props) {
   const[sidebar, setSidebar] = useState(false);
+  console.log("headerprops",props.user)
   const toggleSidebar = () => {
     setSidebar((prevState) => !prevState)
   }
+
   return (
   <div className="Navbar"> 
     <div className='menu' onClick={toggleSidebar}>
       <i class="fa-solid fa-bars"></i>
     </div>
-    <div className="title">Sage</div>
+    <div className="title">Sage {props.user}</div>
   <div className={sidebar?"backdrop backdrop--open":"backdrop"} onClick={toggleSidebar}></div>
   <div className={sidebar?"sidebar sidebar--open":"sidebar"}>
     <li><i class="fa-solid fa-user"></i><a href="/dashboard/mentee/menteeprofile">My Profile</a></li>
