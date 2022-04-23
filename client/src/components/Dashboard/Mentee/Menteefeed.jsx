@@ -14,7 +14,6 @@ export default function Menteefeed(props) {
   const [allData, setData] = useState(data);
   
 
-  
 
   const generateLocationDataForDropdown = () => {
     return [...new Set(data.map((item) => item.location))];

@@ -89,7 +89,7 @@ export default function Video() {
   };
 
   const generateRoomName = () =>
-    `JitsiMeetRoomNo${Math.random() * 100}-${Date.now()}`;
+    `SageRoomNo${1}`;
 
   // Multiple instances demo
   const renderNewInstance = () => {

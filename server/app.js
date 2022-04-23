@@ -13,7 +13,7 @@ const mentorsRouter = require("./routes/mentors");
 const authRouter = require("./routes/auth");
 const searchRouter = require("./routes/search");
 const filterRouter = require("./routes/filter");
-// const appointmentsRouter = require('./routes/appointments');
+const appointmentsRouter = require("./routes/appoinments")
 
 const app = express();
 
@@ -47,6 +47,6 @@ app.use("/mentors", mentorsRouter(db));
 app.use("/login", authRouter(db));
 app.use("/search",searchRouter(db));
 app.use("/filter", filterRouter(db));
-// app.use('/appointments', appointmentsRouter(db));
+app.use("/appointments", appointmentsRouter(db));
 
 module.exports = app;
