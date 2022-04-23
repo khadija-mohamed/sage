@@ -72,7 +72,7 @@ export default function Login(props) {
           <span className="head-left"> S</span>
           <img className="o3" src={logo} alt="logo"/>
           <span className="head-right">GE</span>
-          <h4> Please enter email and Password to proceed.
+          <h4> Please enter email and password to proceed.
           <form onSubmit={handleSubmit} action="">
   <label for=""></label>
   <input type="text" name="" id="" placeholder="email" class="email" onChange={e => setEmail(e.target.value)}></input>

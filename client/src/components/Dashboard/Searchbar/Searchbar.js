@@ -39,10 +39,10 @@ const Searchbar = ({
   return (
     <div className="row-my-5">
       <div className="col">
-        <h4 className="border-bottom">Filters</h4>
+        <h2>Find a Sage</h2>
       </div>
       <div className="col-sm-12 my-2">
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Search by Name</label>
         <input
           type="text"
           className="form-control"
@@ -59,7 +59,7 @@ const Searchbar = ({
       </div>
 
       <div className="col-sm-12 my-2">
-        <label htmlFor="skill">Skills</label>
+        <label htmlFor="skill">Search by Skills</label>
         <input
           type="text"
           className="form-control"
@@ -68,10 +68,10 @@ const Searchbar = ({
         />
       </div>
 
-      <div className="col-sm-12 my-2">
-        <label htmlFor="location">Location</label>
+      <div className="col-sm-12-my-2">
+        <label htmlFor="location"> Search by location </label>
         <select
-          className="form-control"
+          className="form-control-button"
           id="location"
           onChange={handleInput("location")}
         >
@@ -83,7 +83,6 @@ const Searchbar = ({
           ))}
         </select>
       </div>
-
 
     </div>
   );
