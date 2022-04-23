@@ -53,8 +53,8 @@ a:hover {
 }
 
 .sidebar li:hover {
-  background-color: rgb(114, 204, 177);
-  color: black;
+  background-color: rgb(103, 163, 145);
+  color: rgb(86, 255, 204);
  }
 
  .sidebar--open{

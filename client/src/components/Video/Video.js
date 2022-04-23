@@ -88,7 +88,12 @@ export default function Video() {
     navigate("/dashboard");
   };
 
+<<<<<<< HEAD
   const generateRoomName = () => `SageRoomNo${3754 * 13674}`;
+=======
+  const generateRoomName = () =>
+    `SageRoomNo${1}`;
+>>>>>>> 05587d60e943b6306eeab5762a3a6812a38de7b2
 
   // Multiple instances demo
   const renderNewInstance = () => {
