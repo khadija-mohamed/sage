@@ -5,17 +5,12 @@ import Searchbar from '../Searchbar/Searchbar';
 
 import Quotes from '../Quotes/Quotes';
 
-<<<<<<< HEAD
-
-import MentorListItem from '../Mentor/MentorListItem';
-import Header from '../../NavBar/Header';
-=======
 // import React, { useContext } from 'react';
 import MentorListItem from '../Mentor/MentorListItem';
 import Header from '../../NavBar/Header';
 import { UserContext } from '../../../UserContext';
+import Dashboard from '../Dashboard';
 
->>>>>>> myprofile
 
 
 export default function Menteefeed(props) {
@@ -24,10 +19,9 @@ export default function Menteefeed(props) {
   const [allData, setData] = useState(data);
   
  
-  const {user} = useContext(UserContext);
+  // const {user} = useContext(UserContext);
   
- console.log("hihih",user)
- console.log("what is props",props.user)
+
   const generateLocationDataForDropdown = () => {
     return [...new Set(data.map((item) => item.location))];
   };
@@ -63,44 +57,38 @@ export default function Menteefeed(props) {
     setData(filteredData);
   };  
 
-  const defaultData = () => {
-    setData(data);
-  }
+
   return (
-   <div className='menteefeed'>
-    <div>
-      <Header/>
-    </div>
-    <div>
-      <Quotes/>
-    </div>
-<<<<<<< HEAD
-=======
-    <h4>{user.email}</h4>
->>>>>>> myprofile
-    <div className="menteefeed-wrapper"> 
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-3">
-            <Searchbar 
-              locations={generateLocationDataForDropdown()}
-              onNameFilter={handleFilterName}
-              onSkillFilter={handleFilterSkill}
-              onLocationFilter={handleFilterLocation}
-               defaultData ={defaultData}
-            />
-          </div>
-        
+  <div className="menteefeed-wrapper"> 
+    <div className="container">
+      <div className="row">
+        <div className="col-sm-3">
+         <Dashboard />
+         <Searchbar 
+            locations={generateLocationDataForDropdown()}
+            onNameFilter={handleFilterName}
+            onSkillFilter={handleFilterSkill}
+            onLocationFilter={handleFilterLocation} 
+          /> 
+        </div>
         <div className="col-sm-9">
-          <div className="row mt-5">
+      { allData.length === 0 ?
+        <div className="mentor-container">
+            {data.map((item) => (
+              <MentorListItem item={item} key={item.id} />
+            ))}
+          </div>
+      :
+          <div className="mentor-container">
             {allData.map((item) => (
               <MentorListItem item={item} key={item.id} />
             ))}
           </div>
+      }
         </div>
       </div>
     </div>
     </div>
-    </div>
+    
   );
 }

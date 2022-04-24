@@ -1,5 +1,5 @@
-import { useState } from "react";
-import './Searchbar.css'
+import React, { useState } from "react";
+import "./Searchbar.scss";
 
 const Searchbar = ({
   locations,
@@ -15,6 +15,7 @@ const Searchbar = ({
   });
 
   const handleInput = (field) => (event) => {
+    event.preventDefault();
     const { value } = event.target;
 
     setFilters({
@@ -41,13 +42,24 @@ const Searchbar = ({
   }
   };
 
+  // use handleFilter in form for form submission
+  // const handleFilter = (event) => {
+  //   event.preventDefault();
+  //   const { value } = event.target;
+
+  //   setFilters((field) => ({
+  //     ...filters,
+  //     [field]: value,
+  //   }));
+  // };
+
   return (
     <div className="row-my-5">
       <div className="col">
-        <h4 className="border-bottom">Filters</h4>
+        {/* <h4 className="border-bottom"></h4> */}
       </div>
       <div className="col-sm-12 my-2">
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Search by Name</label>
         <input
           type="text"
           className="form-control"
@@ -64,7 +76,7 @@ const Searchbar = ({
       </div>  */}
 
       <div className="col-sm-12 my-2">
-        <label htmlFor="skill">Skills</label>
+        <label htmlFor="skill">Search by Skills</label>
         <input
           type="text"
           className="form-control"
@@ -73,14 +85,14 @@ const Searchbar = ({
         />
       </div>
 
-      <div className="col-sm-12 my-2">
-        <label htmlFor="location">Location</label>
+      <div className="col-sm-12-my-2">
+        <label htmlFor="location"> Search by location </label>
         <select
-          className="form-control"
+          className="form-control-button"
           id="location"
           onChange={handleInput("location")}
         >
-          <option value="">Select</option>
+          <option value=""> Select </option>
           {locations.map((location) => (
             <option value={location} key={location}>
               {location}
@@ -88,11 +100,8 @@ const Searchbar = ({
           ))}
         </select>
       </div>
-
-      
     </div>
   );
 };
-
 
 export default Searchbar;
