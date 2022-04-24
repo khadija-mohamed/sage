@@ -1,7 +1,9 @@
 import React from "react";
 import "./MenteeListItem.scss";
+import {Link} from 'react-router-dom';
+
 export default function MenteeListItem({item}) {
- 
+  const menteeid = item?.id;
   return (
     <div class="Booking">
       <div class="booking-container">
@@ -21,12 +23,14 @@ export default function MenteeListItem({item}) {
             <span>{item?.location}</span>
           </div>
           </div>
-          <div class="purchase-button-container">
-          <h2 class="back-h2">Team</h2>
-          <div class="purchase-button dark">View Profile</div>
+         </div> 
+          <div >
+            <Link to={`/dashboard/mentee/mentordetail/${menteeid}`}>
+          <button className="button-52"
+                  >view profile</button>
+        </Link></div>
           </div>
         </div>
-      </div>
-     </div>
+   
   );
 }
