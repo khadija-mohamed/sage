@@ -1,18 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import './Menteefeed.css';
-import Dashboard from '../Dashboard';
+
 import Searchbar from '../Searchbar/Searchbar';
-import useApplicationData from "../../../hooks/useApplicationData.js";
-import MentorListItem from '../Mentor/MentorListItem'
+
+import Quotes from '../Quotes/Quotes';
+
+// import React, { useContext } from 'react';
+import MentorListItem from '../Mentor/MentorListItem';
+import Header from '../../NavBar/Header';
+import { UserContext } from '../../../UserContext';
+import Dashboard from '../Dashboard';
+
+
 
 export default function Menteefeed(props) {
-
-  const { state } = useApplicationData();
-
-  console.log("State:", state.mentors);
   
-  const data = state.mentors;
+  const data = props.state.mentors;
   const [allData, setData] = useState(data);
+  
+ 
+  // const {user} = useContext(UserContext);
+  
 
   const generateLocationDataForDropdown = () => {
     return [...new Set(data.map((item) => item.location))];
@@ -49,8 +57,9 @@ export default function Menteefeed(props) {
     setData(filteredData);
   };  
 
+
   return (
-    <div className="menteefeed-wrapper"> 
+  <div className="menteefeed-wrapper"> 
     <div className="container">
       <div className="row">
         <div className="col-sm-3">
@@ -80,5 +89,6 @@ export default function Menteefeed(props) {
       </div>
     </div>
     </div>
+    
   );
 }

@@ -98,11 +98,13 @@ export default function Sage() {
         </label>
         <label>
           <p>Confirm Password</p>
-          <input
-            type="password"
-            id="input"
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <input type="password" id="input"/>
+        </label>
+        <label>
+          <p>Upload a Photo</p>
+          <div className="imgbutton">
+          <input type="file" id="img"/>
+          </div>
         </label>
   
         <label>
