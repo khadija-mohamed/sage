@@ -20,6 +20,8 @@ import Mentordetail from "./components/Dashboard/Mentor/Mentordetail"
 import Booking from "./components/Dashboard/Booking/Booking";
 import useApplicationData from "./hooks/useApplicationData";
 import Video from "./components/Video/Video";
+import MenteeEditprofile from "./components/Dashboard/Mentee/MenteeEditprofile";
+import MentorEditprofile from "./components/Dashboard/Mentor/MentorEditprofile";
 // import Calendar from "./components/Calendar";
 import {UserContext} from "./UserContext";
 import { useState } from "react";
@@ -66,12 +68,14 @@ function App() {
               <Route path="/register/sagee" element={<Sagee />}/>
               <Route path="/dashboard/mentee/menteefeed" element={<Menteefeed state ={state}/>}/>
               <Route path="/dashboard/mentee/menteeprofile" element={<Menteeprofile state ={state}/>}/>
+              <Route path="/dashboard/mentee/menteeprofile/editprofile/:mentorid" element={<MenteeEditprofile state ={state}/>}/>
               <Route path="/dashboard/mentee/mentordetail/:mentorid" element={<Mentordetail state ={state}/>}/>
               <Route path="/dashboard/mentee/menteefind" element={<Menteefind />}/>
               {/* <Route path="/" element={<Logout />}/> */}
               {/* <Route path="/dashboard/mentor/mentorconnect" element={<Mentorconnect />}/> */}
               <Route path="/dashboard/mentor/mentorfeed" element={<Mentorfeed state ={state}/>} />
               <Route path="/dashboard/mentor/mentorprofile" element={<Mentorprofile />}/>
+              <Route path="/dashboard/mentor/mentorprofile/editprofile/:mentorid" element={<MentorEditprofile state ={state}/>}/>
               <Route path="/dashboard/booking" element={<Booking state ={state}/>}/>
               <Route path="/dashboard/video" element={<Video />}/>
           

@@ -64,13 +64,14 @@ export default function Sagee() {
           <span className="head-left"> S</span>
           <img className="o3" src={logo} alt="logo"/>
           <span className="head-right">GE</span>
-          <h4> Please register as a Sagee to proceed.
+          <div className='login'>
+          <h4> Please register as a Sagee to proceed.</h4>
           <form onSubmit={handleSubmit}>
         <label>
           <p>First Name</p>
           <input
             type="text"
-            id="input"
+            id="first_name"
             onChange={(e) => setFirstname(e.target.value)}
           />
         </label>
@@ -78,7 +79,7 @@ export default function Sagee() {
           <p>Last Name</p>
           <input
             type="text"
-            id="input"
+            id="last_name"
             onChange={(e) => setLastname(e.target.value)}
           />
         </label>
@@ -86,7 +87,7 @@ export default function Sagee() {
           <p>Email</p>
           <input
             type="email"
-            id="input"
+            id="sageeemail"
             onChange={(e) => setEmail(e.target.value)}
           />
         </label>
@@ -94,7 +95,7 @@ export default function Sagee() {
           <p>Password</p>
           <input
             type="password"
-            id="input"
+            id="sageepassword"
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
@@ -102,7 +103,7 @@ export default function Sagee() {
           <p>Confirm Password</p>
           <input
             type="password"
-            id="input"
+            id="confirmsagee"
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
@@ -118,7 +119,7 @@ export default function Sagee() {
           <p>About</p>
           <input
             type="text"
-            id="input"
+            id="aboutme"
             onChange={(e) => setDescription(e.target.value)}
           />
         </label>
@@ -126,11 +127,11 @@ export default function Sagee() {
           <p>Skills</p>
           <input
             type="text"
-            id="input"
+            id="sageeskill"
             onChange={(e) => setSkill(e.target.value)}
           />
         </label>
-        <label for="file" class="button">
+        <label  className="button">
           <p>Upload a Photo</p>
           {/* <div class="imgbutton">
           <input type="file" id="img"/>
@@ -142,10 +143,10 @@ export default function Sagee() {
           />
         </label>
         <div>
-        <button class="button-52" type="submit">Submit</button>
+        <button className="button-52" type="submit">Submit</button>
         </div>
       </form>
-      </h4>  
+      </div>  
         </h1>
       </div>
     </div>

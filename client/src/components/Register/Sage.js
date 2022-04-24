@@ -60,17 +60,18 @@ export default function Sage() {
       <div className="transparent-text">
       </div>
       <div className="sage-block">
-        <h1 className="head-main">
+        <div className="head-main">
           <span className="head-left"> S</span>
           <img className="o3" src={logo} alt="logo"/>
           <span className="head-right">GE</span>
-          <h4> Please register as Sage to proceed.
+          <div className='login'>
+          <h4> Please register as Sage to proceed.</h4>
           <form onSubmit={handleSubmit}>
         <label>
           <p>First Name</p>
           <input
             type="text"
-            id="input"
+            id="firstname"
             onChange={(e) => setFirstname(e.target.value)}
           />
         </label>
@@ -78,7 +79,7 @@ export default function Sage() {
           <p>Last Name</p>
           <input
             type="text"
-            id="input"
+            id="lastname"
             onChange={(e) => setLastname(e.target.value)}
           />
         </label>
@@ -86,7 +87,7 @@ export default function Sage() {
           <p>Email</p>
           <input
             type="email"
-            id="input"
+            id="sageemail"
             onChange={(e) => setEmail(e.target.value)}
           />
         </label>
@@ -94,13 +95,13 @@ export default function Sage() {
           <p>Password</p>
           <input
             type="password"
-            id="input"
+            id="sagepasswor"
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
         <label>
           <p>Confirm Password</p>
-          <input type="password" id="input"/>
+          <input type="password" id="confirm"/>
         </label>
         <label>
           <p>Location</p>
@@ -114,7 +115,7 @@ export default function Sage() {
           <p>About</p>
           <input
             type="text"
-            id="input"
+            id="description"
             onChange={(e) => setDescription(e.target.value)}
           />
         </label>
@@ -122,11 +123,11 @@ export default function Sage() {
           <p>Skills</p>
           <input
             type="text"
-            id="input"
+            id="skill"
             onChange={(e) => setSkill(e.target.value)}
           />
         </label>
-        <label for="file" class="button">
+        <label for="file" className="button">
           <p>Upload a Photo</p>
           {/* <div class="imgbutton">
           <input type="file" id="img"/>
@@ -138,12 +139,12 @@ export default function Sage() {
           />
         </label>
         <div>
-          <div></div>
-        <button class="button-52" type="submit">Submit</button>
+          
+        <button className="button-52" type="submit">Submit</button>
         </div>
       </form>
-      </h4>  
-        </h1>
+      </div>  
+        </div>
       </div>
     </div>
     </div>
