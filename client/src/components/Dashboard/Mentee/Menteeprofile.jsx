@@ -2,6 +2,7 @@ import React, { useState,useContext } from 'react';
 import logo from "./logo.svg"
 import light from "./light.svg"
 import './Menteeprofile.css';
+import {Link} from 'react-router-dom';
 
 import { UserContext } from '../../../UserContext';
 import Dashboard from '../Dashboard';
@@ -62,12 +63,11 @@ export default function Menteeprofile(props) {
 
       </div>
 
-      {/* <div>
-        <Link to={`/dashboard/mentee/mentordetail/${mentorid}`}>
-          <button className="card_btn"
-                  >view profile</button>
-        </Link>
-      </div> */}
+      <div >
+            <Link to={`/dashboard/mentee/menteeprofile/editprofile/${userObj.id}`}>
+          <button className="button-52"
+                  >Edit profile</button>
+        </Link></div>
 
     </div>
     </div>
