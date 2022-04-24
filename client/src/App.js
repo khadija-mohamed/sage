@@ -1,5 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css'
 // import axios from "axios";
 // import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -13,7 +14,7 @@ import Menteeprofile from "./components/Dashboard/Mentee/Menteeprofile"
 import Menteefind from "./components/Dashboard/Mentee/Menteefind"
 // import Logout from "./components/Logout/Logout"
 import Landing from "./components/Landing/Landing"
-import Mentorconnect from "./components/Dashboard/Mentor/Mentorconnect"
+// import Mentorconnect from "./components/Dashboard/Mentor/Mentorconnect"
 import Mentorfeed from "./components/Dashboard/Mentor/Mentorfeed"
 import Mentorprofile from "./components/Dashboard/Mentor/Mentorprofile"
 import Mentordetail from "./components/Dashboard/Mentor/Mentordetail"

@@ -11,7 +11,7 @@ export default function Dashboard() {
     setSidebar((prevState) => !prevState)
   }
   return(
-    <div className='Dashboard'>
+    <div>
       <NavBar openSidebar={toggleSidebar}/>
       <Backdrop sidebar={sidebar} closeSidebar={toggleSidebar}/>
       <SideBar sidebar={sidebar}/>

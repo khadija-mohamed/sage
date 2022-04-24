@@ -9,8 +9,7 @@ export default function MentorListItem({item}) {
 
           <div class="card-wrapper">
             <div class="card dark"
-            style={{backgroundImage:"{item?.photo_url}"}}
-            >
+            style={{backgroundImage:"{item?.photo_url}"}}>
               <img style={{height: "20em"}} src={item?.photo_url}></img>
           </div>
           <div class="text-overlay"></div>
@@ -19,11 +18,10 @@ export default function MentorListItem({item}) {
             <span>{item?.description}</span>
             <span>{item?.skill}</span>
             <span>{item?.location}</span>
+            <div class="button-52">View Profile</div>
           </div>
           </div>
           <div class="purchase-button-container">
-          <h2 class="back-h2">Team</h2>
-          <div class="purchase-button dark">View Profile</div>
           </div>
         </div>
       </div>
