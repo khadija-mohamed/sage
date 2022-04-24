@@ -12,6 +12,7 @@ export default function Sagee() {
   const [first_name, setFirstname] = useState("");
   const [last_name, setLastname] = useState("");
   const [photo_url, setPhotourl] = useState("");
+  const [location, setLocation] = useState("");
   const [description, setDescription] = useState("");
   const [skill, setSkill] = useState("");
 
@@ -41,6 +42,7 @@ export default function Sagee() {
           email: email,
           password: password,
           photo_url: photo_url,
+          location: location,
           description: description,
           skill: skill,
         })
@@ -104,7 +106,14 @@ export default function Sagee() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-  
+        <label>
+          <p>Location</p>
+          <input
+            type="text"
+            id="input"
+            onChange={(e) => setLocation(e.target.value)}
+          />
+          </label>
         <label>
           <p>About</p>
           <input
@@ -127,7 +136,7 @@ export default function Sagee() {
           <input type="file" id="img"/>
           </div> */}
           <input
-            type="file"
+            type="text"
             id="input"
             onChange={(e) => setPhotourl(e.target.value)}
           />
