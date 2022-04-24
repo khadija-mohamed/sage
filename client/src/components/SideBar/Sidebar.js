@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // import React from "react";
 
 // const SideBar = ({sidebar}) => {
@@ -12,7 +12,7 @@
 //     </div>
 //   )
 // }
-=======
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -27,6 +27,6 @@ const SideBar = ({sidebar}) => {
     </div>
   )
 }
->>>>>>> myprofile
 
-// export default SideBar;
+
+ export default SideBar;

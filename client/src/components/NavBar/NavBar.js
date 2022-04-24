@@ -10,4 +10,4 @@ function NavBar({openSidebar}) {
   </div>
 )}
 
-// export default NavBar;
+export default NavBar;

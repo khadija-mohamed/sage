@@ -3,8 +3,6 @@ import logo from "./logo.svg"
 import light from "./light.svg"
 import './Menteeprofile.css';
 import Header from '../../NavBar/Header';
-<<<<<<< HEAD
-=======
 import { UserContext } from '../../../UserContext';
 
 
@@ -28,16 +26,11 @@ export default function Menteeprofile(props) {
    
    console.log("emaillll",userObj.email)
  
->>>>>>> myprofile
 
   return(
     <div className="menteeprofile-wrapper">
      <Header/>
-<<<<<<< HEAD
-     <div className='mentee-profile'>
-=======
      {/* <div className='mentee-profile'>
->>>>>>> myprofile
      <img className="person" src={logo} alt="logo"/>
      <div className="grid">
          <p>{user.email}</p>
