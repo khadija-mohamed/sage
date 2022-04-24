@@ -1,33 +1,36 @@
 import React from "react";
+import "./MenteeListItem.scss";
+import {Link} from 'react-router-dom';
 
-import "./MenteeListItem.css";
-
-export default function MenteeListItem(props) {
- 
+export default function MenteeListItem({item}) {
+  const menteeid = item?.id;
   return (
-    <div className='card'>
-      <div className="card_photo">
-        <img src={props.photo_utl} alt=""/>
-      </div>
-        <h3>{props.first_name} {props.last_name}</h3>
-      
-      <div className="card_description">
-        <p>{props.description}</p>
-        
-      </div>
-      <div className="card_tag">
-        <p>{props.skill}</p>
-        
-      </div>
-      <div className="card_tag">
-        <p>{props.location}</p>
-        
-      </div>
-        
-      <div>
-        <button className="card_btn">view profile</button>
-      </div>
-      
-    </div>
+    <div class="Booking">
+      <div class="booking-container">
+        <div class="card-container">
+
+          <div class="card-wrapper">
+            <div class="card dark"
+            style={{backgroundImage:"{item?.photo_url}"}}
+            >
+              <img style={{height: "20em"}} src={item?.photo_url}></img>
+          </div>
+          <div class="text-overlay"></div>
+            <h2>{item?.first_name} {item?.last_name}</h2>
+          <div class="details-text">
+            <span>{item?.description}</span>
+            <span>{item?.skill}</span>
+            <span>{item?.location}</span>
+          </div>
+          </div>
+         </div> 
+          <div >
+            <Link to={`/dashboard/mentee/mentordetail/${menteeid}`}>
+          <button className="button-52"
+                  >view profile</button>
+        </Link></div>
+          </div>
+        </div>
+   
   );
 }

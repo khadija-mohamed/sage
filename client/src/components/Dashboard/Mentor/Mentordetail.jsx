@@ -4,6 +4,7 @@ import "./Mentordetail.css";
 import {Link, useParams} from 'react-router-dom';
 import React, { useState, useEffect} from 'react';
 import Header from "../../NavBar/Header";
+import Dashboard from "../Dashboard";
 
 
 
@@ -28,7 +29,7 @@ export default function Mentordetail(props) {
   :   (
       <div>
       <div>
-        <Header/>
+        <Dashboard/>
       </div>
       <div className='card'>
         <div className="card_photo">
