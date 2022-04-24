@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import logo from './logo.svg'
 import Axios from 'axios'
+import Sagemodal from '../Modal/Modal';
 import NavBar from '../../NavBar/NavBar';
 import './booking.scss'
 
@@ -39,7 +40,9 @@ export default function Booking(props) {
     console.log(newdata)
   }
 
-  return(
+  
+
+  return (
     <div className="Booking">
       <NavBar />
       <div className="orange-main">
@@ -52,11 +55,16 @@ export default function Booking(props) {
           <span className="head-right">GE</span> 
           <h4> Book a meeting with a Sage
           <form action="/dashboard/mentee/menteeprofile" onSubmit={submit} >
+            <label>
+              <p>Do you have the Sage Calendar added?</p>
+            <Sagemodal />
+            </label> 
+
         <label>
           <p>Your Name</p>
           <input
             type="text"
-            id="input"
+            class="input"
             onChange={(e) => handle(e)} id="name" value={data.name}
           />
         </label>
@@ -100,5 +108,6 @@ export default function Booking(props) {
       </div>
     </div>
 </div> 
-)
+
+  )
 }

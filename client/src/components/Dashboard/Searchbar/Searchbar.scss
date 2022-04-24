@@ -1,15 +1,22 @@
 .row-my-5{
   width: 25em;
   margin: 1em auto;
-  margin-top: 2em;
+  margin-top: 1em;
   /* border: 0.5px solid black; */
   padding: 1em;
 
 }
 
-h2 {
-  font-size: 40px;
+header {
+  font-size: 50px;
+  margin: 0;
+  text-align: center;
 }
+
+h2 {
+  font-size: 20px;
+}
+
 .skill{
   font: bold;
 }
