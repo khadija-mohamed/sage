@@ -2,7 +2,7 @@
 import "./App.css";
 // import axios from "axios";
 // import React, { useState, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter,Route, Routes } from "react-router-dom";
 import Dashboard from "../src/components/Dashboard/Dashboard";
 import Login from "../src/components/Login/Login";
 import Register from "../src/components/Register/Register";
@@ -22,44 +22,63 @@ import Calendar from "./components/Calendar";
 import useApplicationData from "./hooks/useApplicationData";
 import Video from "./components/Video/Video";
 // import Calendar from "./components/Calendar";
+import {UserContext} from "./UserContext";
+import { useState } from "react";
+
+
+
+
+
+
 
 function App() {
-  const { state , setState} = useApplicationData();
+  const { state} = useApplicationData();
+  const [user, setUser] = useState({ email: '', auth: false });
+  
 
-  // useEffect(() => {
-  //   axios.get("http://localhost:8080/").then((response) => {
-    // console.log("Response:", response);
-  //   });
-  // });
+  const login = (email) => {
+    setUser((user) => ({
+      email: email,
+      auth: true,
+    }));
+  };
 
-  // const [token, setToken] = useState();
+  const logout = () => {
+    setUser((user) => ({
+      email: '',
+      auth: false,
+    }));
+  };
 
-  // if(!token) {
-  //   return <Login setToken={setToken} />
-
-  // }
+  
 
 
   return (
     <div>
-          <Routes>
-            <Route path="/dashboard" index element={<Dashboard/>}/>
-            <Route path="/" element={<Landing />}/>
-            <Route path="/login" element={<Login  state = {state}/>} />
-            <Route path="/register" element={<Register />}/>
-            <Route path="/register/sage" element={<Sage />}/>
-            <Route path="/register/sagee" element={<Sagee />}/>
-            <Route path="/dashboard/mentee/menteefeed" element={<Menteefeed state ={state}/>}/>
-            <Route path="/dashboard/mentee/menteeprofile" element={<Menteeprofile />}/>
-            <Route path="/dashboard/mentee/mentordetail/:mentorid" element={<Mentordetail state ={state}/>}/>
-            <Route path="/dashboard/mentee/menteefind" element={<Menteefind />}/>
-            {/* <Route path="/" element={<Logout />}/> */}
-            {/* <Route path="/dashboard/mentor/mentorconnect" element={<Mentorconnect />}/> */}
-            <Route path="/dashboard/mentor/mentorfeed" element={<Mentorfeed state ={state}/>} />
-            <Route path="/dashboard/mentor/mentorprofile" element={<Mentorprofile />}/>
-            <Route path="/dashboard/booking" element={<Booking />}/>
-            <Route path="/dashboard/video" element={<Video />}/>
-          </Routes>
+
+           <UserContext.Provider value ={{user,login,logout}}> 
+           <BrowserRouter>
+            <Routes>
+              <Route path="/dashboard" index element={<Dashboard />}/>
+              <Route path="/" element={<Landing />}/>
+              <Route path="/login" element={<Login />}/>
+              <Route path="/register" element={<Register />}/>
+              <Route path="/register/sage" element={<Sage />}/>
+              <Route path="/register/sagee" element={<Sagee />}/>
+              <Route path="/dashboard/mentee/menteefeed" element={<Menteefeed state ={state}/>}/>
+              <Route path="/dashboard/mentee/menteeprofile" element={<Menteeprofile state ={state}/>}/>
+              <Route path="/dashboard/mentee/mentordetail/:mentorid" element={<Mentordetail state ={state}/>}/>
+              <Route path="/dashboard/mentee/menteefind" element={<Menteefind />}/>
+              {/* <Route path="/" element={<Logout />}/> */}
+              {/* <Route path="/dashboard/mentor/mentorconnect" element={<Mentorconnect />}/> */}
+              <Route path="/dashboard/mentor/mentorfeed" element={<Mentorfeed state ={state}/>} />
+              <Route path="/dashboard/mentor/mentorprofile" element={<Mentorprofile />}/>
+              <Route path="/dashboard/booking" element={<Booking />}/>
+              <Route path="/dashboard/video" element={<Video />}/>
+          
+            </Routes>
+            </BrowserRouter> 
+          </UserContext.Provider>   
       </div>
   );
 }
