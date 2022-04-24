@@ -2,8 +2,9 @@ import React, { useState,useContext } from 'react';
 import logo from "./logo.svg"
 import light from "./light.svg"
 import './Menteeprofile.css';
-import Header from '../../NavBar/Header';
+
 import { UserContext } from '../../../UserContext';
+import Dashboard from '../Dashboard';
 
 
 export default function Menteeprofile(props) {
@@ -29,7 +30,7 @@ export default function Menteeprofile(props) {
 
   return(
     <div className="menteeprofile-wrapper">
-     <Header/>
+     <Dashboard/>
      {/* <div className='mentee-profile'>
      <img className="person" src={logo} alt="logo"/>
      <div className="grid">
