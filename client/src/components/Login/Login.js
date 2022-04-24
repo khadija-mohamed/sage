@@ -6,24 +6,10 @@ import "./Login.css";
 import NavBar from "../NavBar/NavBar";
 
 export default function Login(props) {
-  // const { setIsLoggedIn, onUpdate } = props;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-
-  // const params = useParams();
-  // const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     navigate('/dashboard');
-  //   }, 2000);
-  // }, [navigate]);
-
-  // useEffect(() => {
-
-  // }, [params.id]);
 
   const validateForm = () => {
     if (!email) {
@@ -49,19 +35,9 @@ export default function Login(props) {
         })
         .then(() => {
           navigate("/dashboard");
-          // setIsLoggedIn(true);
-          // onUpdate(true);
         })
         .catch((err) => err);
     }
-
-    // const token = await loginUser({
-    //   email,
-    //   password
-    // });
-    // // navigate('/dashboard');
-    // console.log("Token:", token)
-    // setToken(token);
   };
 
   return (
@@ -108,7 +84,3 @@ export default function Login(props) {
     </div>
   );
 }
-
-// Login.propTypes = {
-//   setToken: PropTypes.func.isRequired
-// }
