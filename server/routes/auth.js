@@ -99,38 +99,10 @@ module.exports = (db) => {
         console.log(err);
         res.status(500).end();
       });
-    // const user = await potentialLogin(req.body.email, req.body.password)
-    // req.session.email = user.id
-    // res.json({status: 'all good'})
+    
   });
 
-  // res.send({
-  //   token: "test123",
-  // });
-
-    // if (existingUser.rowCount === 0) {
-    //   const hashedPassword = await bcrypt.hash(req.body.password, 10);
-
-    //   const newUserQuery = await pool.query(
-    //     "INSERT INTO mentees(first_name, last_name, email, password, photo_url, description, skill) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING id, email",
-    //     [
-    //       req.body.first_name,
-    //       req.body.last_name,
-    //       req.body.email,
-    //       hashedPassword,
-    //       req.body.photo_url,
-    //       req.body.description,
-    //       req.body.skill,
-    //     ]
-    //   );
-    //   req.session.user = {
-    //     email,
-    //     id: newUserQuery.rows[0].id,
-    //   };
-    //   res.json({ loggedIn: true, email });
-    // } else {
-    //   res.json({ loggedIn: false, status: "Email already in use" });
-    // }
+ 
 
   return router;
 };
