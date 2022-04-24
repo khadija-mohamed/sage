@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import './Menteefeed.css';
-// import Dashboard from '../Dashboard';
+
 import Searchbar from '../Searchbar/Searchbar';
-import Grid from '../Grid/Grid';
+
 import Quotes from '../Quotes/Quotes';
-// import Filter from '../Filter/Filter';
-// import Block from '../Block/Block';
-import useApplicationData from "../../../hooks/useApplicationData.js";
-import MentorList from '../Mentor/MentorList';
+
+// import React, { useContext } from 'react';
 import MentorListItem from '../Mentor/MentorListItem';
+import Header from '../../NavBar/Header';
+import { UserContext } from '../../../UserContext';
+
 
 
 export default function Menteefeed(props) {
@@ -16,9 +17,11 @@ export default function Menteefeed(props) {
   const data = props.state.mentors;
   const [allData, setData] = useState(data);
   
-
+ 
+  const {user} = useContext(UserContext);
   
-
+ console.log("hihih",user)
+ console.log("what is props",props.user)
   const generateLocationDataForDropdown = () => {
     return [...new Set(data.map((item) => item.location))];
   };
@@ -52,24 +55,33 @@ export default function Menteefeed(props) {
     });
 
     setData(filteredData);
-  };
+  };  
 
-  
-
+  const defaultData = () => {
+    setData(data);
+  }
   return (
+   <div className='menteefeed'>
+    <div>
+      <Header/>
+    </div>
+    <div>
+      <Quotes/>
+    </div>
+    <h4>{user.email}</h4>
     <div className="menteefeed-wrapper"> 
-    <div className="container">
-      <div className="row">
-        <div className="col-sm-3">
-          <Searchbar
-            locations={generateLocationDataForDropdown()}
-            onNameFilter={handleFilterName}
-            onSkillFilter={handleFilterSkill}
-            onLocationFilter={handleFilterLocation}
-           
-          />
-        </div>
-        <Quotes />
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-3">
+            <Searchbar 
+              locations={generateLocationDataForDropdown()}
+              onNameFilter={handleFilterName}
+              onSkillFilter={handleFilterSkill}
+              onLocationFilter={handleFilterLocation}
+               defaultData ={defaultData}
+            />
+          </div>
+        
         <div className="col-sm-9">
           <div className="row mt-5">
             {allData.map((item) => (
@@ -80,6 +92,6 @@ export default function Menteefeed(props) {
       </div>
     </div>
     </div>
+    </div>
   );
-
 }

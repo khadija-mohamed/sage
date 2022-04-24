@@ -4,7 +4,7 @@ function NavBar({openSidebar}) {
   return (
   <div className="Navbar"> 
   <div className='menu' onClick={openSidebar}>
-  <i class="fa-solid fa-bars"></i>
+  <i className="fa-solid fa-bars"></i>
   </div>
   <div className="title">Sage</div>
   </div>
