@@ -2,25 +2,12 @@ import React, { useState } from 'react';
 import './Mentorfeed.css';
 import Dashboard from '../Dashboard';
 import Searchbar from '../Searchbar/Searchbar';
-<<<<<<< HEAD
-import Filter from '../Filter/Filter';
-=======
->>>>>>> f505d8e593e08aea055f6fe484397e7802050625
 import useApplicationData from "../../../hooks/useApplicationData.js";
 import MenteeListItem from '../Mentee/MenteeListItem'
 
 export default function Menteefeed(props) {
 
   const { state } = useApplicationData();
-<<<<<<< HEAD
-  return(
-    <div className="mentorfeed-wrapper">
-        <Searchbar/>
-        <Filter />
-        <MentorDashboard/>
-        <h1>Meet the Sagees</h1>
-        <MenteeList mentees = {state.mentees}/>
-=======
 
   console.log("State:", state.mentees);
   
@@ -64,10 +51,10 @@ export default function Menteefeed(props) {
 
   return (
     <div className="mentorfeed-wrapper"> 
+    <Dashboard />
     <div className="container">
       <div className="row">
         <div className="col-sm-3">
-         <Dashboard />
          <Searchbar 
             locations={generateLocationDataForDropdown()}
             onNameFilter={handleFilterName}
@@ -92,7 +79,6 @@ export default function Menteefeed(props) {
         </div>
       </div>
     </div>
->>>>>>> f505d8e593e08aea055f6fe484397e7802050625
     </div>
   );
 }

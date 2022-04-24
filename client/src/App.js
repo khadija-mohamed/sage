@@ -26,11 +26,6 @@ import {UserContext} from "./UserContext";
 import { useState } from "react";
 
 
-
-
-
-
-
 function App() {
   const { state} = useApplicationData();
   const [user, setUser] = useState({ email: '', auth: false });
@@ -51,8 +46,6 @@ function App() {
   };
 
   
-
-
   return (
     <div>
 
@@ -75,6 +68,7 @@ function App() {
               <Route path="/dashboard/mentor/mentorprofile" element={<Mentorprofile />}/>
               <Route path="/dashboard/booking" element={<Booking state ={state}/>}/>
               <Route path="/dashboard/video" element={<Video />}/>
+          
           
             </Routes>
             </BrowserRouter> 

@@ -1,13 +1,8 @@
 import React, { useState,useContext } from 'react';
 import './Menteefeed.css';
-
 import Searchbar from '../Searchbar/Searchbar';
-
-import Quotes from '../Quotes/Quotes';
-
 // import React, { useContext } from 'react';
 import MentorListItem from '../Mentor/MentorListItem';
-import Header from '../../NavBar/Header';
 import { UserContext } from '../../../UserContext';
 import Dashboard from '../Dashboard';
 
@@ -60,10 +55,10 @@ export default function Menteefeed(props) {
 
   return (
   <div className="menteefeed-wrapper"> 
+  <Dashboard />
     <div className="container">
       <div className="row">
         <div className="col-sm-3">
-         <Dashboard />
          <Searchbar 
             locations={generateLocationDataForDropdown()}
             onNameFilter={handleFilterName}
