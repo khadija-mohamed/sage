@@ -1,16 +1,34 @@
-import React, { useState } from "react";
+
+import React, { useContext, useState } from 'react';
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+import './Login.css';
+
+
+
+import { UserContext } from '../../UserContext';
+
+
 import logo from "./logo.svg";
-import { useNavigate } from "react-router-dom";
+
 import "./Login.css";
 import NavBar from "../NavBar/NavBar";
 
+
 export default function Login(props) {
-  // const { setIsLoggedIn, onUpdate } = props;
-  const [email, setEmail] = useState("");
+   const { setIsLoggedIn, onUpdate } = props;
+   const [email, setEmail] = useState();
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  // const [user, setUser] = useState("");
+
+  const{user,login} = useContext(UserContext);
+  
+
+  // const {user:email,password,
+  //        setUser:setEmail,setPassword} = useContext(UserContext);
+  // const [user, setUser] = useState
 
   // const params = useParams();
   // const navigate = useNavigate();
@@ -43,6 +61,7 @@ export default function Login(props) {
     e.preventDefault();
 
     if (validateForm) {
+<<<<<<< HEAD
       axios
         .post("http://localhost:8080/login/login", {
           email: email,
@@ -66,12 +85,32 @@ export default function Login(props) {
     // console.log("Token:", token)
     // setToken(token);
   };
+=======
 
-  return (
+      axios.post(
+        'http://localhost:8080/login/login', { email: email, password: password }
+      ).then(() => {
+        navigate('/dashboard');
+        
+        // setIsLoggedIn(true);
+        // onUpdate(true);
+      }).catch(err => err);
+
+    }
+
+>>>>>>> f505d8e593e08aea055f6fe484397e7802050625
+
+    
+  }
+  console.log("what is user",user)
+  return(
+    <div>
+      <NavBar/>
     <div className="login-wrapper">
-      <NavBar />
+       
       {/* <div id="bg"></div> */}
       <div className="orange-main">
+<<<<<<< HEAD
         <div className="transparent-text"></div>
         <div className="sage-block">
           <h1 className="head-main">
@@ -107,9 +146,37 @@ export default function Login(props) {
             </h4>
           </h1>
         </div>
+=======
+      <div className="transparent-text">
+      </div>
+      <div className="sage-block">
+        <div className="head-main">
+        
+          <span className="head-left"> S</span>
+           <img className="o3" src={logo} alt="logo"/> 
+          <span className="head-right">GE</span>
+          <div className='login'>
+            <h4> {" "}Please enter email and Password to proceed.</h4>
+          {/* <div className='form-input'> */}
+            <form onSubmit={handleSubmit} action="">
+                   {/* <label for=""></label>  */}
+                  <input type="text" name="" id="email" placeholder="email" className="email" onChange={e => setEmail(e.target.value)}></input>
+                  {/* <label for=""></label> */}
+                  <input type="password" name="" id="password" placeholder="password" className="pass" onChange={e => setPassword(e.target.value)}></input>
+                  <button className="button-52" type="submit" onClick={() => login(email)}>Submit</button>
+          </form>
+          </div>
+          </div>
+       
+        
+>>>>>>> f505d8e593e08aea055f6fe484397e7802050625
       </div>
     </div>
-  );
+  
+  </div>
+</div>
+    
+  )
 }
 
 // Login.propTypes = {
