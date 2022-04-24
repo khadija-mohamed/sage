@@ -5,6 +5,7 @@ export default function useApplicationData(props) {
   const [state, setState] = useState({
     mentors: [],
     mentees: [],
+    
   });
 
   //  const setMentors = (mentors) => setState((prev) => ({ ...prev, mentors }));

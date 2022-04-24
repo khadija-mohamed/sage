@@ -100,11 +100,7 @@ export default function Sage() {
         </label>
         <label>
           <p>Confirm Password</p>
-          <input
-            type="password"
-            id="input"
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <input type="password" id="input"/>
         </label>
         <label>
           <p>Location</p>

@@ -1,0 +1,24 @@
+.card-photo {
+  margin-top: 1em;
+}
+
+.mentor-container {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  height: 50vh;
+  position: sticky;
+ 
+} 
+
+.singlecard {
+  margin-top: 2em;
+  display:flex;
+  flex-direction: column;
+ 
+  
+}
+
+

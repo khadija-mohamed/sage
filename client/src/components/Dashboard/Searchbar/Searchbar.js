@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./Searchbar.scss";
 
-const Searchbar = (
-
-  { locations, onNameFilter, onSkillFilter, onLocationFilter },
-  item
-) => {
+const Searchbar = ({
+  locations,
+  onNameFilter,
+  onSkillFilter,
+  onLocationFilter,
+  defaultData
+}, item) => {
   const [filters, setFilters] = useState({
     name: "",
     skill: "",
@@ -20,18 +22,24 @@ const Searchbar = (
       ...filters,
       [field]: value,
     });
-
-    switch (field) {
-      case "name":
-        onNameFilter(value);
-        break;
-      case "skill":
-        onSkillFilter(value);
-        break;
-      case "location":
-        onLocationFilter(value);
-        break;
-    }
+    
+    
+  switch (field) {
+    case "name":
+      onNameFilter(value);
+      break;
+    case "skill":
+      onSkillFilter(value);
+      break;
+    case "location":
+      onLocationFilter(value);
+      break;
+    default:
+      defaultData(value);
+      break;
+      
+    
+  }
   };
 
   // use handleFilter in form for form submission
@@ -48,7 +56,7 @@ const Searchbar = (
   return (
     <div className="row-my-5">
       <div className="col">
-        <h4 className="border-bottom"></h4>
+        {/* <h4 className="border-bottom"></h4> */}
       </div>
       <div className="col-sm-12 my-2">
         <label htmlFor="name">Search by Name</label>
@@ -60,12 +68,12 @@ const Searchbar = (
           onChange={handleInput("name")}
         />
       </div>
-      <div>
-        <img src={item.photo}></img>
-      </div>
-      <div>
+       {/* <div>
+        <img src={item.photo_url} alt=''></img>
+      </div> 
+       <div>
         <p>{item.description}</p>
-      </div>
+      </div>  */}
 
       <div className="col-sm-12 my-2">
         <label htmlFor="skill">Search by Skills</label>
