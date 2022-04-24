@@ -64,11 +64,7 @@ export default function Booking(props) {
           <p>Your Name</p>
           <input
             type="text"
-<<<<<<< HEAD
             class="input"
-=======
-            // className="input"
->>>>>>> f505d8e593e08aea055f6fe484397e7802050625
             onChange={(e) => handle(e)} id="name" value={data.name}
           />
         </label>

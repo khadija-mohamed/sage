@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:wght@400;700&display=swap');
 
-$dark: rgb(3, 90, 50);
+$dark: rgb(255, 255, 255);
 $light: #fbfbfb;
 
 $animation-speed-fast: .8s;
@@ -33,7 +33,6 @@ body {
   margin: 2em;
   width: 230px;
   height: 325px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   position: relative;
   perspective: 1000px;
   transform: perspective(1000px) translateY(0);

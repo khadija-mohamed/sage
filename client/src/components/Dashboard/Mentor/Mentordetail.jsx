@@ -48,7 +48,7 @@ export default function Mentordetail(props) {
         </div>
 
         <div>
-          <button className="card_btn">Book my appointment</button>
+          <button className="card_btn">Book a meeting with me </button>
         </div>
         <div>
           <button className="card_btn">Contact Me</button>
