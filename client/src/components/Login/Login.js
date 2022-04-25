@@ -46,12 +46,12 @@ export default function Login(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (validateForm) {
+    if (validateForm()) {
       axios
         .post("http://localhost:8080/login/login", {
           email: email,
           password: password,
-        })
+        }, {withCredentials: true})
         .then(() => {
           navigate("/dashboard");
         })
@@ -76,7 +76,7 @@ export default function Login(props) {
            <img className="o3" src={logo} alt="logo"/> 
           <span className="head-right">GE</span>
           <div className='login'>
-            <h4> {" "}Please enter email and Password to proceed.</h4>
+          {!email || !password ? <div><h4> Please enter email and Password to proceed.</h4></div> : <h4>“The expert in anything was once a beginner.”</h4>}
           {/* <div className='form-input'> */}
             <form onSubmit={handleSubmit} action="">
                    {/* <label for=""></label>  */}
