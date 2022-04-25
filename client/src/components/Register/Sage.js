@@ -12,6 +12,7 @@ export default function Sage() {
   const [first_name, setFirstname] = useState("");
   const [last_name, setLastname] = useState("");
   const [photo_url, setPhotourl] = useState("");
+  const [location, setLocation] = useState("");
   const [description, setDescription] = useState("");
   const [skill, setSkill] = useState("");
 
@@ -41,6 +42,7 @@ export default function Sage() {
           email: email,
           password: password,
           photo_url: photo_url,
+          location: location,
           description: description,
           skill: skill,
         })
@@ -101,13 +103,14 @@ export default function Sage() {
           <p>Confirm Password</p>
           <input type="password" id="confirm"/>
         </label>
-        {/* <label>
-          <p>Upload a Photo</p>
-          <div className="imgbutton">
-          <input type="file" id="img"/>
-          </div>
-        </label> */}
-  
+        <label>
+          <p>Location</p>
+          <input
+            type="text"
+            id="input"
+            onChange={(e) => setLocation(e.target.value)}
+          />
+          </label>
         <label>
           <p>About</p>
           <input
@@ -123,18 +126,8 @@ export default function Sage() {
             id="skill"
             onChange={(e) => setSkill(e.target.value)}
           />
-         </label> 
-        {/* <label className="button">
-          {/* <div class="imgbutton">
-          <input type="file" id="img"/>
-          </div> */}
-          {/* <input
-            type="file"
-            id="photourl"
-            onChange={(e) => setPhotourl(e.target.value)}
-          />
-        </label> */} 
-        <label  className="button">
+        </label>
+        <label for="file" className="button">
           <p>Upload a Photo</p>
           {/* <div class="imgbutton">
           <input type="file" id="img"/>
