@@ -125,5 +125,11 @@ module.exports = (db) => {
     });
   });
 
+  router.post("/logout", (req, res) => {
+    // clear the cookie session when a user clicks the log out button
+    req.session.email = null;
+    return res.status(204).send();
+  });
+
   return router;
 };

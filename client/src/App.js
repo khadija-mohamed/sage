@@ -12,7 +12,7 @@ import Sagee from "./components/Register/Sagee";
 import Menteefeed from "./components/Dashboard/Mentee/Menteefeed";
 import Menteeprofile from "./components/Dashboard/Mentee/Menteeprofile";
 import Menteefind from "./components/Dashboard/Mentee/Menteefind";
-// import Logout from "./components/Logout/Logout"
+import Logout from "../src/components/Logout/Logout"
 import Landing from "./components/Landing/Landing";
 import Mentorconnect from "./components/Dashboard/Mentor/Mentorconnect";
 import Mentorfeed from "./components/Dashboard/Mentor/Mentorfeed";
@@ -76,7 +76,7 @@ function App() {
               path="/dashboard/mentee/menteefind"
               element={<Menteefind />}
             />
-            {/* <Route path="/" element={<Logout />}/> */}
+            <Route path="/logout" element={<Logout />}/>
             {/* <Route path="/dashboard/mentor/mentorconnect" element={<Mentorconnect />}/> */}
             <Route
               path="/dashboard/mentor/mentorfeed"
