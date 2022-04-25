@@ -51,9 +51,22 @@ module.exports = (db) => {
       FROM mentors WHERE email=$1`,
       [email]
     );
-
     return result.rows[0];
   };
+
+  // const allUsers = async (email) => {
+  //   const result = await pool.query(
+  //     `SELECT email
+  //     FROM mentees
+  //     UNION SELECT email
+  //     FROM mentors`
+  //   );
+  //   const emailArray = result.rows.map(emails => emails.email);
+  //   if(emailArray.includes(email)) {
+  //     return false;
+  //   }
+  //   return true;
+  // };
 
   // all routes will go here
 
@@ -88,6 +101,11 @@ module.exports = (db) => {
       };
       return res.status(400).json(templateVars);
     }
+    const user = await potentialLogin(email);
+    console.log("User+++++++++", user);
+    if (user) {
+      return res.status(400).send({ status: "error", message: "User already registered, please login to continue." });
+    }
     const salt = bcrypt.genSaltSync(10);
     const hashedPassword = bcrypt.hashSync(password, salt);
 
@@ -115,7 +133,7 @@ module.exports = (db) => {
   });
 
   // sage registration
-  router.post("/register/sage", async (req, res) => {
+  router.post("/register/sage", async (req, res, next) => {
     let templateVars = {
       user: req.session,
     };
@@ -142,8 +160,15 @@ module.exports = (db) => {
     ) {
       let templateVars = {
         message: "Input fields cannot be blank",
+        alreadyRegisterted: "This email is already registered.",
+        email: req.session.email,
       };
       return res.status(400).json(templateVars);
+    }
+    const user = await potentialLogin(email);
+    console.log("User+++++++++", user);
+    if (user) {
+      return res.status(400).send({ status: "error", message: "User already registered, please login to continue." });
     }
     const salt = bcrypt.genSaltSync(10);
     const hashedPassword = bcrypt.hashSync(password, salt);
@@ -158,16 +183,20 @@ module.exports = (db) => {
       description,
       skill,
     };
+    // console.log("email input", input.email)
+    // if (allUsers(input.email)) {
+    //   console.log("Input", input.email);
+    //   return res.status(400).send();
+    // }
     try {
+      // await allUsers(input.email);
       await registerNewSage(input);
-      let templateVars = {
-        message: "all good",
-      };
       req.session.email = input.email;
-      res.status(200).json(templateVars);
+      res.status(200).send();
     } catch (err) {
       console.log(err);
-      res.status(500).send("error");
+      // return next(err)
+      return res.status(400).send();
     }
   });
 
@@ -195,6 +224,7 @@ module.exports = (db) => {
       // compare password
       const correctPassword = bcrypt.compareSync(password, user.password);
       if (correctPassword) {
+        // allUsers()
         req.session.email = user.email;
         return res.status(204).send();
       } else {
