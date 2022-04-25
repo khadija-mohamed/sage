@@ -22,11 +22,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.1",
     "babel-plugin-macros": "^3.1.0",
-<<<<<<< HEAD
-    "bootstrap": "^5.1.3",
-=======
     "bcryptjs": "^2.4.3",
->>>>>>> d4edaeb21e456009049201c6cfc7df2d22e85eb9
     "node-sass": "^7.0.1",
     "react": "^18.0.0",
     "react-bootstrap": "^2.3.0",
