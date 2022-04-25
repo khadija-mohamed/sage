@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./Login.css";
 import { UserContext } from "../../UserContext";
 import logo from "./logo.svg";
@@ -58,7 +58,6 @@ export default function Login(props) {
           }
         })
         .catch(err => {
-          console.log("Error", err.response)
           alert(err.response.data.message)     
         });
     }
@@ -69,6 +68,9 @@ export default function Login(props) {
       <NavBar />
       <div className="login-wrapper">
         <div className="orange-main">
+          <div className="register-btn">
+        <button className="button-52" type="submit"><Link to="/register"><span className="register-btn-text">Register</span></Link></button>
+        </div>
           <div className="transparent-text"></div>
           <div className="sage-block">
             <div className="head-main">
