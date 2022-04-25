@@ -60,7 +60,7 @@ export default function Sage() {
       <div className="transparent-text">
       </div>
       <div className="sage-block">
-        <div className="head-main">
+        <h1 className="head-main">
           <span className="head-left"> S</span>
           <img className="o3" src={logo} alt="logo"/>
           <span className="head-right">GE</span>
@@ -71,7 +71,7 @@ export default function Sage() {
           <p>First Name</p>
           <input
             type="text"
-            id="firstname"
+            id="first_name"
             onChange={(e) => setFirstname(e.target.value)}
           />
         </label>
@@ -79,7 +79,7 @@ export default function Sage() {
           <p>Last Name</p>
           <input
             type="text"
-            id="lastname"
+            id="last_name"
             onChange={(e) => setLastname(e.target.value)}
           />
         </label>
@@ -95,13 +95,17 @@ export default function Sage() {
           <p>Password</p>
           <input
             type="password"
-            id="sagepasswor"
+            id="sagepassword"
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
         <label>
           <p>Confirm Password</p>
-          <input type="password" id="confirm"/>
+          <input
+            type="password"
+            id="confirmsage"
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </label>
         <label>
           <p>Location</p>
@@ -115,7 +119,7 @@ export default function Sage() {
           <p>About</p>
           <input
             type="text"
-            id="description"
+            id="aboutme"
             onChange={(e) => setDescription(e.target.value)}
           />
         </label>
@@ -123,11 +127,11 @@ export default function Sage() {
           <p>Skills</p>
           <input
             type="text"
-            id="skill"
+            id="sageskill"
             onChange={(e) => setSkill(e.target.value)}
           />
         </label>
-        <label for="file" className="button">
+        <label className="button">
           <p>Upload a Photo</p>
           {/* <div class="imgbutton">
           <input type="file" id="img"/>
@@ -139,12 +143,11 @@ export default function Sage() {
           />
         </label>
         <div>
-          
         <button className="button-52" type="submit">Submit</button>
         </div>
       </form>
       </div>  
-        </div>
+        </h1>
       </div>
     </div>
     </div>
