@@ -49,7 +49,11 @@ export default function Sage() {
         .then(() => {
           navigate("/login");
         })
-        .catch((err) => err);
+        .catch((err) => {
+          if(err.response) {
+            alert(err.response.data.message)
+          }
+        });
     }
   };
 
