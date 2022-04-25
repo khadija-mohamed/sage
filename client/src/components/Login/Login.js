@@ -35,16 +35,6 @@ export default function Login(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-  //   if (validateForm()) {
-  //     axios.post(
-  //       'http://localhost:8080/login/login', { email: email, password: password }
-  //     ).then(() => {
-  //       navigate('/dashboard');
-  //     }).catch(err => {
-  //       console.log("Error", err.response)
-  //       alert(err.response.data.message)     
-  //     });
-
 // if -- err.response exist -- do in catch function, send unknown error otherwise .
 
     if (validateForm()) {
@@ -123,7 +113,6 @@ export default function Login(props) {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div> 
+  )
 }
-
