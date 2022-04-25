@@ -30,7 +30,8 @@ body {
 .sidebar li {
   list-style: none;
   padding: 1rem 2rem;
-  border-bottom: solid rgb(255, 255, 255) 0.5px;
+  align-self: center;
+
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -73,4 +74,8 @@ a:hover {
 
 .backdrop--open{
   transform: translateX(-0%);
+ }
+
+ .space {
+   padding-top: 10em;
  }

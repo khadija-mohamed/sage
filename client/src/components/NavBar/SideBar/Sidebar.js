@@ -8,7 +8,7 @@ const SideBar = ({sidebar}) => {
       <li><i class="fa-solid fa-seedling"></i><Link to="/dashboard/mentee/menteefeed">My Feed</Link></li>
       <li><i class="fa-solid fa-users"></i><Link to="/dashboard/mentee/menteefind">Connect with a Sage</Link></li>
       <li><i class="fa-solid fa-calendar-check"></i><Link to="/dashboard/booking">Bookings</Link></li>
-      <li><i class="fa-solid fa-arrow-right-from-bracket"></i><Link to="/">Log out</Link></li>
+      <li><i class="fa-solid fa-arrow-right-from-bracket"></i><Link to="/logout">Log out</Link></li>
     </div>
   )
 }
