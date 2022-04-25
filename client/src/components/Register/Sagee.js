@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import "./Sagee.css";
 import NavBar from "../NavBar/NavBar";
+// import useApplicationData from "../../hooks/useApplicationData";
 
 export default function Sagee() {
   const [email, setEmail] = useState("");
@@ -17,8 +18,15 @@ export default function Sagee() {
   const [skill, setSkill] = useState("");
 
   const [error, setError] = useState("");
+  // const { state } = useApplicationData();
   const navigate = useNavigate();
+
   const validateForm = () => {
+    // const mentee = state.mentees.map((menteeEmail) => menteeEmail.email);
+    // const mentor = state.mentors.map((mentorEmail) => mentorEmail.email);
+    // if (mentee.includes(email) || mentor.includes(email)) {
+    //   return false;
+    // }
     if (!email) {
       setError("Email cannot be blank");
       return false;
@@ -49,7 +57,14 @@ export default function Sagee() {
         .then(() => {
           navigate("/login");
         })
-        .catch((err) => err);
+        .catch((err) => {
+          if(err.response) {
+            alert(err.response.data.message)
+          }
+        //   if (!validateForm) {
+        //     alert(err.response.data.alreadyRegistered)
+        //   }
+        });
     }
   };
 
