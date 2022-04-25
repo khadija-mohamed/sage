@@ -9,15 +9,23 @@ import NavBar from "../NavBar/NavBar";
 import useApplicationData from "../../hooks/useApplicationData";
 
 export default function Login(props) {
-  const { setIsLoggedIn, onUpdate } = props;
+  // const { setIsLoggedIn, onUpdate } = props;
   const [email, setEmail] = useState();
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [user,setUser] = useState("");
+  
   const navigate = useNavigate();
+  // console.log("loginnn mentees props",props.state.mentees)
+  //mentees and mentors data
+  const data = props.state;
+  console.log(data.mentees)
 
-  const { user, login } = useContext(UserContext);
+  const { login } = useContext(UserContext);
 
-  const { state } = useApplicationData();
+  // const { state } = useApplicationData();
+  console.log("what is user",user)
+  // console.log("what is state",state.mentees)
 
   const validateForm = () => {
     if (!email) {
@@ -48,10 +56,19 @@ export default function Login(props) {
           { withCredentials: true }
         )
         .then(() => {
-          const mentee = state.mentees.map((menteeEmail) => menteeEmail.email);
-          const mentor = state.mentors.map((mentorEmail) => mentorEmail.email);
-          if (mentee.includes(email)) {
+          const mentee = data.mentees.filter((user) => {
+            if (user.email === email) {
+              return user;
+            }
+          });
+          console.log("heyy",mentee)
+          // const mentee = data.mentees.map((menteeEmail) => menteeEmail.email);
+          const mentor = data.mentors.map((mentorEmail) => mentorEmail.email);
+          if (mentee) {
+            // console.log("mentee login",mentee)
             navigate('/dashboard/mentee/menteefeed');
+            login(mentee[0]);
+            // login(mentee.)
           }
           if (mentor.includes(email)) {
             navigate('/dashboard/mentor/mentorfeed');
@@ -105,7 +122,7 @@ export default function Login(props) {
                   <button
                     className="button-52"
                     type="submit"
-                    onClick={() => login(email)}
+                    // onClick={() => login(email)}
                   >
                     Submit
                   </button>

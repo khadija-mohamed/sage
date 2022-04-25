@@ -7,8 +7,8 @@ const bcrypt = require("bcryptjs");
 module.exports = (db) => {
   const registerNewSagee = async (user) => {
     const result = await pool.query(
-      `INSERT INTO mentees(first_name, last_name, location, email, password, photo_url, description, skill)
-      VALUES($1, $2, $3, $4, $5, $6, $7, $8)
+      `INSERT INTO mentees(first_name, last_name, location, email, password, photo_url, description, skill,isActive)
+      VALUES($1, $2, $3, $4, $5, $6, $7, $8,$9)
       RETURNING email`,
       [
         user.first_name,
@@ -19,6 +19,7 @@ module.exports = (db) => {
         user.photo_url,
         user.description,
         user.skill,
+        true
       ]
     );
     return result.rows[0];

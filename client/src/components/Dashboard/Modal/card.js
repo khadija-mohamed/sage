@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 
 
 const card = (
-  <React.Fragment className="card">
+  <React.Fragment key="card">
     <CardContent className='Outlinedcard'>
       <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
         noun

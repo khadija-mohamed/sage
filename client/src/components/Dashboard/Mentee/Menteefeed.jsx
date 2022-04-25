@@ -66,19 +66,19 @@ export default function Menteefeed(props) {
           /> 
         </div>
         <div className="col-sm-9">
-      { allData.length === 0 ?
+      {/* { allData.length === 0 ? */}
         <div className="mentor-container">
-            {data.map((item) => (
-              <MentorListItem item={item} key={item.id} />
-            ))}
-          </div>
-      :
-          <div className="mentor-container">
             {allData.map((item) => (
               <MentorListItem item={item} key={item.id} />
             ))}
           </div>
-      }
+      {/* : */}
+          {/* <div className="mentor-container">
+            {allData.map((item) => (
+              <MentorListItem item={item} key={item.id} />
+            ))}
+          </div> */}
+      {/* } */}
         </div>
       </div>
     </div>

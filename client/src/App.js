@@ -33,19 +33,32 @@ function App() {
   const menteesData = state.mentees;
   const data = mentorsData.concat(menteesData);
 
-  const [user, setUser] = useState({ email: '', location:'', skill:'', description:'',isactive:true, photo_url:'',auth: false });
+  const [user, setUser] = useState({ first_name:'', last_name: ' ',email: '', location:'', skill:'', description:'',isactive:true, photo_url:'',auth: false });
 
-
-  const login = (email,location,skill,description,isactive,photo_url) => {
-
-    
+  // const [user, setUser] = useState({ email: '',auth:false})
+  const login = (data) => {
     setUser((user) => ({
-      email:user.email,
-      location: user.location,
-      skill:user.skill,
-      description:user.description,
-      isactive:user.isactive,
-      photo_url:user.photo_url,
+      first_name:data.first_name,
+      last_name:data.last_name,
+      email:data.email,
+      location: data.location,
+      skill:data.skill,
+      description:data.description,
+      isactive:data.isactive,
+      photo_url:data.photo_url,
+      auth: true,
+    }));
+  };
+  const update = (data) => {
+    setUser((user) => ({
+      first_name:data.first_name,
+      last_name:data.last_name,
+      email:data.email,
+      location: data.location,
+      skill:data.skill,
+      description:data.description,
+      isactive:data.isactive,
+      photo_url:data.photo_url,
       auth: true,
     }));
   };
@@ -60,12 +73,12 @@ function App() {
   return (
     <div>
 
-      <UserContext.Provider value={{ user, login, logout }}>
+      <UserContext.Provider value={{ user, login, logout ,update}}>
         <BrowserRouter>
           <Routes>
             <Route path="/dashboard" index element={<Dashboard  data={data}/>} />
             <Route path="/" element={<Landing />} />
-            <Route path="/login" element={<Login data={data}/>} />
+            <Route path="/login" element={<Login state={state}/>} />
             <Route path="/register" element={<Register />} />
             <Route path="/register/sage" element={<Sage />} />
             <Route path="/register/sagee" element={<Sagee />} />
