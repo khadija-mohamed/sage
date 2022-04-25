@@ -26,17 +26,12 @@ export default function MentorListItem({item}) {
               <span>{item?.location}</span>
             </div>
           </div>
-        </div>  
-          
-          <div >
-            <Link to={`/dashboard/mentee/mentordetail/${mentorid}`}>
-          <button className="button-52"
-                  >view profile</button>
-        </Link></div>
-          </div>
         </div>
-   
-    
+        <Link to={`/dashboard/mentee/mentordetail/${mentorid}`}>
+          <button className="button-52">view profile</button>
+        </Link>
+    </div>
+    </div>
   );
 }
 

@@ -1,15 +1,21 @@
 .row-my-5{
   width: 25em;
   margin: 1em auto;
-  margin-top: 2em;
+  margin-top: 1em;
   /* border: 0.5px solid black; */
   padding: 1em;
+}
 
+header {
+  font-size: 50px;
+  margin: 0;
+  text-align: center;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 20px;
 }
+
 .skill{
   font: bold;
 }
@@ -47,7 +53,6 @@ input {
 }
 
 
-
 .form-control-button:after {
   content: "";
   background-color: rgb(9, 73, 57);
@@ -69,4 +74,10 @@ input {
   .form-control-button {
     padding: 10px 15px 10px;
   }
+}
+
+span {
+  font-size: 14px;
+  font: inherit;
+  font-style: italic;
 }

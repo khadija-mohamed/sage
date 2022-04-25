@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/heading-has-content */
 import React, { useState } from "react";
 import "./Searchbar.scss";
 
@@ -59,6 +60,9 @@ const Searchbar = ({
         {/* <h4 className="border-bottom"></h4> */}
       </div>
       <div className="col-sm-12 my-2">
+        <header>Filter
+        </header>
+
         <label htmlFor="name">Search by Name</label>
         <input
           type="text"

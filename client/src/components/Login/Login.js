@@ -2,9 +2,7 @@ import React, { useContext, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
-
 import { UserContext } from "../../UserContext";
-
 import logo from "./logo.svg";
 
 import NavBar from "../NavBar/NavBar";
@@ -37,10 +35,22 @@ export default function Login(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+  //   if (validateForm()) {
+  //     axios.post(
+  //       'http://localhost:8080/login/login', { email: email, password: password }
+  //     ).then(() => {
+  //       navigate('/dashboard');
+  //     }).catch(err => {
+  //       console.log("Error", err.response)
+  //       alert(err.response.data.message)     
+  //     });
+
+// if -- err.response exist -- do in catch function, send unknown error otherwise .
+
     if (validateForm()) {
       axios
         .post(
-          "http://localhost:8080/login/login",
+          'http://localhost:8080/login/login',
           {
             email: email,
             password: password,
@@ -51,15 +61,18 @@ export default function Login(props) {
           const mentee = state.mentees.map((menteeEmail) => menteeEmail.email);
           const mentor = state.mentors.map((mentorEmail) => mentorEmail.email);
           if (mentee.includes(email)) {
-            navigate("/dashboard/mentee/menteefeed");
+            navigate('/dashboard/mentee/menteefeed');
           }
           if (mentor.includes(email)) {
-            navigate("/dashboard/mentor/mentorfeed");
+            navigate('/dashboard/mentor/mentorfeed');
           }
         })
-        .catch((err) => err);
+        .catch(err => {
+          console.log("Error", err.response)
+          alert(err.response.data.message)     
+        });
     }
-  };
+  }
 
   return (
     <div>
@@ -113,3 +126,4 @@ export default function Login(props) {
     </div>
   );
 }
+
