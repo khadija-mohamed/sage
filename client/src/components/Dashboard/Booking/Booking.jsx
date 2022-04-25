@@ -92,15 +92,15 @@ export default function Booking(props) {
   
         <label>
           <p>Select a date </p>
-          <input  onChange={(e) => handle(e)} id="date" value={data.date}type="date" class="datepicker" />
+          <input  onChange={(e) => handle(e)} id="date" value={data.date}type="date" className="datepicker" />
           <p>Select a start-time </p>
-          <input  onChange={(e) => handle(e)} id="startTime" value={data.startTime} type="time" class="timepicker" />
+          <input  onChange={(e) => handle(e)} id="startTime" value={data.startTime} type="time" className="timepicker" />
           <p>Select an end-time </p>
-          <input  onChange={(e) => handle(e)} id="endTime" value={data.endTime}type="time" class="timepicker" />
+          <input  onChange={(e) => handle(e)} id="endTime" value={data.endTime}type="time" className="timepicker" />
         </label>
         <div>
           <div></div>
-        <button class="button-52" type="submit" >Submit</button>
+        <button className="button-52" type="submit" >Submit</button>
         </div>
       </form>
       </h4>  
