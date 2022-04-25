@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const cookieSession = require("cookie-session");
-const bcrypt = require("bcrypt");
 const logger = require("morgan");
 const cors = require("cors");
 

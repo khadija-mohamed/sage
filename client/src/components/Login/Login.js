@@ -9,8 +9,8 @@ import NavBar from "../NavBar/NavBar";
 
 
 export default function Login(props) {
-   const { setIsLoggedIn, onUpdate } = props;
-   const [email, setEmail] = useState();
+  const { setIsLoggedIn, onUpdate } = props;
+  const [email, setEmail] = useState();
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -22,19 +22,6 @@ export default function Login(props) {
   // const {user:email,password,
   //        setUser:setEmail,setPassword} = useContext(UserContext);
   // const [user, setUser] = useState
-
-  // const params = useParams();
-  // const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     navigate('/dashboard');
-  //   }, 2000);
-  // }, [navigate]);
-
-  // useEffect(() => {
-
-  // }, [params.id]);
 
   const validateForm = () => {
     if (!email) {
@@ -52,6 +39,7 @@ export default function Login(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+<<<<<<< HEAD
     if (validateForm()) {
       axios.post(
         'http://localhost:8080/login/login', { email: email, password: password }
@@ -65,6 +53,21 @@ export default function Login(props) {
 
 // if -- err.response exist -- do in catch function, send unknown error otherwise .
 
+=======
+    if (validateForm) {
+      axios
+        .post("http://localhost:8080/login/login", {
+          email: email,
+          password: password,
+        })
+        .then(() => {
+          navigate("/dashboard");
+        })
+        .catch((err) => err);
+    }
+  };
+
+>>>>>>> d4edaeb21e456009049201c6cfc7df2d22e85eb9
   console.log("what is user",user)
   return(
     <div>
@@ -96,4 +99,8 @@ export default function Login(props) {
 </div>
     
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d4edaeb21e456009049201c6cfc7df2d22e85eb9
