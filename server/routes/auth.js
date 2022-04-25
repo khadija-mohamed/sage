@@ -54,20 +54,6 @@ module.exports = (db) => {
     return result.rows[0];
   };
 
-  // const allUsers = async (email) => {
-  //   const result = await pool.query(
-  //     `SELECT email
-  //     FROM mentees
-  //     UNION SELECT email
-  //     FROM mentors`
-  //   );
-  //   const emailArray = result.rows.map(emails => emails.email);
-  //   if(emailArray.includes(email)) {
-  //     return false;
-  //   }
-  //   return true;
-  // };
-
   // all routes will go here
 
   // sagee registration
@@ -183,11 +169,7 @@ module.exports = (db) => {
       description,
       skill,
     };
-    // console.log("email input", input.email)
-    // if (allUsers(input.email)) {
-    //   console.log("Input", input.email);
-    //   return res.status(400).send();
-    // }
+    
     try {
       // await allUsers(input.email);
       await registerNewSage(input);
