@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom';
 
 import { UserContext } from '../../../UserContext';
 import Dashboard from '../Dashboard';
+import MenteeEditprofile from './MenteeEditprofile';
 
 
 export default function Menteeprofile(props) {
@@ -14,6 +15,7 @@ export default function Menteeprofile(props) {
   const {user} = useContext(UserContext);
 
   const userEmail = user.email;
+  const [modalOpen, setModalOpen] = useState(false);
   
  
 
@@ -25,7 +27,8 @@ export default function Menteeprofile(props) {
     });
    
   const userObj =userData[0];
-  const menteeId = userObj.id;
+  console.log("whatttt",userObj);
+  // const menteeId = userObj.id;
    
   
  
@@ -47,7 +50,7 @@ export default function Menteeprofile(props) {
     </div> */}
     <div className='card'>
       <div className="card_photo">
-        <img src={userObj.photo_url}></img>
+        <img src={userObj.photo_url} alt=""></img>
       </div>
         <h3>{userObj.first_name} {userObj.last_name}</h3>
 
@@ -64,13 +67,20 @@ export default function Menteeprofile(props) {
 
       </div>
 
-      <div >
-            <Link to={`/dashboard/mentee/menteeprofile/editprofile/${menteeId}`}>
-          <button className="button-52"
-                  >Edit profile</button>
-        </Link></div>
+      <button
+        className="openModalBtn"
+        onClick={() => {
+          setModalOpen(true);
+
+        }}
+      >
+        Edit profile
+      </button>
+
+      {modalOpen && <MenteeEditprofile setOpenModal={setModalOpen} key = {userObj.id} mentee = {userObj}/>}
+    </div>
 
     </div>
-    </div>
+   
   )
 }
