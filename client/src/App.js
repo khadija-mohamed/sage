@@ -34,12 +34,23 @@ import { useState } from "react";
 
 function App() {
   const { state} = useApplicationData();
-  const [user, setUser] = useState({ email: '', auth: false });
-  
+  const mentorsData = state.mentors;
+  const menteesData = state.mentees;
+  const data = mentorsData.concat(menteesData);
 
-  const login = (email) => {
+  const [user, setUser] = useState({ email: '', location:'', skill:'', description:'',isactive:true, photo_url:'',auth: false });
+
+
+  const login = (email,location,skill,description,isactive,photo_url) => {
+
+    
     setUser((user) => ({
-      email: email,
+      email:user.email,
+      location: user.location,
+      skill:user.skill,
+      description:user.description,
+      isactive:user.isactive,
+      photo_url:user.photo_url,
       auth: true,
     }));
   };
@@ -60,9 +71,9 @@ function App() {
            <UserContext.Provider value ={{user,login,logout}}> 
            <BrowserRouter>
             <Routes>
-              <Route path="/dashboard" index element={<Dashboard />}/>
+              <Route path="/dashboard" index element={<Dashboard data={data}/>}/>
               <Route path="/" element={<Landing />}/>
-              <Route path="/login" element={<Login />}/>
+              <Route path="/login" element={<Login data={data}/>}/>
               <Route path="/register" element={<Register />}/>
               <Route path="/register/sage" element={<Sage />}/>
               <Route path="/register/sagee" element={<Sagee />}/>

@@ -12,165 +12,178 @@ import { useNavigate,useParams } from "react-router-dom";
 
 
 import Dashboard from '../Dashboard';
+import useApplicationData from '../../../hooks/useApplicationData';
 
 
 
 export default function MenteeEditprofile(props) {
   
-  // console.log("userObj",userObj)
-  const { menteeId} = useParams()
-  console.log("props.mentee",props.state.mentees,menteeId);
+  const navigate = useNavigate();
+   
+   const setOpenModal = props.setOpenModal;
+
+  const menteePhoto= props.mentee.photo_url;
+  const des = props.mentee.description;
+  const menteeSkill = props.mentee.skill;
+  const status = props.mentee.isacitve;
+  const menteeLocation = props.mentee.location;
+  const menteeId = props.mentee.id;
+  
+  
+  const [photo_url, setPhotourl] = useState(menteePhoto);
+  const [description, setDescription] = useState(des);
+  const [skill, setSkill] = useState(menteeSkill);
+  const [location,setLocation] = useState(menteeLocation);
+  const [isactive,setIsactive] = useState(status);
+
   
 
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [first_name, setFirstname] = useState("");
-  const [last_name, setLastname] = useState("");
-  const [photo_url, setPhotourl] = useState("");
-  const [description, setDescription] = useState("");
-  const [skill, setSkill] = useState("");
+  const converBoolean = (value)=> {
+     if (value === "true") {
+       return true;
+     } 
 
-  const [error, setError] = useState("");
-  const navigate = useNavigate();
-  const validateForm = () => {
-    if (!email) {
-      setError("Email cannot be blank");
-      return false;
-    }
-    setError("");
-    if (!password) {
-      setError("Password cannot be blank");
-      return false;
-    }
-    return true;
-  };
+  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  let handleSubmit = (e) => {
+       e.preventDefault();
 
-    // if (validateForm) {
-  //     axios
-  //       .post("http://localhost:8080/login/register/sage", {
-  //         first_name: first_name,
-  //         last_name: last_name,
-  //         email: email,
-  //         password: password,
-  //         photo_url: photo_url,
-  //         description: description,
-  //         skill: skill,
-  //       })
-  //       .then(() => {
-  //         navigate("/login");
-  //       })
-  //       .catch((err) => err);
-  //   }
+       axios
+         .post(`http://localhost:8080/login/mentee/${menteeId}/edit`, {
+           
+           
+           photo_url: photo_url,
+           description: description,
+           skill: skill,
+           isactive: isactive,
+           location:location
+         })
+         .then( res => {
+           setOpenModal(false);
+          // console.log("whyyyyy")
+           navigate("/dashboard/mentee/menteeprofile");
+          // console.log(res.data);
+          
+          
+        // window.location = "/dashboard"
+         })
+         .catch((err) => err);
+     
    };
 
   return (
-    <div className="register-wrapper">
-      <Dashboard />
-      <div className="orange-main">
-      <div className="transparent-text">
-      </div>
-      <div className="sage-block">
-        <div className="head-main">
-          <span className="head-left"> S</span>
-          <img className="o3" src={logo} alt="logo"/>
-          <span className="head-right">GE</span>
-          <div className='login'>
-          <h4> Please register as Sage to proceed.</h4>
-          <form onSubmit={handleSubmit}>
-        <label>
-          <p>First Name</p>
-          <input
-            type="text"
-            id="firstname"
-            placeholder=''
-            onChange={(e) => setFirstname(e.target.value)}
-          />
-        </label>
-        <label>
-          <p>Last Name</p>
-          <input
-            type="text"
-            id="lastname"
-            onChange={(e) => setLastname(e.target.value)}
-          />
-        </label>
-        <label>
-          <p>Email</p>
-          <input
-            type="email"
-            id="sageemail"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </label>
-        <label>
-          <p>Password</p>
-          <input
-            type="password"
-            id="sagepasswor"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <label>
-          <p>Confirm Password</p>
-          <input type="password" id="confirm"/>
-        </label>
-        {/* <label>
-          <p>Upload a Photo</p>
-          <div className="imgbutton">
-          <input type="file" id="img"/>
-          </div>
-        </label> */}
+    
   
-        <label>
-          <p>About</p>
-          <input
-            type="text"
-            id="description"
-            onChange={(e) => setDescription(e.target.value)}
-          />
-        </label>
-        <label>
-          <p>Skills</p>
-          <input
-            type="text"
-            id="skill"
-            onChange={(e) => setSkill(e.target.value)}
-          />
-         </label> 
-        {/* <label className="button">
-          {/* <div class="imgbutton">
-          <input type="file" id="img"/>
-          </div> */}
-          {/* <input
-            type="file"
-            id="photourl"
-            onChange={(e) => setPhotourl(e.target.value)}
-          />
-        </label> */} 
-        <label  className="button">
-          <p>Upload a Photo</p>
-          {/* <div class="imgbutton">
-          <input type="file" id="img"/>
-          </div> */}
-          <input
-            type="text"
-            id="input"
-            onChange={(e) => setPhotourl(e.target.value)}
-          />
-        </label>
-        <div>
+
+    <div className="modalBackground">
+      <div className="modalContainer">
+        <div className="titleCloseBtn">
+          <button
+            onClick={() => {
+              setOpenModal(false);
+            }}
+          >
+            X
+          </button>
+        </div>
+
+        <div className="orange-main">
+          <div className="transparent-text">
+          </div>
+          <div className="sage-block">
+            <div className="head-main">
           
-        <button className="button-52" type="submit">Submit</button>
+            <div className='login'>
+              < h4> Update your profile</h4>
+              <form onSubmit={handleSubmit} action="">
+              <label>
+                  <p>Location</p>
+                  <input
+                    type="text"
+                    id="description"
+                    defaultValue = {menteeLocation}
+                    onChange={(e) => setLocation(e.target.value)}
+                  />
+                </label>
+
+                <label>
+                  <p>About</p>
+                  <input
+                    type="text"
+                    id="description"
+                    defaultValue = {des}
+                    onChange={(e) => setDescription(e.target.value)}
+                  />
+                </label>
+
+                <label>
+                  <p>Skills</p>
+                  <input
+                    type="text"
+                    id="skill"
+                    defaultValue={menteeSkill}
+                    onChange={(e) => setSkill(e.target.value)}
+                  />
+                </label> 
+
+                <label  className="button">
+                  <p>Enter a Photo URL</p>
+
+                  <input
+                    type="text"
+                    id="input"
+                    defaultValue = {menteePhoto}
+                    onChange={(e) => setPhotourl(e.target.value)}
+                  />
+                </label>
+                <label  className="button">
+                <p>isActive</p>
+                <select
+                    className="form-control-button"
+                    id="input"
+                    
+                    onChange={(e) => setIsactive(converBoolean(e.target.value))}
+                  >
+                  <option value ="True">Active</option>
+                  <option value ="False">Not Active</option>
+                </select>
+                </label>
+
+                <div className="footer">
+                  <button
+                    onClick={() => {
+                      setOpenModal(false);
+                    }}
+                    id="cancelBtn"
+                  >
+                    Cancel
+                  </button>
+                 
+                  
+                 
+                    {/* <Link to={`/dashboard`}>  */}
+                  <button
+                  type ="submit"
+                    // onClick={() => {
+                    //    setOpenModal(false);
+                    //  }}
+                    
+                   
+                  >
+                    Submit
+                  </button>
+                  
+                  {/* </Link>  */}
+                 </div>
+              </form>
+                 
+               </div>    
+          </div>
         </div>
-      </form>
-      </div>  
-        </div>
-      </div>
     </div>
-    </div>
+  </div>
+  </div>
+   
   );
 }

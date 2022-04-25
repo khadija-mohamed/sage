@@ -25,7 +25,7 @@ export default function MenteeListItem({item}) {
           </div>
          </div> 
           <div >
-            <Link to={`/dashboard/mentee/mentordetail/${menteeid}`}>
+            <Link to={`/dashboard/mentor/menteedetail/${menteeid}`}>
           <button className="button-52"
                   >view profile</button>
         </Link></div>
