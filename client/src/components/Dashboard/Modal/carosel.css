@@ -1,0 +1,17 @@
+.carouselblock {
+height: 40vh;
+width: 65vh;
+margin: 0 5em;
+display: flex;
+border: 0.5px solid black;
+}
+
+
+.p_bolded {
+  font-size: large;
+  font-style: oblique;
+}
+
+strong {
+  font-style: inherit;
+}

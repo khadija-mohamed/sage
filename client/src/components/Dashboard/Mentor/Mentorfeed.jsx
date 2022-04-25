@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Mentorfeed.css';
-import Dashboard from '../Dashboard';
+import MentorDashboard from '../MentorDashboard';
 import Searchbar from '../Searchbar/Searchbar';
 import cationData from "../../../hooks/useApplicationData.js";
 import MenteeListItem from '../Mentee/MenteeListItem'
@@ -52,10 +52,10 @@ export default function Menteefeed(props) {
 
   return (
     <div className="mentorfeed-wrapper"> 
+    <MentorDashboard />
     <div className="container">
       <div className="row">
         <div className="col-sm-3">
-         <Dashboard />
          <Searchbar 
             locations={generateLocationDataForDropdown()}
             onNameFilter={handleFilterName}
