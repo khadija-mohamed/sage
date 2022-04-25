@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:wght@400;700&display=swap');
 
-$dark: rgb(3, 90, 50);
+$dark: rgb(255, 255, 255);
 $light: #fbfbfb;
 
 $animation-speed-fast: .8s;
 $animation-speed-slow: 1s;
-
-
 
 body {
   height: 100vh;
@@ -24,16 +22,15 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  // height: 110vh;
   position: sticky;
 }
 
 
 .card {
-  margin: 2em;
+  margin: 1em;
   width: 230px;
+  margin-left: 2em;
   height: 325px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   position: relative;
   perspective: 1000px;
   transform: perspective(1000px) translateY(0);
@@ -42,8 +39,6 @@ body {
 
   
   &.dark{
-    background-color:$dark ;
-    color: $light;
     margin-top: 30px;
     
     .purchase-button{
@@ -88,7 +83,6 @@ body {
   pointer-events: none;
   width: 100%;
   perspective: inherit;
-  // padding-top: 50px;
   
 }
 
@@ -189,3 +183,4 @@ small{
 span {
   width: 65%;
 }
+

@@ -94,7 +94,6 @@ module.exports = (db) => {
   });
 
   router.post("/login", (req, res) => {
-    console.log("Session", req.session);
     // check email and password
     const { email, password } = req.body;
 
@@ -121,7 +120,7 @@ module.exports = (db) => {
         req.session.email = user.email;
         return res.status(204).send();
       } else {
-        return res.status(400).json(templateVars);
+        return res.status(400).send();
       }
     });
   });

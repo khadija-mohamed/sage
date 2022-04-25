@@ -79,7 +79,7 @@ export default function MenteeEditprofile(props) {
           <img className="o3" src={logo} alt="logo"/>
           <span className="head-right">GE</span>
           <div className='login'>
-          <h4> Please register as Sage to proceed.</h4>
+          <h4> Please complete the form to update your information</h4>
           <form onSubmit={handleSubmit}>
         <label>
           <p>First Name</p>
@@ -141,23 +141,10 @@ export default function MenteeEditprofile(props) {
             onChange={(e) => setSkill(e.target.value)}
           />
          </label> 
-        {/* <label className="button">
-          {/* <div class="imgbutton">
-          <input type="file" id="img"/>
-          </div> */}
-          {/* <input
-            type="file"
-            id="photourl"
-            onChange={(e) => setPhotourl(e.target.value)}
-          />
-        </label> */} 
         <label  className="button">
           <p>Upload a Photo</p>
-          {/* <div class="imgbutton">
-          <input type="file" id="img"/>
-          </div> */}
           <input
-            type="text"
+            type="file"
             id="input"
             onChange={(e) => setPhotourl(e.target.value)}
           />
