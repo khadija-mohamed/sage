@@ -120,7 +120,7 @@ module.exports = (db) => {
         req.session.email = user.email;
         return res.status(204).send();
       } else {
-        return res.status(400).send();
+        return res.status(400).send(templateVars);
       }
     });
   });
