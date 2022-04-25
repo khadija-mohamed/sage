@@ -109,59 +109,5 @@ module.exports = (db) => {
     })
   })
 
-  router.post("/login2", (req, res) => {
-    const { email, password } = req.body;
-    const salt = bcrypt.genSaltSync(10);
-    const hashedPassword = bcrypt.hashSync(password, salt);
-    console.log("hash", hashedPassword)
-
-    let templateVars = {
-      message: "Email or password is incorrect",
-      user: req.session,
-      password: hashedPassword,
-    };
-    console.log("hashed", templateVars.password)
-    console.log("password", password)
-    if (!email || !password) {
-      let templateVars = {
-        message: "Input fields cannot be blank",
-        user: req.session,
-      };
-      return res.status(400).json(templateVars);
-    }
-    potentialLogin(email, password)
-      .then((user) => {
-        let templateVars = {
-          message: "Email and/or password is incorrect",
-          user: req.session,
-          password: hashedPassword,
-        };
-        const result = bcrypt.compareSync(password, templateVars.password)
-        console.log("result", result);
-        if (!user) {
-          let templateVars = {
-            message: "Email and/or password is incorrect",
-            user: req.session,
-          };
-          return res.status(400).json(templateVars);
-        } 
-        if (!result) {
-          return res.status(400).json(templateVars);
-        } else {
-          req.session.email = user.id
-          return res.json({});
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        res.status(500).end();
-      });
-    // const result = bcrypt.compareSync(password, templateVars.password)
-    // if (!result) {
-    //   return res.send("Email or password is incorrect")
-    // }
-    // req.session.email = user.id
-  });
-
   return router;
 };
