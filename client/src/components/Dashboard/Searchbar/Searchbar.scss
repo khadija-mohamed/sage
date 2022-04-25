@@ -4,7 +4,6 @@
   margin-top: 1em;
   /* border: 0.5px solid black; */
   padding: 1em;
-
 }
 
 header {
@@ -54,7 +53,6 @@ input {
 }
 
 
-
 .form-control-button:after {
   content: "";
   background-color: rgb(9, 73, 57);
@@ -76,4 +74,10 @@ input {
   .form-control-button {
     padding: 10px 15px 10px;
   }
+}
+
+span {
+  font-size: 14px;
+  font: inherit;
+  font-style: italic;
 }

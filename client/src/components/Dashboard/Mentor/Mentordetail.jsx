@@ -2,9 +2,9 @@
 
 import "./Mentordetail.css";
 import {Link, useParams} from 'react-router-dom';
-import React, { useState, useEffect} from 'react';
-import Header from "../../NavBar/Header";
+import React, { useState, useEffect} from 'react'; 
 import Dashboard from "../Dashboard";
+import Sagecarousel from '../Modal/carosel';
 
 
 
@@ -30,11 +30,13 @@ export default function Mentordetail(props) {
       <div>
       <div>
         <Dashboard/>
+  
       </div>
-      <div className='card'>
-        <div className="card_photo">
+    <div className="card-wrapper2">
+    <Sagecarousel />
+      <div className='card2'>
+        <div className="card_photo2">
            <img src={newMentor.photo_url} alt =''></img>
-        </div>  
           <h3>{newMentor.first_name} {newMentor.last_name}</h3>
 
         <div className="card_description">
@@ -46,14 +48,11 @@ export default function Mentordetail(props) {
         <div className="card_tag">
           <p>{newMentor.location}</p>
         </div>
-
-        <div>
-          <button className="card_btn">Book a meeting with me </button>
-        </div>
-        <div>
-          <button className="card_btn">Contact Me</button>
-        </div>
-
+        <div className="buttons">
+          <button className="button-52"><Link to=" ">Contact Me</Link></button>
+            </div>  
+            </div>   
+      </div>
       </div>
     </div>
   );  
