@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 import "./Sage.css";
 import NavBar from "../NavBar/NavBar";
-// import useApplicationData from "../../hooks/useApplicationData";
 
 export default function Sage() {
   const [email, setEmail] = useState("");
@@ -18,7 +17,6 @@ export default function Sage() {
   const [skill, setSkill] = useState("");
 
   const [error, setError] = useState("");
-  // const { state } = useApplicationData();
   const navigate = useNavigate();
   const validateForm = () => {
     if (!email) {
