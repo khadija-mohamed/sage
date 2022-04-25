@@ -138,7 +138,7 @@ export default function Sagee() {
           </div> */}
           <input
             type="text"
-            id="input"
+            id="sageephoto"
             onChange={(e) => setPhotourl(e.target.value)}
           />
         </label>

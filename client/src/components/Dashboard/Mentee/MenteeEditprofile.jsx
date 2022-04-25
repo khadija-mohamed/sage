@@ -22,19 +22,28 @@ export default function MenteeEditprofile(props) {
    
    const setOpenModal = props.setOpenModal;
 
-  const menteePhoto= props.mentee.photo_url;
-  const des = props.mentee.description;
-  const menteeSkill = props.mentee.skill;
-  const status = props.mentee.isacitve;
-  const menteeLocation = props.mentee.location;
-  const menteeId = props.mentee.id;
+  // const menteePhoto= props.mentee.photo_url;
+  // const des = props.mentee.description;
+  // const menteeSkill = props.mentee.skill;
+  // const status = props.mentee.isacitve;
+  // const menteeLocation = props.mentee.location;
+   const menteeId = props.mentee.id;
   
   
-  const [photo_url, setPhotourl] = useState(menteePhoto);
-  const [description, setDescription] = useState(des);
-  const [skill, setSkill] = useState(menteeSkill);
-  const [location,setLocation] = useState(menteeLocation);
-  const [isactive,setIsactive] = useState(status);
+  // const [photo_url, setPhotourl] = useState(menteePhoto);
+  // const [description, setDescription] = useState(des);
+  // const [skill, setSkill] = useState(menteeSkill);
+  // const [location,setLocation] = useState(menteeLocation);
+  // const [isactive,setIsactive] = useState(status);
+
+  const[user,setUser] = useState(props.mentee);
+  const { update } = useContext(UserContext);
+  // const menteePhoto= user.photo_url;
+  // const des = user.description;
+  // const menteeSkill = user.skill;
+  // const status = user.isAcitve;
+  // const menteeLocation = user.location;
+  // const menteeId = user.id;
 
   
 
@@ -53,11 +62,11 @@ export default function MenteeEditprofile(props) {
          .post(`http://localhost:8080/login/mentee/${menteeId}/edit`, {
            
            
-           photo_url: photo_url,
-           description: description,
-           skill: skill,
-           isactive: isactive,
-           location:location
+           photo_url: user.photo_url,
+           description: user.description,
+           skill: user.skill,
+           isactive: user.isactive,
+           location:user.location
          })
          .then( res => {
            setOpenModal(false);
@@ -65,7 +74,8 @@ export default function MenteeEditprofile(props) {
            navigate("/dashboard/mentee/menteeprofile");
           // console.log(res.data);
           
-          
+          update(user);
+          console.log()
         // window.location = "/dashboard"
          })
          .catch((err) => err);
@@ -102,8 +112,11 @@ export default function MenteeEditprofile(props) {
                   <input
                     type="text"
                     id="description"
-                    defaultValue = {menteeLocation}
-                    onChange={(e) => setLocation(e.target.value)}
+                    defaultValue = {user.location}
+                    onChange={(e) => setUser((prev)=> ({
+                      ...prev,
+                      location:e.target.value}))
+                    }
                   />
                 </label>
 
@@ -112,8 +125,11 @@ export default function MenteeEditprofile(props) {
                   <input
                     type="text"
                     id="description"
-                    defaultValue = {des}
-                    onChange={(e) => setDescription(e.target.value)}
+                    defaultValue = {user.description}
+                    onChange={(e) => setUser((prev)=> ({
+                      ...prev,
+                      description:e.target.value}))
+                    }
                   />
                 </label>
 
@@ -122,8 +138,11 @@ export default function MenteeEditprofile(props) {
                   <input
                     type="text"
                     id="skill"
-                    defaultValue={menteeSkill}
-                    onChange={(e) => setSkill(e.target.value)}
+                    defaultValue = {user.skill}
+                    onChange={(e) => setUser((prev)=> ({
+                      ...prev,
+                      skill:e.target.value}))
+                    }
                   />
                 </label> 
 
@@ -133,8 +152,11 @@ export default function MenteeEditprofile(props) {
                   <input
                     type="text"
                     id="input"
-                    defaultValue = {menteePhoto}
-                    onChange={(e) => setPhotourl(e.target.value)}
+                    defaultValue = {user.photo_url}
+                    onChange={(e) => setUser((prev)=> ({
+                      ...prev,
+                      photo_url:e.target.value}))
+                    }
                   />
                 </label>
                 <label  className="button">
@@ -142,8 +164,11 @@ export default function MenteeEditprofile(props) {
                 <select
                     className="form-control-button"
                     id="input"
-                    
-                    onChange={(e) => setIsactive(converBoolean(e.target.value))}
+                    onChange={(e) => setUser((prev)=> ({
+                      ...prev,
+                      isActive:converBoolean(e.target.value)}))
+                    // onChange={(e) => setIsactive(converBoolean(e.target.value))
+                    }
                   >
                   <option value ="True">Active</option>
                   <option value ="False">Not Active</option>
