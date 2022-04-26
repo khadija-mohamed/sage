@@ -1,0 +1,83 @@
+.card-wrapper2 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 230px;
+  margin-top: 14em;
+  margin: 6em auto;
+  /* text-align: center; */
+  height: 325px;
+  position: relative;
+  perspective: 1000px;
+}
+
+/* .card_photo2 {
+  align-self: center;
+  margin: 0 auto;
+} */
+
+.card2 .detail-img {
+  display: flex;
+  height: 700px;
+  align-items: center;
+  /* border: 0.3px solid black; */
+  border-radius: 10%;
+  box-shadow: rgb(203 200 200) 10px 10px 8px;
+}
+
+.mentee-detail-img .detail-img {
+  display: flex;
+  position: relative;
+  left: -355px;
+  top: -30px;
+}
+
+/* .mentor-name {
+  position: relative;
+  top: 20px;
+  left: -185px;
+} */
+
+.card-descriptions, .card-skills, .card-location {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 6em;
+    border-radius: 25px;
+    box-shadow: rgb(203 200 200) 10px 10px 8px;
+    margin: 60px;
+    height: 110px;
+    /* font-weight: bold; */
+}
+
+.card-descriptions {
+  margin-top: 0px;
+}
+
+.mentee-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 6em; */
+  margin-bottom: 30px;
+  margin-top: 40px;
+  /* height: 110px; */
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.all-cards {
+  position: relative;
+  bottom: 700px;
+  right: -340px;
+}
+
+/* .detail-button {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+} */

@@ -1,60 +1,75 @@
 // import React from "react";
 
 import "./Mentordetail.css";
-import {Link, useParams} from 'react-router-dom';
-import React from 'react'; 
+import { Link, useParams } from "react-router-dom";
+import React from "react";
 import Dashboard from "../Dashboard";
-import Sagecarousel from '../Modal/carosel';
-
-
+import Sagecarousel from "../Modal/carosel";
 
 export default function Mentordetail(props) {
-  
-  const { mentorid} = useParams();
-  
+  const { mentorid } = useParams();
+
   const data = props.state.mentors;
-  
-  const newMentor = data.find(mentorObj => {
-    
-    return mentorObj.id == mentorid
 
-  })
-  
-  
+  const newMentor = data.find((mentorObj) => {
+    return mentorObj.id == mentorid;
+  });
 
-  return !newMentor ?(
-    <div className='card'>card</div>
-  )
-   
-  :   (
+  return !newMentor ? (
+    <div className="card">card</div>
+  ) : (
+    <div>
       <div>
-      <div>
-        <Dashboard/>
+        <Dashboard />
       </div>
-      
-    <div className="card-wrapper2">
-      <div className='card2'>
-        <div className="card_photo2">
-           <img src={newMentor.photo_url} alt =''></img>
-          <h3>{newMentor.first_name} {newMentor.last_name}</h3>
 
-        <div className="card_description">
-          <p>{newMentor.description}</p>
+      <div className="whole-container">
+        <div className="card-wrapper2">
+          <div className="card2">
+            <div className="mentor-name-photo">
+              <div className="mentor-detail-img">
+                <img className="detail-img" src={newMentor.photo_url} alt=""></img>
+              </div>
+            </div>
+            <div className="all-cards">
+              <div className="mentor-name">
+                <h3>
+                  {newMentor.first_name} {newMentor.last_name}
+                </h3>
+              </div>
+              <div className="card-descriptions">
+                <div className="about-title">
+                  <h3>About Me</h3>
+                </div>
+                <div className="about">
+                  <p>{newMentor.description}</p>
+                </div>
+              </div>
+              <div className="card-skills">
+                <div className="skills-title">
+                  <h3>Skills</h3>
+                </div>
+                <div className-="skills">
+                  <p>{newMentor.skill}</p>
+                </div>
+              </div>
+              <div className="card-location">
+                <div className="skills-title">
+                  <h3>Location</h3>
+                </div>
+                <div>
+                  <p>{newMentor.location}</p>
+                </div>
+              </div>
+              <div className="detail-button">
+                <button className="button-52">
+                  <Link to="/dashboard/booking">Contact Me</Link>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="card_tag">
-          <p>{newMentor.skill}</p>
-        </div>
-        <div className="card_tag">
-          <p>{newMentor.location}</p>
-        </div>
-        <div className="buttons">
-          <button className="button-52"><Link to="/dashboard/booking">Contact Me</Link></button>
-            </div>  
-            </div>   
-      </div>
       </div>
     </div>
-  );  
-
-
+  );
 }

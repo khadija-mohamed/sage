@@ -11,7 +11,7 @@ function Sagecarousel() {
   <Carousel.Item className="carousel_item">
     <img
       className="carouselblock"
-      src="https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      src="https://images.saatchiart.com/saatchi/950863/art/3641280/2711165-HSC00001-7.jpg"
       alt="First slide"
     />
     <Carousel.Caption>
@@ -22,7 +22,7 @@ function Sagecarousel() {
   <Carousel.Item>
     <img
       className="carouselblock"
-      src="https://images.unsplash.com/photo-1504204267155-aaad8e81290d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      src="https://s.clipartkey.com/mpngs/s/221-2218489_watercolor-leaves-02-free-png-watercolor-leaves.png"
       alt="Second slide"
     />
 
@@ -34,7 +34,7 @@ function Sagecarousel() {
   <Carousel.Item>
     <img
       className="carouselblock"
-      src="https://images.unsplash.com/flagged/photo-1568005242833-d0f5f61da402?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      src="https://images.saatchiart.com/saatchi/950863/art/3643686/2713571-HSC00001-7.jpg"
       alt="Third slide"
     />
 
