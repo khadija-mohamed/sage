@@ -88,7 +88,7 @@ export default function MenteeEditprofile(props) {
         <div className="orange-main">
           <div className="transparent-text">
           </div>
-          <div className="sage-block">
+         
             <div className="head-main">
           
             <div className='login'>
@@ -194,7 +194,7 @@ export default function MenteeEditprofile(props) {
                  </div>
               </form>
                  
-               </div>    
+             
           </div>
         </div>
     </div>
