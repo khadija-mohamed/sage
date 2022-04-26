@@ -63,15 +63,21 @@ export default function Login(props) {
           });
           console.log("heyy",mentee)
           // const mentee = data.mentees.map((menteeEmail) => menteeEmail.email);
-          const mentor = data.mentors.map((mentorEmail) => mentorEmail.email);
+          const mentor = data.mentors.filter((user) => {
+            if (user.email === email) {
+              return user;
+            }
+          });
+         // const mentor = data.mentors.map((mentorEmail) => mentorEmail.email);
           if (mentee) {
             // console.log("mentee login",mentee)
             navigate('/dashboard/mentee/menteefeed');
             login(mentee[0]);
             // login(mentee.)
           }
-          if (mentor.includes(email)) {
+          if (mentor) {
             navigate('/dashboard/mentor/mentorfeed');
+            login(mentor[0]);
           }
         })
         .catch(err => {
