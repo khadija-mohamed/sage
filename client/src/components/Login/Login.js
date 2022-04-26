@@ -19,12 +19,12 @@ export default function Login(props) {
   // console.log("loginnn mentees props",props.state.mentees)
   //mentees and mentors data
   const data = props.state;
-  console.log(data.mentees)
+  // console.log(data.mentees)
 
   const { login } = useContext(UserContext);
 
   // const { state } = useApplicationData();
-  console.log("what is user",user)
+  // console.log("what is user",user)
   // console.log("what is state",state.mentees)
 
   const validateForm = () => {
@@ -61,21 +61,21 @@ export default function Login(props) {
               return user;
             }
           });
-          console.log("heyy",mentee)
+          console.log("heyy mentee",mentee)
           // const mentee = data.mentees.map((menteeEmail) => menteeEmail.email);
           const mentor = data.mentors.filter((user) => {
             if (user.email === email) {
               return user;
             }
           });
+          console.log("what is mentor",mentor)
          // const mentor = data.mentors.map((mentorEmail) => mentorEmail.email);
-          if (mentee) {
+          if (typeof mentee[0] === "object") {
             // console.log("mentee login",mentee)
             navigate('/dashboard/mentee/menteefeed');
             login(mentee[0]);
             // login(mentee.)
-          }
-          if (mentor) {
+          } else  {
             navigate('/dashboard/mentor/mentorfeed');
             login(mentor[0]);
           }
