@@ -31,6 +31,7 @@ form input, form button {
   outline: 0;
   color: white;
   border: 1px solid black;
+  border-radius: 0.25rem;
   cursor: pointer;
   position: relative;
   user-select: none;

@@ -29,7 +29,7 @@ export default function Logout(props) {
   };
 
   return (
-    <div>
+    <div className="index">
       <i className="logout-msg">You have successfully logged out.</i>
       <img className="logout-logo" src={logo} alt="logo"/>
       <form onSubmit={handleSubmit}>

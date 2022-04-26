@@ -41,6 +41,7 @@ export default function Mentorprofile() {
                     <p>{userObj.location}</p>
                     </div>
                     <div className="outlinecard">
+                      <div className='register-btn'>
                     <button
                     className="button-52"
                     onClick={() => {
@@ -48,6 +49,7 @@ export default function Mentorprofile() {
                          Edit profile
                          </button>
                          {modalOpen && <MentorEditprofile setOpenModal={setModalOpen} key = {userObj.id} mentor = {userObj}/>}
+                         </div>
                          </div>
                         <OutlinedCard />
                         </div>

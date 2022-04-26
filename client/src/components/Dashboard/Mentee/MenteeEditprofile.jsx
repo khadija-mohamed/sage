@@ -168,6 +168,7 @@ export default function MenteeEditprofile(props) {
 
                 <div className="footer">
                   <button
+                  className="button-52"
                     onClick={() => {
                       setOpenModal(false);
                     }}
@@ -184,6 +185,7 @@ export default function MenteeEditprofile(props) {
                     // onClick={() => {
                     //    setOpenModal(false);
                     //  }}
+                    className="button-52"
                     
                    
                   >

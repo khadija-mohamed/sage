@@ -1,9 +1,13 @@
 .row-my-5{
-  // width: 25em;
   margin: 1em auto;
   margin-top: 1em;
-  /* border: 0.5px solid black; */
   padding: 1em;
+}
+
+.container{
+margin: auto 0;
+margin-left: 14em;
+padding: 1em
 }
 
 header {
@@ -63,6 +67,7 @@ form-control:focus {
   cursor: pointer;
   position: relative;
   user-select: none;
+  border-radius: 0.25rem;
 }
 
 

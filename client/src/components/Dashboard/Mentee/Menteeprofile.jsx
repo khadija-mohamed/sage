@@ -40,6 +40,7 @@ export default function Menteeprofile(props) {
                     <p>{userObj.location}</p>
                     </div>
                     <div className="outlinecard">
+                    <div className="register-btn">
                     <button
                     className="button-52"
                     onClick={() => {
@@ -47,13 +48,13 @@ export default function Menteeprofile(props) {
                          Edit profile
                          </button>
                          {modalOpen && <MenteeEditprofile setOpenModal={setModalOpen} key = {userObj.id} mentee = {userObj}/>}
-                         
+                         </div>
                         </div>
                         <OutlinedCard />
                         </div>
                         </div>
                         </Grid>
-                        <iframe src="https://feed.mikle.com/widget/v2/154449/?preloader-text=Loading" height="450px" width="30%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>
+                        <iframe src="https://feed.mikle.com/widget/v2/154449/?preloader-text=Loading" height="409px" width="450px" class="fw-iframe" scrolling="no" frameborder="0"></iframe>
       
         <Sagecarousel className="carouselcontainer"/> 
         <div className='notepad'>

@@ -41,7 +41,7 @@ class NotePad extends React.Component {
           <div>
             <textarea
               rows="15"
-              cols="60"
+              cols="90"
               placeholder="Use this notepad to jot down ideas!"
               id="notes-value"
               value={this.state.notesText}

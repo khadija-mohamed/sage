@@ -81,7 +81,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="index">
 
       <UserContext.Provider value={{ user, login, logout ,update}}>
         <BrowserRouter>

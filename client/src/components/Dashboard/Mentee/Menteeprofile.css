@@ -5,12 +5,14 @@
 .fw-iframe {
   display: flex;
   position: relative;
+  margin-left: 2em;
   top: 5em;
 }
 
 .carousel {
   display: flex;
   top: 5em;
+  margin-left: 7em;
 }
 
 .carousel.slide {
