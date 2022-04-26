@@ -144,12 +144,10 @@ export default function Sagee() {
                 </label>
                 <label className="button">
                   <p>Upload a Photo</p>
-                  {/* <div class="imgbutton">
-          <input type="file" id="img"/>
-          </div> */}
+                 
                   <input
                     type="text"
-                    id="input"
+                    id="sageephoto"
                     onChange={(e) => setPhotourl(e.target.value)}
                   />
                 </label>

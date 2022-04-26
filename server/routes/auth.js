@@ -7,8 +7,8 @@ const bcrypt = require("bcryptjs");
 module.exports = (db) => {
   const registerNewSagee = async (user) => {
     const result = await pool.query(
-      `INSERT INTO mentees(first_name, last_name, location, email, password, photo_url, description, skill)
-      VALUES($1, $2, $3, $4, $5, $6, $7, $8)
+      `INSERT INTO mentees(first_name, last_name, location, email, password, photo_url, description, skill, isActive)
+      VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)
       RETURNING email`,
       [
         user.first_name,
@@ -19,6 +19,7 @@ module.exports = (db) => {
         user.photo_url,
         user.description,
         user.skill,
+        true
       ]
     );
     return result.rows[0];
@@ -88,7 +89,6 @@ module.exports = (db) => {
       return res.status(400).json(templateVars);
     }
     const user = await potentialLogin(email);
-    console.log("User+++++++++", user);
     if (user) {
       return res.status(400).send({ status: "error", message: "User already registered, please login to continue." });
     }
@@ -170,13 +170,11 @@ module.exports = (db) => {
     };
     
     try {
-      // await allUsers(input.email);
       await registerNewSage(input);
       req.session.email = input.email;
       res.status(200).send();
     } catch (err) {
       console.log(err);
-      // return next(err)
       return res.status(400).send();
     }
   });
@@ -205,7 +203,6 @@ module.exports = (db) => {
       // compare password
       const correctPassword = bcrypt.compareSync(password, user.password);
       if (correctPassword) {
-        // allUsers()
         req.session.email = user.email;
         return res.status(204).send();
       } else {
@@ -222,3 +219,73 @@ module.exports = (db) => {
 
   return router;
 };
+
+//edit mentee profile
+
+router.get("/mentee/:id/edit", (req, res) => {
+
+  const {id} = req.params;
+ 
+  pool.query(`SELECT * FROM mentees WHERE id = $1`, [id])
+      .then(data => {
+        
+   
+      return res.json(data.rows[0]);
+  });
+});
+
+
+router.post("/mentee/:id/edit", (req, res) => {
+  let templateVars = {
+    user: req.session
+  }
+  const {id} = req.params;
+  const {photo_url, location, description, skill,isactive } = req.body
+  
+
+
+ pool.query( `Update mentees SET  location = $1, description = $2, skill = $3, photo_url = $4, isactive = $5 WHERE id = $6`,[location, description, skill,photo_url, isactive,id])
+ .then(() => {
+   console.log('item was added edited');
+  res.send("whhhh")
+  
+});
+
+return router;
+ 
+});
+
+//edit mentor profile
+
+router.get("/mentor/:id/edit", (req, res) => {
+
+  const {id} = req.params;
+ 
+  pool.query(`SELECT * FROM mentors WHERE id = $1`, [id])
+      .then(data => {
+        
+   
+      return res.json(data.rows[0]);
+  });
+});
+
+
+router.post("/mentor/:id/edit", (req, res) => {
+  let templateVars = {
+    user: req.session
+  }
+  const {id} = req.params;
+  const {photo_url, location, description, skill,isactive } = req.body
+  
+
+
+ pool.query( `Update mentors SET  location = $1, description = $2, skill = $3, photo_url = $4, isactive = $5 WHERE id = $6`,[location, description, skill,photo_url, isactive,id])
+ .then(() => {
+   console.log('mentees was added edited');
+  res.send("whhhh")
+  
+});
+
+return router;
+ 
+});

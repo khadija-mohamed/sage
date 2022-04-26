@@ -1,0 +1,172 @@
+.modalBackground {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  width: 500px;
+  height: 700px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+// .modalContainer .title {
+//   display: inline-block;
+//   text-align: center;
+//   margin-top: 10px;
+// }
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modalContainer .body {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.modalContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer .footer button {
+  width: 150px;
+  height: 45px;
+  margin: 10px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#cancelBtn {
+  background-color: crimson;
+}
+
+
+// #bg {
+//   position: fixed;
+//   width: 100%;
+//   height: 100%; 
+// }
+
+// form {
+//   position: relative;
+//   width: 250px;
+//   margin: 0 auto;
+//   background: rgba(255, 255, 255, 0.3);
+//   padding: 20px 22px;
+// }
+
+// form input, form button {
+//   width: 212px;
+//   background-repeat: no-repeat;
+//   padding: 8px 24px 8px 10px;
+//   font: inherit;
+//   letter-spacing: .075em;
+//   color: rgb(0, 0, 0);
+//   text-shadow: 0 1px 0 rgba(0,0,0,.1);
+//   margin-bottom: 19px;
+// }
+/* CSS */
+// .button-52 {
+//   font-size: 16px;
+//   font-weight: 200;
+//   letter-spacing: 1px;
+//   padding: 13px 20px 13px;
+//   outline: 0;
+//   color: white;
+//   border: 1px solid black;
+//   cursor: pointer;
+//   position: relative;
+//   background-color: rgba(0, 0, 0, 0);
+//   user-select: none;
+//   -webkit-user-select: none;
+//   touch-action: manipulation;
+// }
+
+// .button-52:after {
+//   content: "";
+//   background-color: rgb(9, 73, 57);
+//   width: 100%;
+//   z-index: -1;
+//   position: absolute;
+//   height: 100%;
+//   top: 7px;
+//   left: 7px;
+//   transition: 0.2s;
+// }
+
+// .button-52:hover:after {
+//   top: 0px;
+//   left: 0px;
+// }
+
+// @media (min-width: 768px) {
+//   .button-52 {
+//     padding: 13px 50px 13px;
+//   }
+// }
+
+// .buttons {
+//   align-items: center;
+//   justify-content: center;
+//   display: flex;
+//   margin-top: 20px;
+// }
+
+// .register {
+//   font-size: 14px;
+//   width: 25rem;
+//   height: auto;
+//   margin: 0 auto;
+//   margin-top: 10px;
+// }
+
+// .space{
+//   width: 7rem;
+//   height: auto;
+//   display: inline-block;
+// }
+
+// a:link{
+//   color:white;
+//   text-decoration: none;
+// }
+
+// a:visited {
+//   color: white;
+//   text-decoration: none;
+// }
+
+// a:hover {
+//   color: white;
+//   text-decoration: none;
+// }
