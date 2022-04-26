@@ -10,21 +10,14 @@ import OutlinedCard from '../Modal/card';
 
 
 export default function Menteeprofile(props) {
-  //mentees data
-  // const data = props.state.mentees;
+  
 
   //user email and auth
   const {user} = useContext(UserContext);
-  console.log("menteeprofile",user)
 
-  
   const [modalOpen, setModalOpen] = useState(false);
-  
- 
-
   const userObj =user;
-  console.log("whatttt",userObj);
-  // const menteeId = userObj.id;
+
    
   return(
      <div className="menteeprofile-wrapper">
