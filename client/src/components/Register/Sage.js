@@ -16,6 +16,9 @@ export default function Sage() {
   const [description, setDescription] = useState("");
   const [skill, setSkill] = useState("");
 
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  
   const validateForm = () => {
     if (!email) {
       setError("Email cannot be blank");
@@ -47,11 +50,7 @@ export default function Sage() {
         .then(() => {
           navigate("/login");
         })
-        .catch((err) => {
-          if(err.response) {
-            alert(err.response.data.message)
-          }
-        });
+        .catch((err) => err);
     }
   };
 
