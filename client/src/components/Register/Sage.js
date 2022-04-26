@@ -18,7 +18,7 @@ export default function Sage() {
 
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  
+
   const validateForm = () => {
     if (!email) {
       setError("Email cannot be blank");
@@ -74,6 +74,7 @@ export default function Sage() {
             type="text"
             id="first_name"
             onChange={(e) => setFirstname(e.target.value)}
+            required
           />
         </label>
         <label>
@@ -82,6 +83,7 @@ export default function Sage() {
             type="text"
             id="last_name"
             onChange={(e) => setLastname(e.target.value)}
+            required
           />
         </label>
         <label>
@@ -90,6 +92,7 @@ export default function Sage() {
             type="email"
             id="sageemail"
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </label>
         <label>
@@ -98,6 +101,7 @@ export default function Sage() {
             type="password"
             id="sagepassword"
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
         </label>
         <label>
@@ -106,6 +110,7 @@ export default function Sage() {
             type="password"
             id="confirmsage"
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
         </label>
         <label>
@@ -114,6 +119,7 @@ export default function Sage() {
             type="text"
             id="input"
             onChange={(e) => setLocation(e.target.value)}
+            required
           />
           </label>
         <label>
@@ -122,6 +128,7 @@ export default function Sage() {
             type="text"
             id="aboutme"
             onChange={(e) => setDescription(e.target.value)}
+            required
           />
         </label>
         <label>
@@ -130,6 +137,7 @@ export default function Sage() {
             type="text"
             id="sageskill"
             onChange={(e) => setSkill(e.target.value)}
+            required
           />
         </label>
         <label className="button">
@@ -141,6 +149,7 @@ export default function Sage() {
             type="text"
             id="input"
             onChange={(e) => setPhotourl(e.target.value)}
+            required
           />
         </label>
         <div>

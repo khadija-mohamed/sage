@@ -8,11 +8,11 @@ import useApplicationData from '../../../hooks/useApplicationData.js';
 
 export default function Menteefeed(props) {
 
-  const { state } = useApplicationData();
+  // const { state } = useApplicationData();
 
-  console.log("State:", state.mentees);
+  // console.log("State:", state.mentees);
   
-  const data = state.mentees;
+  const data = props.state.mentees;
   const [allData, setData] = useState(data);
 
   const generateLocationDataForDropdown = () => {
@@ -64,19 +64,19 @@ export default function Menteefeed(props) {
           /> 
         </div>
         <div className="col-sm-9">
-      { allData.length === 0 ?
+      {/* { allData.length === 0 ? */}
         <div className="mentee-container">
-            {data.map((item) => (
+            {allData.map((item) => (
               <MenteeListItem item={item} key={item.id} />
             ))}
           </div>
-      :
+      {/* : 
           <div className="mentee-container">
             {allData.map((item) => (
               <MenteeListItem item={item} key={item.id} />
             ))}
           </div>
-      }
+       }  */}
         </div>
       </div>
     </div>

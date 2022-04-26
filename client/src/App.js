@@ -23,21 +23,23 @@ import useApplicationData from "./hooks/useApplicationData";
 import Video from "./components/Video/Video";
 import MenteeEditprofile from "./components/Dashboard/Mentee/MenteeEditprofile";
 import MentorEditprofile from "./components/Dashboard/Mentor/MentorEditprofile";
+import Menteedetail from "./components/Dashboard/Mentee/Menteedetail";
 // import Calendar from "./components/Calendar";
 import { UserContext } from "./UserContext";
 import { useState } from "react";
 
 function App() {
   const { state} = useApplicationData();
-  const mentorsData = state.mentors;
-  const menteesData = state.mentees;
-  const data = mentorsData.concat(menteesData);
+  // const mentorsData = state.mentors;
+  // const menteesData = state.mentees;
+  // const data = mentorsData.concat(menteesData);
 
-  const [user, setUser] = useState({ first_name:'', last_name: ' ',email: '', location:'', skill:'', description:'',isactive:true, photo_url:'',auth: false });
+  const [user, setUser] = useState({ id:'',first_name:'', last_name: ' ',email: '', location:'', skill:'', description:'',isactive:true, photo_url:'',auth: false });
 
   // const [user, setUser] = useState({ email: '',auth:false})
   const login = (data) => {
     setUser((user) => ({
+      id:data.id,
       first_name:data.first_name,
       last_name:data.last_name,
       email:data.email,
@@ -76,7 +78,7 @@ function App() {
       <UserContext.Provider value={{ user, login, logout ,update}}>
         <BrowserRouter>
           <Routes>
-            <Route path="/dashboard" index element={<Dashboard  data={data}/>} />
+            <Route path="/dashboard" index element={<Dashboard />} />
             <Route path="/" element={<Landing />} />
             <Route path="/login" element={<Login state={state}/>} />
             <Route path="/register" element={<Register />} />
@@ -91,12 +93,16 @@ function App() {
               element={<Menteeprofile state={state} />}
             />
             <Route
-              path="/dashboard/mentee/menteeprofile/editprofile/:mentorid"
+              path="/dashboard/mentee/menteeprofile/editprofile/:menteeid"
               element={<MenteeEditprofile state={state} />}
             />
             <Route
               path="/dashboard/mentee/mentordetail/:mentorid"
               element={<Mentordetail state={state} />}
+            />
+            <Route
+              path="/dashboard/mentor/menteedetail/:menteeid"
+              element={<Menteedetail state={state} />}
             />
             <Route
               path="/dashboard/mentee/menteefind"
@@ -110,7 +116,7 @@ function App() {
             />
             <Route
               path="/dashboard/mentor/mentorprofile"
-              element={<Mentorprofile />}
+              element={<Mentorprofile state={state}/>}
             />
             <Route
               path="/dashboard/mentor/mentorprofile/editprofile/:mentorid"

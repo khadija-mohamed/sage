@@ -244,13 +244,49 @@ router.post("/mentee/:id/edit", (req, res) => {
   let templateVars = {
     user: req.session
   }
+  const {id} = req.params;
   const {photo_url, location, description, skill,isactive } = req.body
   
 
 
- pool.query( `Update mentees SET  location = $1, description = $2, skill = $3, photo_url = $4, isactive = $5`,[location, description, skill,photo_url, isactive])
+ pool.query( `Update mentees SET  location = $1, description = $2, skill = $3, photo_url = $4, isactive = $5 WHERE id = $6`,[location, description, skill,photo_url, isactive,id])
  .then(() => {
    console.log('item was added edited');
+  res.send("whhhh")
+  
+});
+
+return router;
+ 
+});
+
+//edit mentor profile
+
+router.get("/mentor/:id/edit", (req, res) => {
+
+  const {id} = req.params;
+ 
+  pool.query(`SELECT * FROM mentors WHERE id = $1`, [id])
+      .then(data => {
+        
+   
+      return res.json(data.rows[0]);
+  });
+});
+
+
+router.post("/mentor/:id/edit", (req, res) => {
+  let templateVars = {
+    user: req.session
+  }
+  const {id} = req.params;
+  const {photo_url, location, description, skill,isactive } = req.body
+  
+
+
+ pool.query( `Update mentors SET  location = $1, description = $2, skill = $3, photo_url = $4, isactive = $5 WHERE id = $6`,[location, description, skill,photo_url, isactive,id])
+ .then(() => {
+   console.log('mentees was added edited');
   res.send("whhhh")
   
 });

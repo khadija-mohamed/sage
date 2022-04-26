@@ -2,7 +2,7 @@
 
 import "./Mentordetail.css";
 import {Link, useParams} from 'react-router-dom';
-import React, { useState, useEffect} from 'react'; 
+import React from 'react'; 
 import Dashboard from "../Dashboard";
 import Sagecarousel from '../Modal/carosel';
 
@@ -10,7 +10,7 @@ import Sagecarousel from '../Modal/carosel';
 
 export default function Mentordetail(props) {
   
-  const { mentorid} = useParams()
+  const { mentorid} = useParams();
   
   const data = props.state.mentors;
   
@@ -49,7 +49,7 @@ export default function Mentordetail(props) {
           <p>{newMentor.location}</p>
         </div>
         <div className="buttons">
-          <button className="button-52"><Link to=" ">Contact Me</Link></button>
+          <button className="button-52"><Link to="/dashboard/booking">Contact Me</Link></button>
             </div>  
             </div>   
       </div>
