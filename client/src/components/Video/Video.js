@@ -56,16 +56,16 @@ export default function Video() {
   };
 
   const handleJitsiIFrameRef1 = (iframeRef) => {
-    iframeRef.style.border = "10px solid rgb(9, 73, 57)";
-    iframeRef.style.background = "rgb(9, 73, 57)";
-    iframeRef.style.height = "610px";
+    iframeRef.style.border = "10px solid #538075";
+    iframeRef.style.background = "#538075";
+    iframeRef.style.height = "870px";
   };
 
   const handleJitsiIFrameRef2 = (iframeRef) => {
     iframeRef.style.marginTop = "10px";
     iframeRef.style.border = "10px dashed #df486f";
     iframeRef.style.padding = "5px";
-    iframeRef.style.height = "400px";
+    iframeRef.style.height = "450px";
   };
 
   const handleApiReady = (apiObj) => {
@@ -85,7 +85,7 @@ export default function Video() {
 
   const handleReadyToClose = () => {
     /* eslint-disable-next-line no-alert */
-    navigate("/dashboard");
+    navigate(-3);
   };
 
   const generateRoomName = () => `SageRoomNo${3754 * 13674}`;
@@ -125,7 +125,7 @@ export default function Video() {
           textAlign: "center",
           border: "2px solid white",
           margin: "2px",
-          background: "rgb(91, 125, 116)",
+          background: "#538075",
         }}
       >
         <img className="o3" src={logo} alt="logo" />
@@ -134,7 +134,7 @@ export default function Video() {
         roomName={generateRoomName()}
         spinner={renderSpinner}
         config={{
-          subject: "lalalala",
+          subject: "Demo Day",
           hideConferenceSubject: false,
         }}
         onApiReady={(externalApi) => handleApiReady(externalApi)}
