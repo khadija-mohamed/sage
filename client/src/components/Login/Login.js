@@ -9,15 +9,23 @@ import NavBar from "../NavBar/NavBar";
 import useApplicationData from "../../hooks/useApplicationData";
 
 export default function Login(props) {
-  const { setIsLoggedIn, onUpdate } = props;
+  // const { setIsLoggedIn, onUpdate } = props;
   const [email, setEmail] = useState();
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [user,setUser] = useState("");
+  
   const navigate = useNavigate();
+  // console.log("loginnn mentees props",props.state.mentees)
+  //mentees and mentors data
+  const data = props.state;
+  console.log("what is props.state",data.mentees)
 
-  const { user, login } = useContext(UserContext);
+  const { login } = useContext(UserContext);
 
   const { state } = useApplicationData();
+  // console.log("what is user",user)
+  // console.log("what is state",state.mentees)
 
   const validateForm = () => {
     if (!email) {
@@ -48,13 +56,36 @@ export default function Login(props) {
           { withCredentials: true }
         )
         .then(() => {
-          const mentee = state.mentees.map((menteeEmail) => menteeEmail.email);
-          const mentor = state.mentors.map((mentorEmail) => mentorEmail.email);
-          if (mentee.includes(email.toLowerCase())) {
+          const menteeEmail = state.mentees.map((menteeEmails) => menteeEmails.email);
+          const mentorEmail = state.mentors.map((mentorEmails) => mentorEmails.email);
+          if (menteeEmail.includes(email.toLowerCase())) {
             navigate('/dashboard/mentee/menteefeed');
           }
-          if (mentor.includes(email.toLowerCase())) {
+          if (mentorEmail.includes(email.toLowerCase())) {
             navigate('/dashboard/mentor/mentorfeed');
+          }
+          const mentee = data.mentees.filter((user) => {
+            if (user.email === email) {
+              return user;
+            }
+          })
+          console.log("heyy mentee",mentee)
+          // const mentee = data.mentees.map((menteeEmail) => menteeEmail.email);
+          const mentor = data.mentors.filter((user) => {
+            if (user.email === email) {
+              return user;
+            }
+          });
+          console.log("what is mentor",mentor)
+         // const mentor = data.mentors.map((mentorEmail) => mentorEmail.email);
+          if (typeof mentee[0] === "object") {
+            // console.log("mentee login",mentee)
+            navigate('/dashboard/mentee/menteefeed');
+            login(mentee[0]);
+            // login(mentee.)
+          } else if(typeof mentor[0] === "object") {
+            navigate('/dashboard/mentor/mentorfeed');
+            login(mentor[0]);
           }
         })
         .catch(err => {
@@ -93,6 +124,7 @@ export default function Login(props) {
                     placeholder="email"
                     className="email"
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                   ></input>
                   <input
                     type="password"
@@ -101,11 +133,12 @@ export default function Login(props) {
                     placeholder="password"
                     className="pass"
                     onChange={(e) => setPassword(e.target.value)}
+                    required
                   ></input>
                   <button
                     className="button-52"
                     type="submit"
-                    onClick={() => login(email)}
+                    // onClick={() => login(email)}
                   >
                     Submit
                   </button>

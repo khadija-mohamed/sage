@@ -1,3 +1,14 @@
+/* .mentee-profile {
+  position: absolute;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  top: 0;
+  width: 100%;
+  margin: auto 0;
+  height: 100%;
+  margin-top: 3.5em;
+  margin-left: 250px;
+}
 
 .card-wrapper2 {
   display: flex;
@@ -23,7 +34,45 @@
 .carousel-control-next-icon{
   color: black;
 }
+/* 
+.grid-2  {
+  position: relative;
+  display: flex;
+  height: 60px;
+  top: 0;
+  margin-bottom: 400px ;
+}
 
+.light {
+display: inline-block;
+height: 60px;
+margin-top: 55vh;
+margin-left: 170px;
+} */ 
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+}
+
+.App .openModalBtn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
 .Outlinedcard {
   margin: 30px auto 0;
   text-align: center;

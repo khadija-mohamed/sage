@@ -1,29 +1,29 @@
-import { useState } from "react";
-import { UserContext } from "./UserContext";
+// import { useState } from "react";
+// import { UserContext } from "./UserContext";
 
 
-const UserProvider = ({ children }) => {
-  const [user, setUser] = useState({ email: '', auth: false });
+// const UserProvider = ({ children }) => {
+//   const [user, setUser] = useState({ email: '', location:'', skill:'', description:'',isactive:true, photo_url:'',auth: false });
+  
+//   const login = (email) => {
+//     setUser((user) => ({
+//       email: email,
+//       auth: true,
+//     }));
+//   };
 
-  const login = (email) => {
-    setUser((user) => ({
-      email: email,
-      auth: true,
-    }));
-  };
+//   const logout = () => {
+//     setUser((user) => ({
+//       email: '',
+//       auth: false,
+//     }));
+//   };
 
-  const logout = () => {
-    setUser((user) => ({
-      email: '',
-      auth: false,
-    }));
-  };
+//   return (
+//     <UserContext.Provider value={{ user, login, logout }}>
+//       {children}
+//     </UserContext.Provider>
+//   );
+// };
 
-  return (
-    <UserContext.Provider value={{ user, login, logout }}>
-      {children}
-    </UserContext.Provider>
-  );
-};
-
-export default UserProvider;
+// export default UserProvider;

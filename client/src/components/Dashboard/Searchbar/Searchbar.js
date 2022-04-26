@@ -7,8 +7,8 @@ const Searchbar = ({
   onNameFilter,
   onSkillFilter,
   onLocationFilter,
-  defaultData
-}, item) => {
+  
+}) => {
   const [filters, setFilters] = useState({
     name: "",
     skill: "",
@@ -25,7 +25,7 @@ const Searchbar = ({
 // }, true);
 
   const handleInput = (field) => (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     const { value } = event.target;
 
     setFilters({
@@ -45,7 +45,7 @@ const Searchbar = ({
       onLocationFilter(value);
       break;
     default:
-      defaultData(value);
+      // defaultData(value);
       break;
     }
   };

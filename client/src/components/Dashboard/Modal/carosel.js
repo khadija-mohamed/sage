@@ -8,7 +8,7 @@ function Sagecarousel() {
     return (
         <div className="carouselcontainer">
   <Carousel className="carousel">
-  <Carousel.Item classname="carousel_item">
+  <Carousel.Item className="carousel_item">
     <img
       className="carouselblock"
       src="https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"

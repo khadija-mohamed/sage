@@ -18,6 +18,7 @@ export default function Sage() {
 
   const [error, setError] = useState("");
   const navigate = useNavigate();
+
   const validateForm = () => {
     if (!email) {
       setError("Email cannot be blank");
