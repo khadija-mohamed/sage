@@ -22,28 +22,16 @@ export default function MenteeEditprofile(props) {
    
    const setOpenModal = props.setOpenModal;
 
-  // const menteePhoto= props.mentee.photo_url;
-  // const des = props.mentee.description;
-  // const menteeSkill = props.mentee.skill;
-  // const status = props.mentee.isacitve;
-  // const menteeLocation = props.mentee.location;
-   const menteeId = props.mentee.id;
+  
+  // const menteeId = useParams();
   
   
-  // const [photo_url, setPhotourl] = useState(menteePhoto);
-  // const [description, setDescription] = useState(des);
-  // const [skill, setSkill] = useState(menteeSkill);
-  // const [location,setLocation] = useState(menteeLocation);
-  // const [isactive,setIsactive] = useState(status);
 
   const[user,setUser] = useState(props.mentee);
   const { update } = useContext(UserContext);
-  // const menteePhoto= user.photo_url;
-  // const des = user.description;
-  // const menteeSkill = user.skill;
-  // const status = user.isAcitve;
-  // const menteeLocation = user.location;
-  // const menteeId = user.id;
+  
+  const menteeId = user.id;
+  console.log("menteeedit profile", props,menteeId)
 
   
 
@@ -75,7 +63,6 @@ export default function MenteeEditprofile(props) {
           // console.log(res.data);
           
           update(user);
-          console.log()
         // window.location = "/dashboard"
          })
          .catch((err) => err);
@@ -117,6 +104,7 @@ export default function MenteeEditprofile(props) {
                       ...prev,
                       location:e.target.value}))
                     }
+                    required
                   />
                 </label>
 
@@ -130,6 +118,7 @@ export default function MenteeEditprofile(props) {
                       ...prev,
                       description:e.target.value}))
                     }
+                    required
                   />
                 </label>
 
@@ -143,6 +132,7 @@ export default function MenteeEditprofile(props) {
                       ...prev,
                       skill:e.target.value}))
                     }
+                    required
                   />
                 </label> 
 
@@ -157,6 +147,7 @@ export default function MenteeEditprofile(props) {
                       ...prev,
                       photo_url:e.target.value}))
                     }
+                    required
                   />
                 </label>
                 <label  className="button">

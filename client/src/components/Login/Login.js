@@ -19,7 +19,7 @@ export default function Login(props) {
   // console.log("loginnn mentees props",props.state.mentees)
   //mentees and mentors data
   const data = props.state;
-  // console.log(data.mentees)
+  console.log("what is props.state",data.mentees)
 
   const { login } = useContext(UserContext);
 
@@ -75,7 +75,7 @@ export default function Login(props) {
             navigate('/dashboard/mentee/menteefeed');
             login(mentee[0]);
             // login(mentee.)
-          } else  {
+          } else if(typeof mentor[0] === "object") {
             navigate('/dashboard/mentor/mentorfeed');
             login(mentor[0]);
           }
@@ -116,6 +116,7 @@ export default function Login(props) {
                     placeholder="email"
                     className="email"
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                   ></input>
                   <input
                     type="password"
@@ -124,6 +125,7 @@ export default function Login(props) {
                     placeholder="password"
                     className="pass"
                     onChange={(e) => setPassword(e.target.value)}
+                    required
                   ></input>
                   <button
                     className="button-52"

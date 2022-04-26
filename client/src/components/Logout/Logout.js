@@ -1,12 +1,15 @@
-import React from "react";
+
 import axios from "axios";
+import React, { useState,useContext } from 'react';
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import "./Logout.css";
 import logo from "../../logo.svg";
+import { UserContext } from "../../UserContext";
 
 export default function Logout(props) {
   const navigate = useNavigate();
+  const {logout} = useContext(UserContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,6 +17,7 @@ export default function Logout(props) {
       .post("http://localhost:8080/login/logout")
       .then(() => {
         navigate("/");
+        logout();
       })
       .catch((err) => err);
   };
