@@ -152,7 +152,6 @@ module.exports = (db) => {
       return res.status(400).json(templateVars);
     }
     const user = await potentialLogin(email);
-    console.log("User+++++++++", user);
     if (user) {
       return res.status(400).send({ status: "error", message: "User already registered, please login to continue." });
     }
