@@ -70,16 +70,15 @@ const Navbar = () => {
             </div>
             
             <li className="nav-item active">
-              <NavLink className="nav-link" to="/dashboard/mentee/menteeprofile" exact>
+              <NavLink className="nav-link" to="/dashboard/mentor/mentorprofile" exact>
               <i 
               className="fa-solid fa-user">
-
               </i> My Profile
               </NavLink>
             </li>
 
             <li className="nav-item">
-              <NavLink className="nav-link" to="/dashboard/mentee/menteefeed" exact>
+              <NavLink className="nav-link" to="/dashboard/mentor/mentorfeed" exact>
               <i className="fa-solid fa-seedling"></i> My Feed
               </NavLink> 
             </li>
@@ -87,11 +86,6 @@ const Navbar = () => {
             <li className="nav-item">
               <NavLink className="nav-link" to="/dashboard/video" exact>
               <i className="fa-solid fa-users"></i> Video Chat
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/dashboard/booking" exact>
-              <i className="fa-solid fa-calendar-check"></i> Bookings
               </NavLink>
             </li>
             <li className="nav-item">

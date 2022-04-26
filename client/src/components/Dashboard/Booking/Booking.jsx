@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import logo from './logo.svg'
 import Axios from 'axios'
+import { Link } from "react-router-dom";
 import Sagemodal from '../Modal/Modal';
 import NavBar from '../../NavBar/NavBar';
 import './booking.scss'
@@ -79,6 +80,19 @@ export default function Booking(props) {
             <option>Mark</option>
             <option>Rachel</option>
             <option>Joe</option>
+            <option>Carmen</option>
+            <option>Edward</option>
+            <option>Brad</option>
+            <option>Khadija</option>
+            <option>Mary</option>
+            <option>Carl</option>
+            <option>Lucas</option>
+            <option>Luna</option>
+            <option>Jay</option>
+            <option>Joseph</option>
+            <option>Erin</option>
+            <option>Miranda</option>
+            <option>Hailey</option>
             </select>
             </label>
 
@@ -100,7 +114,7 @@ export default function Booking(props) {
         </label>
         <div>
           <div></div>
-        <button className="button-52" type="submit" >Submit</button>
+        <button className="button-52" type="submit"><Link to="/dashboard/mentee/menteeprofile">Book</Link></button>
         </div>
       </form>
       </h4>  

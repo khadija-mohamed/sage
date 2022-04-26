@@ -4,7 +4,6 @@ import "./Menteedetail.css";
 import {Link, useParams} from 'react-router-dom';
 import React from 'react'; 
 import Dashboard from "../Dashboard";
-import Sagecarousel from '../Modal/carosel';
 
 
 
@@ -33,7 +32,7 @@ export default function Menteedetail(props) {
   
       </div>
     <div className="card-wrapper2">
-    <Sagecarousel />
+
       <div className='card2'>
         <div className="card_photo2">
            <img src={newMentee.photo_url} alt =''></img>

@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
 import "./Sage.css";
-import NavBar from "../NavBar/NavBar";
+import HomeNav from "../NavBar/HomeNav";
 
 export default function Sage() {
   const [email, setEmail] = useState("");
@@ -60,7 +60,7 @@ export default function Sage() {
 
   return (
     <div className="register-wrapper">
-      <NavBar />
+      <HomeNav />
       <div className="orange-main">
         <div className="transparent-text"></div>
         <div className="login-btn">

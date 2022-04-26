@@ -1,38 +1,20 @@
-/* .mentee-profile {
-  position: absolute;
-  overflow: hidden;
-  background-color: rgb(255, 255, 255);
-  top: 0;
-  width: 100%;
-  margin: auto 0;
-  height: 100%;
-  margin-top: 3.5em;
-  margin-left: 250px;
-}
+.menteeprofile-wrapper {
+  height: 120vh;
 
-.card-wrapper2 {
+}
+.fw-iframe {
   display: flex;
-  justify-content: center;
-  align-self: center;
-  width: 230px;
-  margin-top: 14em;
-  margin: 6em auto;
-  text-align: center;
-  height: 325px;
   position: relative;
-  perspective: 1000px;
+  top: 5em;
 }
 
-
-.card2 img {
+.carousel {
   display: flex;
-  height: 325px;
-  align-items: center;
-  border: 0.3px solid black
+  top: 5em;
 }
 
-.carousel-control-next-icon{
-  color: black;
+.carousel.slide {
+  width: 80vh;
 }
 /* 
 .grid-2  {
@@ -50,37 +32,25 @@ margin-top: 55vh;
 margin-left: 170px;
 } */ 
 
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
-.App {
-  width: 100vw;
-  height: 100vh;
+.card-wrapper2 {
+  top: 0;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  font-family: "Nunito", sans-serif;
 }
 
-.App .openModalBtn {
-  width: 200px;
-  height: 40px;
-  border: none;
-  border-radius: 6px;
-  background-color: cornflowerblue;
-  color: white;
-  cursor: pointer;
-}
-body {
-  padding: 0;
-  margin: 0;
-}
-.Outlinedcard {
-  margin: 30px auto 0;
-  text-align: center;
-}
-
-
-.Actioncard {
+.outlinecard {
   display: flex;
-  margin: 30px auto 0;
-  text-align: center;
+  height: 80px;
+  justify-content: center;
+
+}
+
+
+.spotify {
+  margin: auto;
+  margin-right: 8.7rem;
+}
+
+.notepad {
+  margin: auto;
+  margin-right: 1em;
 }

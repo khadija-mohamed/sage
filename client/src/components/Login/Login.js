@@ -5,7 +5,7 @@ import "./Login.css";
 import { UserContext } from "../../UserContext";
 import logo from "./logo.svg";
 
-import NavBar from "../NavBar/NavBar";
+import HomeNav from "../NavBar/HomeNav";
 import useApplicationData from "../../hooks/useApplicationData";
 
 export default function Login(props) {
@@ -16,16 +16,12 @@ export default function Login(props) {
   const [user,setUser] = useState("");
   
   const navigate = useNavigate();
-  // console.log("loginnn mentees props",props.state.mentees)
-  //mentees and mentors data
-  const data = props.state;
-  console.log("what is props.state",data.mentees)
+ 
 
   const { login } = useContext(UserContext);
 
   const { state } = useApplicationData();
-  // console.log("what is user",user)
-  // console.log("what is state",state.mentees)
+  
 
   const validateForm = () => {
     if (!email) {
@@ -56,6 +52,32 @@ export default function Login(props) {
           { withCredentials: true }
         )
         .then(() => {
+          
+          const mentee = state.mentees.filter((user) => {
+            if (user.email === email) {
+              return user;
+            }
+          })
+          console.log("heyy mentee",mentee)
+          
+          const mentor = state.mentors.filter((user) => {
+            if (user.email === email) {
+              return user;
+            }
+          });
+          console.log("what is mentor",mentor)
+         
+          if (typeof mentee[0] === "object") {
+            console.log("mentee login",mentee)
+            
+            login(mentee[0]);
+            
+            // login(mentee.)
+          } else if(typeof mentor[0] === "object") {
+            // navigate('/dashboard/mentor/mentorfeed');
+            console.log("mentee login",mentor)
+            login(mentor[0]);
+          }
           const menteeEmail = state.mentees.map((menteeEmails) => menteeEmails.email);
           const mentorEmail = state.mentors.map((mentorEmails) => mentorEmails.email);
           if (menteeEmail.includes(email.toLowerCase())) {
@@ -63,29 +85,6 @@ export default function Login(props) {
           }
           if (mentorEmail.includes(email.toLowerCase())) {
             navigate('/dashboard/mentor/mentorfeed');
-          }
-          const mentee = data.mentees.filter((user) => {
-            if (user.email === email) {
-              return user;
-            }
-          })
-          console.log("heyy mentee",mentee)
-          // const mentee = data.mentees.map((menteeEmail) => menteeEmail.email);
-          const mentor = data.mentors.filter((user) => {
-            if (user.email === email) {
-              return user;
-            }
-          });
-          console.log("what is mentor",mentor)
-         // const mentor = data.mentors.map((mentorEmail) => mentorEmail.email);
-          if (typeof mentee[0] === "object") {
-            // console.log("mentee login",mentee)
-            navigate('/dashboard/mentee/menteefeed');
-            login(mentee[0]);
-            // login(mentee.)
-          } else if(typeof mentor[0] === "object") {
-            navigate('/dashboard/mentor/mentorfeed');
-            login(mentor[0]);
           }
         })
         .catch(err => {
@@ -96,7 +95,7 @@ export default function Login(props) {
 
   return (
     <div>
-      <NavBar />
+      <HomeNav />
       <div className="login-wrapper">
         <div className="orange-main">
           <div className="register-btn">

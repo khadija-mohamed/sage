@@ -33,7 +33,6 @@ form input, form button {
   border: 1px solid black;
   cursor: pointer;
   position: relative;
-  background-color: rgba(0, 0, 0, 0);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;

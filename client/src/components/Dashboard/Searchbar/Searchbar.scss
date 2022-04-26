@@ -20,17 +20,16 @@ h2 {
   font: bold;
 }
 
-
 .border-bottom {
 font: bold;
 }
 
-input { 
+input#name.form-control { 
   position: relative;
   padding: 10px 0 0;
-  width: 50%;
+  width: 50px;
   font-family: inherit;
-  width: 100%;
+  width: 40vh;
   border: 0;
   border-bottom: 1px solid gray;
   outline: 0;
@@ -38,6 +37,20 @@ input {
   color: rgb(0, 0, 0);
   padding: 5px 0;
   background: transparent;
+  border: none transparent;
+outline: none;
+}
+
+form-control:focus {
+  outline: none;
+}
+
+.form-control {
+  background: transparent;
+  border: none transparent;
+  border-bottom: 0.5px solid black;
+  outline: none;
+  width: 40vh;
 }
 
 .form-control-button{
