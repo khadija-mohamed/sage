@@ -63,7 +63,7 @@ const Searchbar = ({
         <header>Filter
         </header>
 
-        <label htmlFor="name">Search by Name</label>
+        <label htmlFor="name"><i class="fa-solid fa-magnifying-glass"></i>Search by Name</label>
         <input
           type="text"
           className="searchbar-input"
@@ -82,7 +82,7 @@ const Searchbar = ({
       </div>  */}
 
       <div className="col-sm-12 my-2">
-        <label htmlFor="skill">Search by Skills</label>
+        <label htmlFor="skill"> <i class="fa-solid fa-magnifying-glass"></i>Search by Skills</label>
         <input
           type="text"
           className="searchbar-input"
@@ -93,7 +93,7 @@ const Searchbar = ({
       </div>
 
       <div className="col-sm-12-my-2">
-        <label htmlFor="location"> Search by Location </label>
+        <label htmlFor="location"> <i class="fa-solid fa-magnifying-glass"></i>Search by Location </label>
         <select
           className="form-control-button"
           id="location"

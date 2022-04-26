@@ -143,7 +143,7 @@ export default function Sage() {
                   />
                 </label>
                 <label className="button">
-                  <p>Upload a Photo</p>
+                  <p>Upload a Photo: (use a url link)</p>
                   {/* <div class="imgbutton">
           <input type="file" id="img"/>
           </div> */}

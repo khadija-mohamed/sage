@@ -8,7 +8,7 @@ function Sagemodal() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
-        <div className="container">
+        <div className="sagemodalcontainer">
         <Button className="nextButton" onClick={handleShow}>
           Add Calendar
         </Button>

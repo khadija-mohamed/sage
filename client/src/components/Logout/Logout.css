@@ -1,12 +1,10 @@
-.index {
-height: 100%;
-}
 .logout-msg {
   display: flex;
   justify-content: center;
   margin-top: 200px;
   padding-bottom: 20px;
   color: #538075;
+
 }
 
 .logout-logo {

@@ -143,7 +143,7 @@ export default function Sagee() {
                   />
                 </label>
                 <label className="button">
-                  <p>Upload a Photo</p>
+                  <p>Upload a Photo: (use a url link)</p>
                  
                   <input
                     type="text"
