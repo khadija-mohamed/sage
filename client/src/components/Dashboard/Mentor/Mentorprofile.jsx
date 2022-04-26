@@ -22,7 +22,6 @@ export default function Mentorprofile() {
      <div className="menteeprofile-wrapper">
     
    
-    <div className='card'>
       <div className="card_photo">
       <Dashboard />
       <div className='Outlinedcard'>
@@ -70,7 +69,7 @@ export default function Mentorprofile() {
 
     </div>
    </div>
-   </div>
+  
   )
   
 }
