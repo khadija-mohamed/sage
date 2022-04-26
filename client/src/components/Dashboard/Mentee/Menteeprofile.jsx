@@ -21,11 +21,11 @@ export default function Menteeprofile(props) {
    
   return(
      <div className="menteeprofile-wrapper">
-    
+    <Dashboard />
    
-    <div className='card'>
+    {/* <div className='card'> */}
       <div className="card_photo">
-      <Dashboard />
+      
       <div className='Outlinedcard'>
         <OutlinedCard />
       </div> 
@@ -71,7 +71,7 @@ export default function Menteeprofile(props) {
 
     </div>
    </div>
-   </div>
+   
   )
   
 }
