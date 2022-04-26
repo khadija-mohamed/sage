@@ -9,15 +9,21 @@ import { UserContext } from "../../UserContext";
 
 export default function Logout(props) {
   const navigate = useNavigate();
+
+  //clear user  data
   const {logout} = useContext(UserContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     axios
       .post("http://localhost:8080/login/logout")
       .then(() => {
+        
+        
         navigate("/");
-        logout();
+        
+        
       })
       .catch((err) => err);
   };
@@ -28,7 +34,9 @@ export default function Logout(props) {
       <img className="logout-logo" src={logo} alt="logo"/>
       <form onSubmit={handleSubmit}>
         <div>
-          <button className="button-52" type="submit"><Link to="/">
+          <button className="button-52" type="submit" onClick={() => {
+              logout("");
+            }}><Link to="/">
             Homepage</Link>
           </button>
         </div>
