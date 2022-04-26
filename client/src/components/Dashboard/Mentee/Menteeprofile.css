@@ -1,4 +1,4 @@
-/* .mentee-profile {
+ /* .mentee-profile {
   position: absolute;
   overflow: hidden;
   background-color: rgb(255, 255, 255);
@@ -8,7 +8,7 @@
   height: 100%;
   margin-top: 3.5em;
   margin-left: 250px;
-}
+} */
 
 .card-wrapper2 {
   display: flex;
@@ -27,7 +27,7 @@
 .card2 img {
   display: flex;
   height: 325px;
-  align-items: center;
+  
   border: 0.3px solid black
 }
 
