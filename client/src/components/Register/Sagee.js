@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import "./Sagee.css";
 import NavBar from "../NavBar/NavBar";
@@ -63,6 +63,13 @@ export default function Sagee() {
       <NavBar />
       <div className="orange-main">
         <div className="transparent-text"></div>
+        <div className="login-btn">
+          <button className="button-52" type="submit">
+            <Link to="/login">
+              <span className="login-btn-text">Login</span>
+            </Link>
+          </button>
+        </div>
         <div className="sage-block">
           <h1 className="head-main">
             <span className="head-left"> S</span>

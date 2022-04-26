@@ -15,6 +15,15 @@ const Searchbar = ({
     location: "",
   });
 
+  // const [fieldValue, setFieldValue] = React.useState('');
+  // const handleBlur = (e) => setFieldValue(e.target.value);
+
+//   const form = document.getElementById('form');
+
+// form.addEventListener('blur', (event) => {
+//   event.target.style.background = 'pink';
+// }, true);
+
   const handleInput = (field) => (event) => {
     // event.preventDefault();
     const { value } = event.target;
@@ -38,21 +47,12 @@ const Searchbar = ({
     default:
       // defaultData(value);
       break;
-      
-    
-  }
+    }
   };
 
-  // use handleFilter in form for form submission
-  // const handleFilter = (event) => {
-  //   event.preventDefault();
-  //   const { value } = event.target;
-
-  //   setFilters((field) => ({
-  //     ...filters,
-  //     [field]: value,
-  //   }));
-  // };
+  const resetInput = (e) => {
+    e.target.value = "";
+  }
 
   return (
     <div className="row-my-5">
@@ -68,8 +68,9 @@ const Searchbar = ({
           type="text"
           className="form-control"
           id="name"
-          value={filters.name}
+          // value={filters.name}
           onChange={handleInput("name")}
+          onBlur={(e) => resetInput(e)}
         />
       </div>
        {/* <div>
@@ -86,6 +87,7 @@ const Searchbar = ({
           className="form-control"
           id="skill"
           onChange={handleInput("skill")}
+          onBlur={(e) => resetInput(e)}
         />
       </div>
 
@@ -95,6 +97,7 @@ const Searchbar = ({
           className="form-control-button"
           id="location"
           onChange={handleInput("location")}
+          onBlur={(e) => resetInput(e)}
         >
           <option value=""> Select </option>
           {locations.map((location) => (

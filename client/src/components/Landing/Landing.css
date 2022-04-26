@@ -21,7 +21,7 @@
   margin: 0 auto;
   top: 0;
   font-size: 200px;
-  color: rgb(9, 73, 57);
+  color: #538075;
   z-index: 2;
 }
 
@@ -69,7 +69,7 @@ h1 {
 
 .button-52:after {
   content: "";
-  background-color: rgb(9, 73, 57);
+  background-color: #538075;
   width: 100%;
   z-index: -1;
   position: absolute;

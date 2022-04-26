@@ -7,8 +7,8 @@ const bcrypt = require("bcryptjs");
 module.exports = (db) => {
   const registerNewSagee = async (user) => {
     const result = await pool.query(
-      `INSERT INTO mentees(first_name, last_name, location, email, password, photo_url, description, skill,isActive)
-      VALUES($1, $2, $3, $4, $5, $6, $7, $8,$9)
+      `INSERT INTO mentees(first_name, last_name, location, email, password, photo_url, description, skill, isActive)
+      VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)
       RETURNING email`,
       [
         user.first_name,
@@ -89,7 +89,6 @@ module.exports = (db) => {
       return res.status(400).json(templateVars);
     }
     const user = await potentialLogin(email);
-    console.log("User+++++++++", user);
     if (user) {
       return res.status(400).send({ status: "error", message: "User already registered, please login to continue." });
     }
@@ -153,7 +152,6 @@ module.exports = (db) => {
       return res.status(400).json(templateVars);
     }
     const user = await potentialLogin(email);
-    console.log("User+++++++++", user);
     if (user) {
       return res.status(400).send({ status: "error", message: "User already registered, please login to continue." });
     }
@@ -172,13 +170,11 @@ module.exports = (db) => {
     };
     
     try {
-      // await allUsers(input.email);
       await registerNewSage(input);
       req.session.email = input.email;
       res.status(200).send();
     } catch (err) {
       console.log(err);
-      // return next(err)
       return res.status(400).send();
     }
   });
@@ -207,7 +203,6 @@ module.exports = (db) => {
       // compare password
       const correctPassword = bcrypt.compareSync(password, user.password);
       if (correctPassword) {
-        // allUsers()
         req.session.email = user.email;
         return res.status(204).send();
       } else {

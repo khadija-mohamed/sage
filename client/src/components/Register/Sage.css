@@ -36,4 +36,23 @@ input  {
 
 }
 
+.login-btn {
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+}
+
+.login-btn .button-52 {
+  height: 40px;
+  margin-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.login-btn-text {
+  display: flex;
+  position: relative;
+  bottom: 5px;
+}
+
 
