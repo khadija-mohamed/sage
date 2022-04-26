@@ -27,7 +27,7 @@ form input, form button {
 
 .button-52:after {
   content: "";
-  background-color: rgb(9, 73, 57);
+  background-color: #538075;
   width: 100%;
   z-index: -1;
   position: absolute;

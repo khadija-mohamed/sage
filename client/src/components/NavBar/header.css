@@ -1,5 +1,5 @@
 .Navbar {
-  background-color: rgb(9, 73, 57);
+  background-color: #538075;
   color: white;
   display: flex;
   gap: 1rem;
@@ -9,7 +9,7 @@
 
 .sidebar {
   position: absolute;
-  background-color:rgb(9, 73, 57);
+  background-color: #538075;
   color: white;
   top: 3px;
   margin-top: 50px;

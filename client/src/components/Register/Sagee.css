@@ -41,7 +41,7 @@ form input, form button {
 
 .button-52:after {
   content: "";
-  background-color: rgb(9, 73, 57);
+  background-color: #538075;
   width: 100%;
   z-index: -1;
   position: absolute;
@@ -67,6 +67,27 @@ form input, form button {
   justify-content: center;
   display: flex;
   margin-top: 20px;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+  color: #538075;
+}
+
+.login-btn .button-52 {
+  height: 40px;
+  margin-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #538075;
+}
+
+.login-btn-text {
+  display: flex;
+  position: relative;
+  bottom: 5px;
 }
 
 h4 {
