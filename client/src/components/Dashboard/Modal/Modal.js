@@ -16,7 +16,7 @@ function Sagemodal() {
           <Modal.Header>
             <Modal.Title>To access bookings follow the link below</Modal.Title>
           </Modal.Header>
-          <Modal.Body><p><a href="https://calendar.google.com/calendar/u/0?cid=ODNmNGk2Y2Q4MDdkODJlaW9rMnE1NmJ1M2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"><p>Click here to add Sage Calendar</p></a></p></Modal.Body>
+          <Modal.Body><p><a href="https://calendar.google.com/calendar/u/0?cid=ODNmNGk2Y2Q4MDdkODJlaW9rMnE1NmJ1M2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ" target="_blank"><p>Click here to add Sage Calendar</p></a></p></Modal.Body>
           <Modal.Footer>
             <Button className="button" onClick={handleClose}>
               Done!

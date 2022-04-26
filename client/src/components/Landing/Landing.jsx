@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import './Landing.css'
-import Navbar from "../NavBar/NavBar"
+import HomeNav from "../NavBar/HomeNav"
 import { Link } from "react-router-dom";
 
 
@@ -10,7 +10,7 @@ const Landing = () => {
    
   
     <div className="main">
-       <Navbar /> 
+       <HomeNav /> 
       <div className="orange-main">
         <div className="transparent-text">
         </div>

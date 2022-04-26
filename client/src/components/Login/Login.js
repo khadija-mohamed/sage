@@ -5,7 +5,7 @@ import "./Login.css";
 import { UserContext } from "../../UserContext";
 import logo from "./logo.svg";
 
-import NavBar from "../NavBar/NavBar";
+import HomeNav from "../NavBar/HomeNav";
 import useApplicationData from "../../hooks/useApplicationData";
 
 export default function Login(props) {
@@ -95,7 +95,7 @@ export default function Login(props) {
 
   return (
     <div>
-      <NavBar />
+      <HomeNav />
       <div className="login-wrapper">
         <div className="orange-main">
           <div className="register-btn">

@@ -30,10 +30,9 @@ export default function Mentordetail(props) {
       <div>
       <div>
         <Dashboard/>
-  
       </div>
+      
     <div className="card-wrapper2">
-    <Sagecarousel />
       <div className='card2'>
         <div className="card_photo2">
            <img src={newMentor.photo_url} alt =''></img>

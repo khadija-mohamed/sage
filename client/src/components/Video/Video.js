@@ -1,6 +1,7 @@
 import { JitsiMeeting } from "@jitsi/react-sdk";
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../NavBar/NavBar";
 
 import logo from "../Dashboard/logo.svg";
 
@@ -125,11 +126,12 @@ export default function Video() {
           textAlign: "center",
           border: "2px solid white",
           margin: "2px",
-          background: "#538075",
+          background: "rgb(83, 128, 117)",
         }}
       >
-        <img className="o3" src={logo} alt="logo" />
+        {/* <img className="o3" src={logo} alt="logo" /> */}
       </h1>
+      <Navbar />
       <JitsiMeeting
         roomName={generateRoomName()}
         spinner={renderSpinner}

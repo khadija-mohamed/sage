@@ -66,13 +66,14 @@ const Searchbar = ({
         <label htmlFor="name">Search by Name</label>
         <input
           type="text"
-          className="form-control"
+          className="searchbar-input"
           id="name"
           // value={filters.name}
           onChange={handleInput("name")}
           onBlur={(e) => resetInput(e)}
         />
       </div>
+
        {/* <div>
         <img src={item.photo_url} alt=''></img>
       </div> 
@@ -84,7 +85,7 @@ const Searchbar = ({
         <label htmlFor="skill">Search by Skills</label>
         <input
           type="text"
-          className="form-control"
+          className="searchbar-input"
           id="skill"
           onChange={handleInput("skill")}
           onBlur={(e) => resetInput(e)}
