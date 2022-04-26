@@ -50,10 +50,10 @@ export default function Login(props) {
         .then(() => {
           const mentee = state.mentees.map((menteeEmail) => menteeEmail.email);
           const mentor = state.mentors.map((mentorEmail) => mentorEmail.email);
-          if (mentee.includes(email)) {
+          if (mentee.includes(email.toLowerCase())) {
             navigate('/dashboard/mentee/menteefeed');
           }
-          if (mentor.includes(email)) {
+          if (mentor.includes(email.toLowerCase())) {
             navigate('/dashboard/mentor/mentorfeed');
           }
         })
