@@ -65,9 +65,17 @@ function App() {
     }));
   };
 
-  const logout = () => {
-    setUser((user) => ({
-      email: "",
+  const logout = (data) => {
+    setUser(() => ({
+      id:data,
+      first_name:data,
+      last_name:data,
+      email:data,
+      location: data,
+      skill:data,
+      description:data,
+      isactive:true,
+      photo_url:data,
       auth: false,
     }));
   };
