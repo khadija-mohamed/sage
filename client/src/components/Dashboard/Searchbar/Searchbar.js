@@ -92,7 +92,7 @@ const Searchbar = ({
       </div>
 
       <div className="col-sm-12-my-2">
-        <label htmlFor="location"> Search by location </label>
+        <label htmlFor="location"> Search by Location </label>
         <select
           className="form-control-button"
           id="location"

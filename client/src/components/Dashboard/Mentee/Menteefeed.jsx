@@ -2,6 +2,7 @@ import React, { useState,useContext } from 'react';
 import Searchbar from '../Searchbar/Searchbar';
 // import React, { useContext } from 'react';
 import MentorListItem from '../Mentor/MentorListItem';
+import './Menteefeed.css';
 import { UserContext } from '../../../UserContext';
 import Dashboard from '../Dashboard';
 

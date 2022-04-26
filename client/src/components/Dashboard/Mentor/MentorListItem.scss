@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:wght@400;700&display=swap');
 
-$dark: rgb(255, 255, 255);
-$light: #fbfbfb;
+$dark-mentee: rgb(255, 255, 255);
+$light-mentee: #fbfbfb;
 
 $animation-speed-fast: .8s;
 $animation-speed-slow: 1s;
-
-
 
 body {
   height: 100vh;
@@ -15,100 +13,107 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.booking {
+.booking-mentee {
   width: 50%;
 }
 
-.booking-container {
+.booking-container-mentee {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  // height: 110vh;
   position: sticky;
+  margin-bottom: 25px;
 }
 
 
-.card {
-  margin: 2em;
+.card-mentee {
+  margin: 1em;
   width: 230px;
-  height: 325px;
+  margin-left: 2em;
+  // height: 325px;
   position: relative;
   perspective: 1000px;
   transform: perspective(1000px) translateY(0);
   transform-style: preserve-3d;
   transition: transform $animation-speed-fast ease-in-out;
+  display: flex;
+  justify-content: center;
 
   
-  &.dark{
-    background-color:$dark ;
-    color: $light;
-    margin-top: 30px;
+  &.dark-mentee {
+    // margin-top: 30px;
     
-    .purchase-button{
+    .purchase-button-mentee {
       border: 1px solid rgb(255, 255, 255);
     }
   }
   
-  &.light{
-    background-color: $light;
-    color: $dark;
-    .purchase-button{
+  &.light-mentee {
+    background-color: $light-mentee;
+    color: $dark-mentee;
+    .purchase-button-mentee {
       border: 1px solid  #538075;
     }
   }
 }
 
-.card-container{
+.card-container-mentee {
   display: flex;
 }
 
+.card-wrapper-mentee {
+  width: 20em;
+  // display: flex;
+  // flex-wrap: wrap;
+  // margin-top: 20px;
+}
 
-.card-wrapper:hover{
-  .card{
+
+.card-wrapper-mentee:hover{
+  .card-mentee {
     transform: rotateY(179deg);
     z-index: 2;
     
-    .text-overlay{
+    .text-overlay-mentee {
       opacity: 0;
       transform-style: preserve-3d;
       z-index: 1;
     }
     
-    .purchase-button-container{
+    .purchase-button-container-mentee {
       opacity: 1;
     }
   }
 }
 
-.text-overlay{
+.text-overlay-mentee {
   transform: perspective(1000px) translateY(0) translateZ(80px);
   transition: transform $animation-speed-fast ease-in-out, opacity $animation-speed-slow ease;
   pointer-events: none;
   width: 100%;
   perspective: inherit;
-  // padding-top: 50px;
   
 }
 
-h1{
-  color: $dark;
+h1 {
+  color: $dark-mentee;
 }
 
-h2{
+h2 {
   font-size: .9rem;
   text-align: center;
   font-weight: 500;
 }
 
-.price{
+.price-mentee {
   text-align: center;
   font-size: 1.8rem;
   font-weight: 900;
   margin: 20px;
 }
 
-.purchase-button-container{
+.purchase-button-container-mentee {
   // color: rgb(125, 184, 157);
   position: absolute;
   display: flex;
@@ -124,26 +129,26 @@ h2{
   width: 100%;
   height: 100%;
   
-  .purchase-button{
+  .purchase-button-mentee {
     padding: 10px 40px;
     border-radius: 50px;
     font-size: 1.2rem;
     transition: background-color .25s ease, color .25s ease;
     cursor: pointer;
     
-    &.light:hover{
+    &.light-mentee:hover{
       background-color: #538075;
-      color: $light;
+      color: $light-mentee;
     }
     
-    &.dark:hover{
+    &.dark-mentee:hover{
       background-color: rgb(255, 255, 255);
-      color: $dark;
+      color: $dark-mentee;
     }
   }
 }
 
-.details-text{
+.details-text-mentee {
   margin-top: 20px;
   display: flex;
   gap: 10px 10px;
@@ -154,30 +159,47 @@ h2{
   font-size: .75rem;
 }
 
-small{
+small {
   font-size: .75rem;
   font-weight: 100;
   color: #858585;
 }
 
-.back-h2{
+// .fa-solid{
+//   font-size: 3rem;
+//   margin-bottom: 2rem;
+// }
+
+.back-h2-mentee {
   font-size: 2rem;
   margin-top: 0;
 }
 
-.card-photo {
+.card-photo-mentee {
   margin: auto 0;
 }
 
-.mentor-container {
+.mentee-container-mentee {
   flex-wrap: wrap;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh;
+  height: 110vh;
   // width: 10vh;
   // margin-left: 200px;
   position: sticky;
 } 
+
+span .mentee-about .mentee-skill .mentee-location {
+  width: 60%;
+}
+
+.mentee-location {
+  margin-bottom: 7px;
+}
+
+// span .mentee-about {
+//   font-style: normal;
+// }
 
 
