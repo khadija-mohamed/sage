@@ -70,17 +70,16 @@ const Navbar = () => {
             </div>
             
             <li className="nav-item active">
+              <NavLink className="nav-link" to="/dashboard/mentor/mentorfeed" exact>
+              <i className="fa-solid fa-seedling"></i> My Feed
+              </NavLink> 
+            </li> 
+            <li className="nav-item">
               <NavLink className="nav-link" to="/dashboard/mentor/mentorprofile" exact>
               <i 
               className="fa-solid fa-user">
               </i> My Profile
               </NavLink>
-            </li>
-
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/dashboard/mentor/mentorfeed" exact>
-              <i className="fa-solid fa-seedling"></i> My Feed
-              </NavLink> 
             </li>
 
             <li className="nav-item">

@@ -11,12 +11,10 @@ const pool = new Pool({
 	port: DB_PORT,
 	database: DB_DATABASE,
 })
-
 pool.connect().then(() => {
 	console.log("Database connection established.")
 }).catch( e => {
 	throw new Error(e);
+
 })
-
-
 module.exports = pool;
