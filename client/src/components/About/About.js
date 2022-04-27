@@ -7,15 +7,15 @@ const About = () => {
 
   return  (
     <div className="about">
-      <div class="container">
+      <div class="about_container">
   <header>Sage.</header>
   <p>Zlatibor is a mountain of exceptional beauty whose special geographical properties have made this mountain a real gem of western Serbia.</p>
-  <button className="button-52" type="submit"><Link to="/register"><span className="register-btn-text">Register</span></Link></button>
+  <button className="button-52" type="submit"><Link to="/"><span className="register-btn-text">Join</span></Link></button>
 </div>
 
 <div class="blank"></div>
 
-<div class="container second">
+<div class="about_container second">
   <div class="item">
     <div class="img img-first"></div>
     <div class="card">
@@ -37,14 +37,14 @@ const About = () => {
     <div class="card">
       <h3>Khadija</h3>
       <p>Jumping from an aeroplane and falling through the air before opening your parachute.</p>
-      <a className="button-52" href="GOOGLE.CA">Learn more</a>
+      <a className="about_a" href="GOOGLE.CA">Learn more</a>
     </div>
   </div>
 </div>
 
 <div class="blank"></div>
 
-<div class="container">
+<div class="about_container">
   <h1>Who We Are</h1>
   <p>
 A group of young devs aiming to create the fundamental connection between those who want to learn and those that are willing to teach.
@@ -56,7 +56,7 @@ A sage is someone who has attained wisdom. We hope that by using this applicatio
 <div class="blank"></div>
 
 
-<div class="container">
+<div class="about_container">
   <h1>Our Sages</h1>
   <p>
 Our sages are also known as mentors. They are teachers, recruiters, and hobbyists who enjoy passing down their wisdom and experiences to sagees. If this sounds like you, register as a Sage and join our community!
@@ -65,7 +65,7 @@ Our sages are also known as mentors. They are teachers, recruiters, and hobbyist
 
 <div class="blank"></div>
 
-<div class="container">
+<div class="about_container">
   <h1>Our Sagees</h1>
   <p>
 Our sagees are also known as mentees. They are students, beginners, and potential employees who are willing to hone their skills and expand their knowledge. If this sounds like you, register as a Sagee and join our community!
