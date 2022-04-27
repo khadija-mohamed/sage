@@ -59,47 +59,74 @@ header {
   color: #538075;
 }
 
-.button-62 {
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 1px;
-  padding: 13px 20px 13px;
-  outline: 0;
-  color: white;
-  border: 1px solid black;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  top: -22px;
+.button-52.abt-btn {
+  border-color: #538075;
   margin-left: 25px;
   margin-right: 25px;
 }
 
-.button-62:after {
-  content: "";
-  background-color: #538075;
-  width: 100%;
-  z-index: 0;
-  position: absolute;
-  height: 100%;
-  top: 7px;
-  left: 7px;
-  transition: 0.2s;
+// .button-62 {
+//   font-size: 16px;
+//   font-weight: 200;
+//   letter-spacing: 1px;
+//   padding: 13px 20px 13px;
+//   outline: 0;
+//   color: white;
+//   border: 1px solid black;
+//   border-radius: 0.25rem;
+//   cursor: pointer;
+//   position: relative;
+//   background-color: rgba(0, 0, 0, 0);
+//   user-select: none;
+//   -webkit-user-select: none;
+//   touch-action: manipulation;
+//   top: -22px;
+//   margin-left: 25px;
+//   margin-right: 25px;
+// }
+
+// .button-62:after {
+//   content: "";
+//   background-color: #538075;
+//   width: 100%;
+//   z-index: 0;
+//   position: absolute;
+//   height: 100%;
+//   top: 7px;
+//   left: 7px;
+//   transition: 0.2s;
+// }
+
+// .button-62:hover:after {
+//   top: 0px;
+//   left: 0px;
+// }
+
+// @media (min-width: 768px) {
+//   .button-62 {
+//     padding: 13px 50px 13px;
+//   }
+// }
+
+.about-btn {
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
 }
 
-.button-62:hover:after {
-  top: 0px;
-  left: 0px;
+.about-btn .button-52.abt-btn {
+  height: 40px;
+  margin-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-@media (min-width: 768px) {
-  .button-62 {
-    padding: 13px 50px 13px;
-  }
+.about-btn-text {
+  display: flex;
+  position: relative;
+  bottom: 5px;
+  color: #538075;
+  justify-content: center;
 }
 
 a:link{

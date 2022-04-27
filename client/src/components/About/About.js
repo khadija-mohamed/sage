@@ -9,7 +9,7 @@ const About = () => {
         {/* <div class="about_container"> */}
           <header>Sage.</header>
           <i className="tagline">Learn to grow.</i>
-          <button className="button-52" type="submit"><Link to="/"><span className="register-btn-text">Join</span></Link></button>
+          <button className="button-52 abt-btn" type="submit"><Link to="/"><span className="about-btn-text">Join</span></Link></button>
         {/* </div> */}
       </div>
 
@@ -24,11 +24,7 @@ const About = () => {
               The goal is to reach the summit of a formation or the endpoint of
               a usually pre-defined route without falling
             </p>
-            <button className="button-62" type="submit">
-              <Link to="/about">
-                <span className="btn-text">Learn more</span>
-              </Link>
-            </button>
+            <button className="button-52 abt-btn" type="submit"><span className="about-btn-text">LinkedIn</span></button>
           </div>
         </div>
         <div class="item">
@@ -39,9 +35,7 @@ const About = () => {
               Exploring underground through networks of tunnels and passageways,
               which can be natural or artificial.
             </p>
-            <button className="button-62" type="submit">
-              <Link to="/about">Learn more</Link>
-            </button>
+            <button className="button-52 abt-btn" type="submit"><span className="about-btn-text">LinkedIn</span></button>
           </div>
         </div>
         <div class="item">
@@ -52,9 +46,7 @@ const About = () => {
               Jumping from an aeroplane and falling through the air before
               opening your parachute.
             </p>
-            <button className="button-62" type="submit">
-              <Link to="/about">Learn more</Link>
-            </button>
+            <button className="button-52 abt-btn" type="submit"><span className="about-btn-text">LinkedIn</span></button>
           </div>
         </div>
       </div>
