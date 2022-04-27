@@ -8,7 +8,7 @@ const About = () => {
       <div class="about_container first">
         {/* <div class="about_container"> */}
           <header>Sage.</header>
-          <i>Learn to grow.</i>
+          <i className="tagline">Learn to grow.</i>
           <button className="button-52" type="submit"><Link to="/"><span className="register-btn-text">Join</span></Link></button>
         {/* </div> */}
       </div>
