@@ -1,4 +1,5 @@
 import React from "react";
+import {  Link } from "react-router-dom";
 import './About.scss'
 
 
@@ -9,7 +10,7 @@ const About = () => {
       <div class="container">
   <header>Sage.</header>
   <p>Zlatibor is a mountain of exceptional beauty whose special geographical properties have made this mountain a real gem of western Serbia.</p>
-  <a className="about_a" href="GOOGLE.CA">Learn more</a>
+  <button className="button-52" type="submit"><Link to="/register"><span className="register-btn-text">Register</span></Link></button>
 </div>
 
 <div class="blank"></div>
@@ -36,7 +37,7 @@ const About = () => {
     <div class="card">
       <h3>Khadija</h3>
       <p>Jumping from an aeroplane and falling through the air before opening your parachute.</p>
-      <a className="about_a" href="GOOGLE.CA">Learn more</a>
+      <a className="button-52" href="GOOGLE.CA">Learn more</a>
     </div>
   </div>
 </div>
