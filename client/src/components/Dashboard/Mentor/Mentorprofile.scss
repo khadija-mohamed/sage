@@ -6,6 +6,21 @@
   height: 120vh;
 
 }
+
+.card-wrapper2 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 230px;
+  margin-top: 14em;
+  margin: 6em auto;
+  /* text-align: center; */
+  height: 325px;
+  position: relative;
+  perspective: 1000px;
+}
+
+
 .fw-iframe {
   display: flex;
   position: relative;

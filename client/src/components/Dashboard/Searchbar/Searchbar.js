@@ -59,7 +59,7 @@ const Searchbar = ({
       <div className="col">
         {/* <h4 className="border-bottom"></h4> */}
       </div>
-      <div className="col-sm-12 my-2">
+      <div className="col-sm-12my-2">
         <header>Filter
         </header>
 
