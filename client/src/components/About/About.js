@@ -21,8 +21,7 @@ const About = () => {
           <div class="card">
             <h3>Carmen</h3>
             <p>
-              The goal is to reach the summit of a formation or the endpoint of
-              a usually pre-defined route without falling
+              The Cat
             </p>
             <button className="button-52 abt-btn" type="submit"><span className="about-btn-text">LinkedIn</span></button>
           </div>
@@ -32,8 +31,7 @@ const About = () => {
           <div class="card">
             <h3>Sasu</h3>
             <p>
-              Exploring underground through networks of tunnels and passageways,
-              which can be natural or artificial.
+              The Giraffe
             </p>
             <button className="button-52 abt-btn" type="submit"><span className="about-btn-text">LinkedIn</span></button>
           </div>
@@ -43,8 +41,7 @@ const About = () => {
           <div class="card">
             <h3>Khadija</h3>
             <p>
-              Jumping from an aeroplane and falling through the air before
-              opening your parachute.
+              The Fox
             </p>
             <button className="button-52 abt-btn" type="submit"><span className="about-btn-text">LinkedIn</span></button>
           </div>
