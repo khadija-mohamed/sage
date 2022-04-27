@@ -47,6 +47,7 @@ input  {
   margin-top: 15px;
   padding-left: 30px;
   padding-right: 30px;
+  border-radius: 0.25rem;
 }
 
 .login-btn-text {
