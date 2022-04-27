@@ -18,6 +18,17 @@
 .carousel.slide {
   width: 80vh;
 }
+
+.card2 img {
+  display: flex;
+  height: 325px;
+  align-items: center;
+  border: 0.3px solid black;
+  border: 0.3px solid black;
+  border-radius: 0.25rem;
+  margin-left: 57px;
+  margin-top: 3em;
+}
 /* 
 .grid-2  {
   position: relative;
@@ -37,6 +48,7 @@ margin-left: 170px;
 .card-wrapper2 {
   top: 0;
   display: flex;
+  text-align: center;
 }
 
 .outlinecard {

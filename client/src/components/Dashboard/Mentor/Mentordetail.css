@@ -1,4 +1,4 @@
-.card-wrapper2 {
+.card-wrapper10 {
   display: flex;
   justify-content: center;
   align-self: center;
@@ -11,12 +11,7 @@
   perspective: 1000px;
 }
 
-/* .card_photo2 {
-  align-self: center;
-  margin: 0 auto;
-} */
-
-.card2 .detail-img {
+.card10 .detail-img {
   display: flex;
   height: 700px;
   align-items: center;

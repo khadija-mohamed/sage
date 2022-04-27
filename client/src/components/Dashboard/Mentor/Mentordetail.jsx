@@ -24,8 +24,8 @@ export default function Mentordetail(props) {
       </div>
 
       <div className="whole-container">
-        <div className="card-wrapper2">
-          <div className="card2">
+        <div className="card-wrapper10">
+          <div className="card10">
             <div className="mentor-name-photo">
               <div className="mentor-detail-img">
                 <img className="detail-img" src={newMentor.photo_url} alt=""></img>
