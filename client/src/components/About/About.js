@@ -9,7 +9,7 @@ const About = () => {
       <div class="container">
   <header>Sage.</header>
   <p>Zlatibor is a mountain of exceptional beauty whose special geographical properties have made this mountain a real gem of western Serbia.</p>
-  <a href="GOOGLE.CA">Learn more</a>
+  <a className="about_a" href="GOOGLE.CA">Learn more</a>
 </div>
 
 <div class="blank"></div>
@@ -20,7 +20,7 @@ const About = () => {
     <div class="card">
       <h3>Carmen</h3>
       <p>The goal is to reach the summit of a formation or the endpoint of a usually pre-defined route without falling</p>
-      <a href="GOOGLE.CA">Learn more</a>
+      <a className="about_a" href="GOOGLE.CA">Learn more</a>
     </div>
   </div>
   <div class="item">
@@ -28,7 +28,7 @@ const About = () => {
     <div class="card">
       <h3>Sasu</h3>
       <p>Exploring underground through networks of tunnels and passageways, which can be natural or artificial.</p>
-      <a href="GOOGLE.CA">Learn more</a>
+      <a className="about_a" href="GOOGLE.CA">Learn more</a>
     </div>
   </div>
   <div class="item">
@@ -36,7 +36,7 @@ const About = () => {
     <div class="card">
       <h3>Khadija</h3>
       <p>Jumping from an aeroplane and falling through the air before opening your parachute.</p>
-      <a href="GOOGLE.CA">Learn more</a>
+      <a className="about_a" href="GOOGLE.CA">Learn more</a>
     </div>
   </div>
 </div>

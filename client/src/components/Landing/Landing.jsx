@@ -12,6 +12,9 @@ const Landing = () => {
     <div className="main">
        <HomeNav /> 
       <div className="orange-main">
+      <div className="register-btn">
+        <button className="button-52" type="submit"><Link to="/about"><span className="register-btn-text">About</span></Link></button>
+        </div>
         <div className="transparent-text">
         </div>
         <div className="sage-block">
