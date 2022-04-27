@@ -25,9 +25,96 @@ body {
   background-attachment: fixed;
 }
 
+.first {
+  background-color: transparent;
+  background-image:url(https://murals-weblinc.netdna-ssl.com/product_images/misty-treetops-wall-mural-71958163/5ecd4551585ab7011b49b343/product_large_image.jpg?c=1590510929);
+  background-attachment: fixed;
+  height: 1200px;
+}
+
+.third {
+  background-color: transparent;
+  background-image:url(https://murals-weblinc.netdna-ssl.com/product_images/misty-treetops-wall-mural-71958163/5ecd4551585ab7011b49b343/product_large_image.jpg?c=1590510929);
+  background-attachment: fixed;
+  height: 1200px;
+}
+
+.fourth {
+  background-color: transparent;
+  background-image:url(https://i.pinimg.com/736x/60/66/3d/60663d570edc947c0f5a514419e460ca.jpg);
+  background-attachment: fixed;
+  height: 1200px;
+}
+
+.fifth {
+  background-color: transparent;
+  background-image:url(https://images.unsplash.com/photo-1601748615907-674b3ce9142e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z3JlZW4lMjBzZWF8ZW58MHx8MHx8&w=1000&q=80);
+  background-attachment: fixed;
+  height: 1200px;
+}
+
 header {
   font-weight: 700;
   font-size: 3rem;
+  color: #538075;
+}
+
+.button-62 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  color: white;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  top: -22px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.button-62:after {
+  content: "";
+  background-color: #538075;
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-62:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button-62 {
+    padding: 13px 50px 13px;
+  }
+}
+
+a:link{
+  color:white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 p {
@@ -36,28 +123,36 @@ p {
   padding: 1em;
 }
 
-.about_a {
-  display: inline-block;
-  padding: 1em 3.5em;
-  background-color: var(--color);
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 0.3em;
-  font-weight: 700;
-  letter-spacing: .5px;
-  font-size: .875rem;
+i {
+  max-width: 52ch;
+  line-height: 1.5;
+  padding: 3em;
+  padding-top: 1em;
+  color: #538075;
 }
+
+// .about_a {
+//   display: inline-block;
+//   padding: 1em 3.5em;
+//   background-color: var(--color);
+//   color: white;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   border-radius: 0.3em;
+//   font-weight: 700;
+//   letter-spacing: .5px;
+//   font-size: .875rem;
+// }
 
 .blank,
 .other {
   width: 100%;
   min-height: 10vh;
-  background-color: var(--color);
+  background-color: #538075;
 }
 
 .second {
-  background-image:url(https://images.unsplash.com/photo-1514496959998-c01c40915c5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+  background-image:url(https://images.unsplash.com/photo-1535025075092-5a1cf795130b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWlzdHklMjBmb3Jlc3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60);
   background-attachment: fixed;
   height: 1200px;
 }
@@ -68,20 +163,39 @@ h3 {
   margin-top: 1em;
 }
 
-.card > .about_a {
+h1.h1-title {
+  color: #538075;
+  height: 60px;
+}
+
+// .card > .about_a {
+//   margin-bottom: 2em;
+// }
+
+.card {
   margin-bottom: 2em;
 }
 
 .item {
   display: flex;
   max-width: 320px;
-  background-color: white;;
+  background-color: whitesmoke;
   flex-direction: column;
   align-items: center;
   border-radius: .5em;
   -webkit-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
   -moz-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
   box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+}
+
+.paragraphs {
+  display: flex;
+  max-width: 520px;
+  background-color: whitesmoke;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5em;
+  box-shadow: 0px 29px 38px -15px rgb(0 0 0 / 43%);
 }
 
 .img {
@@ -91,19 +205,20 @@ h3 {
   background-size: cover;
   background-position: center;
   margin-top: 20px;
-  border-radius: .3em;;
+  border-radius: .3em;
+  height: 22em;
 }
 
 .img-first {
-  background-image: url(https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1606&q=80);
+  background-image: url(https://cdn.discordapp.com/attachments/963250054905352208/968618818467397702/Open_Peeps_-_Bust.png);
 }
 
 .img-second {
-  background-image: url(https://images.unsplash.com/photo-1628746404106-4d3843b231b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2F2aW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60);
+  background-image: url(https://cdn.discordapp.com/attachments/963250054905352208/968615295847645184/Open_Peeps_-_Bust.png);
 }
 
 .img-third {
-  background-image: url(https://images.unsplash.com/photo-1632853073412-782bf0279d65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+  background-image: url(https://cdn.discordapp.com/attachments/963250054905352208/968613018441232434/khadija_bust.png);
 }
 
 .second {
