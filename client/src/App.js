@@ -14,7 +14,6 @@ import Menteeprofile from "./components/Dashboard/Mentee/Menteeprofile";
 import Menteefind from "./components/Dashboard/Mentee/Menteefind";
 import Logout from "../src/components/Logout/Logout"
 import Landing from "./components/Landing/Landing";
-import Mentorconnect from "./components/Dashboard/Mentor/Mentorconnect";
 import Mentorfeed from "./components/Dashboard/Mentor/Mentorfeed";
 import Mentorprofile from "./components/Dashboard/Mentor/Mentorprofile";
 import Mentordetail from "./components/Dashboard/Mentor/Mentordetail";
@@ -24,6 +23,7 @@ import Video from "./components/Video/Video";
 import MenteeEditprofile from "./components/Dashboard/Mentee/MenteeEditprofile";
 import MentorEditprofile from "./components/Dashboard/Mentor/MentorEditprofile";
 import Menteedetail from "./components/Dashboard/Mentee/Menteedetail";
+import About from "./components/About/About";
 // import Calendar from "./components/Calendar";
 import { UserContext } from "./UserContext";
 import { useState } from "react";
@@ -117,7 +117,6 @@ function App() {
               element={<Menteefind />}
             />
             <Route path="/logout" element={<Logout />}/>
-            {/* <Route path="/dashboard/mentor/mentorconnect" element={<Mentorconnect />}/> */}
             <Route
               path="/dashboard/mentor/mentorfeed"
               element={<Mentorfeed state={state} />}
@@ -135,6 +134,7 @@ function App() {
               element={<Booking state={state} />}
             />
             <Route path="/dashboard/video" element={<Video />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>
