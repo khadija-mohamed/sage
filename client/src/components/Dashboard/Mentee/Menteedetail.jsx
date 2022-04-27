@@ -32,8 +32,8 @@ export default function Menteedetail(props) {
       </div>
 
       <div className="whole-container">
-        <div className="card-wrapper2">
-          <div className="card2">
+        <div className="card-wrapper10">
+          <div className="card10">
             <div className="mentee-name-photo">
               <div className="mentee-detail-img">
                 <img className="detail-img" src={newMentee.photo_url} alt=""></img>
