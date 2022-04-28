@@ -15,6 +15,12 @@ export default function Menteefeed(props) {
   const data = props.state.mentees;
   const [allData, setData] = useState(data);
 
+  // const allData = Data.filter((user) => {
+  //   if (user.isactive === true) {
+  //     return user;
+  //   }
+  // })
+
   const generateLocationDataForDropdown = () => {
     return [...new Set(data.map((item) => item.location))];
   };
@@ -51,10 +57,12 @@ export default function Menteefeed(props) {
   };  
 
   return (
-    <div className="mentorfeed-wrapper"> 
-    <MentorDashboard />
-    <div className="container">
-      <div className="row">
+    <div>
+      <MentorDashboard />
+    <div className="menteefeed-wrapper"> 
+    
+    {/* <div className="container">
+      <div className="row"> */}
         <div className="col-sm-3">
          <Searchbar 
             locations={generateLocationDataForDropdown()}
@@ -65,7 +73,7 @@ export default function Menteefeed(props) {
         </div>
         <div className="col-sm-9">
       {/* { allData.length === 0 ? */}
-        <div className="mentee-container">
+        <div className="mentor-container">
             {allData.map((item) => (
               <MenteeListItem item={item} key={item.id} />
             ))}
@@ -80,6 +88,7 @@ export default function Menteefeed(props) {
         </div>
       </div>
     </div>
-    </div>
+    // </div>
+    // </div>
   );
 }

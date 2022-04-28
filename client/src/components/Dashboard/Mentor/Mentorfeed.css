@@ -1,3 +1,8 @@
+.menteefeed-wrapper{
+  display: flex;
+  flex-direction: row;
+}
+
 .search {
   padding: 0.5em;
   position: absolute;
@@ -6,8 +11,17 @@
   margin-top: 70px;
   border: 0.5px solid;
 }
-
-.mentee-container {
+.col-sm-3{
+  display: flex;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-left:20px;
+  padding-right: 20px;
+  margin-top: 28px;
+}
+.col-sm-9
+{display: flex;}
+.mentor-container {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
