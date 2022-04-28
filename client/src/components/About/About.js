@@ -21,9 +21,9 @@ const About = () => {
           <div class="card">
             <h3>Carmen</h3>
             <p>
-              The Cat
+              Junior full stack web developer. A background in business and accounting but a passion for code!
             </p>
-            <button className="button-52 abt-btn" type="submit"><span className="about-btn-text">LinkedIn</span></button>
+            <button className="button-52 abt-btn" type="submit"><a href="https://www.linkedin.com/in/carmen-kuang-759828237/"><span className="about-btn-text">LinkedIn</span></a></button>
           </div>
         </div>
         <div class="item">
@@ -31,9 +31,9 @@ const About = () => {
           <div class="card">
             <h3>Sasu</h3>
             <p>
-              The Giraffe
+            Junior full stack web developer. A background in fashion design and illustration but a passion for code!
             </p>
-            <button className="button-52 abt-btn" type="submit"><span className="about-btn-text">LinkedIn</span></button>
+            <button className="button-52 abt-btn" type="submit"><a href="https://www.linkedin.com/in/sasuosayande/"><span className="about-btn-text">LinkedIn</span></a></button>
           </div>
         </div>
         <div class="item">
@@ -41,9 +41,9 @@ const About = () => {
           <div class="card">
             <h3>Khadija</h3>
             <p>
-              The Fox
+            Junior full stack web developer. A background in biology and english literature but a passion for code!
             </p>
-            <button className="button-52 abt-btn" type="submit"><span className="about-btn-text">LinkedIn</span></button>
+            <button className="button-52 abt-btn" type="submit"><a href="https://www.linkedin.com/in/khadija-mohamed/"><span className="about-btn-text">LinkedIn</span></a></button>
           </div>
         </div>
       </div>

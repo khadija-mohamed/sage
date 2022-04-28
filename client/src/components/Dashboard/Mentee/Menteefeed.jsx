@@ -15,7 +15,11 @@ export default function Menteefeed(props) {
   
  
   // const {user} = useContext(UserContext);
-  
+  // const allData = Data.filter((user) => {
+  //   if (user.isactive === true) {
+  //     return user;
+  //   }
+  // })
 
   const generateLocationDataForDropdown = () => {
     return [...new Set(data.map((item) => item.location))];
@@ -54,10 +58,12 @@ export default function Menteefeed(props) {
 
 
   return (
-  <div className="menteefeed-wrapper"> 
+  <div>
+  
   <Dashboard />
-    <div className="container">
-      <div className="row">
+  <div className="menteefeed-wrapper"> 
+    {/* <div className="container">
+      <div className="row"> */}
         <div className="col-sm-3">
         <Searchbar 
             locations={generateLocationDataForDropdown()}
@@ -83,7 +89,7 @@ export default function Menteefeed(props) {
         </div>
       </div>
     </div>
-    </div>
-    
+    // </div>
+    // </div>
   );
 }
