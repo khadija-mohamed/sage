@@ -43,7 +43,7 @@ const calendar = ({ date, description, endTime, mentor, name, startTime }) => {
   // Create a dummy event for temp uses in our calendar
   const event = {
     summary: `Sage Meet with ${name} and ${mentor}`,
-    location: `http://localhost:3000/dashboard/video`,
+    location: `On Sage`,
     description,
     colorId: 1,
     start: {
