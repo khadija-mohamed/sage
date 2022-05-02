@@ -1,23 +1,50 @@
 # Sage
+A mentorship app that connects learners and mentors with the goal of career, educational, and personal growth.
 
-## Setup
+## Features
+Our users are able to:
+* sign up, login, and logout
+* edit their profiles
+* deactivate their profiles
+* view mentors or mentees on the ‘My Feed’ page
+* filter by location to see mentors and mentees local to me
+* filter by skills to see mentors and mentees with similar skills
+* search for mentors or mentees by name
+* book a meeting with a mentor
+* video chat with mentors, enter breakout rooms and share their screen.
+
+## Getting Setup
+This project is run on two servers. Clone into your directory of choice and proceed. 
 
 Install dependencies with `npm install`
 
-## Running Webpack Development Server
+#### React Front-End
+* CD into Client
+* `npm run start`
 
-```sh
-npm start
-```
+#### Express Back-End
+* CD into Server
+* `npm start`
 
-## Running Jest Test Framework
+Open up `localhost:3000/` in your browser to access the application. 
 
-```sh
-npm test
-```
+## Dependencies
+* Express
+* DotENV
+* NodeJS
+* PostgeSQL
+* React
+* React-Router
+* Axios
+* Jitsi
+* JQuery
+* MUI
+* BcryptJS
+* Google Calendar API
+* React Spotify Widget
 
-## Running Storybook Visual Testbed
+## Contributors
+* [Khadija Mohamed](https://github.com/khadija-mohamed)
+* [Carmen Kuang](https://github.com/carmenkk)
+* [Sasu Osayande](https://github.com/Sasu-Osayande)
 
-```sh
-npm run storybook
-```
