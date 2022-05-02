@@ -1,6 +1,10 @@
 # Sage
 A mentorship app that connects learners and mentors with the goal of career, educational, and personal growth.
 
+![Sage, About Us Page](https://github.com/khadija-mohamed/sage/blob/master/docs/About%20Us%20Page.png?raw=true)
+![Sage, Login/Register Page](https://github.com/khadija-mohamed/sage/blob/master/docs/Login-Register%20Page.png?raw=true)
+![Sage, Mentee Feed with Filter](https://github.com/khadija-mohamed/sage/blob/master/docs/Sagee%20Feed%20with%20Filter.png?raw=true)
+
 ## Features
 Our users are able to:
 * sign up, login, and logout
