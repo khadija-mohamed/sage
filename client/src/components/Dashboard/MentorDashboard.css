@@ -1,5 +1,5 @@
 .Dashboard {
-  width:100vw ;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -14,7 +14,7 @@ body {
   display: flex;
   gap: 1rem;
   align-items: center;
-  padding: 1rem
+  padding: 1rem;
 }
 
 .sidebar {
@@ -40,8 +40,8 @@ body {
   font-weight: 300;
 }
 
-.sidebar li a:link{
-  color:white;
+.sidebar li a:link {
+  color: white;
   text-decoration: none;
 }
 
@@ -58,22 +58,22 @@ a:hover {
 .sidebar li:hover {
   background-color: rgb(114, 204, 177);
   color: black;
- }
+}
 
- .sidebar--open{
+.sidebar--open {
   transform: translateX(-0%);
- }
+}
 
 .backdrop {
   position: fixed;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
   height: 100vh;
   background-color: black;
   display: none;
 }
 
-.backdrop--open{
+.backdrop--open {
   transform: translateX(-0%);
- }
+}

@@ -1,6 +1,5 @@
 .menteeprofile-wrapper {
   height: 120vh;
-
 }
 .fw-iframe {
   display: flex;
@@ -28,21 +27,6 @@
   border-radius: 0.25rem;
   margin-left: 10px;
 }
-/* 
-.grid-2  {
-  position: relative;
-  display: flex;
-  height: 60px;
-  top: 0;
-  margin-bottom: 400px ;
-}
-
-.light {
-display: inline-block;
-height: 60px;
-margin-top: 55vh;
-margin-left: 170px;
-} */ 
 
 .card-wrapper2 {
   top: 0;
@@ -54,9 +38,7 @@ margin-left: 170px;
   display: flex;
   height: 80px;
   justify-content: center;
-
 }
-
 
 .spotify {
   margin: auto;

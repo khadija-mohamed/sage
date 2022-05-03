@@ -37,7 +37,6 @@
   resize: none;
 }
 
-
 .note-head {
   display: flex;
 }
@@ -63,7 +62,6 @@ textarea#notes-value {
   margin-left: 10px;
 }
 
-
-textarea{
+textarea {
   resize: none;
 }

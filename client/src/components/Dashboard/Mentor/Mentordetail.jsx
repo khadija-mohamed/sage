@@ -1,10 +1,7 @@
-// import React from "react";
-
 import "./Mentordetail.css";
 import { Link, useParams } from "react-router-dom";
 import React from "react";
 import Dashboard from "../Dashboard";
-import Sagecarousel from "../Modal/carosel";
 
 export default function Mentordetail(props) {
   const { mentorid } = useParams();
@@ -12,7 +9,7 @@ export default function Mentordetail(props) {
   const data = props.state.mentors;
 
   const newMentor = data.find((mentorObj) => {
-    return mentorObj.id == mentorid;
+    return mentorObj.id = mentorid;
   });
 
   return !newMentor ? (
@@ -28,7 +25,11 @@ export default function Mentordetail(props) {
           <div className="card10">
             <div className="mentor-name-photo">
               <div className="mentor-detail-img">
-                <img className="detail-img" src={newMentor.photo_url} alt=""></img>
+                <img
+                  className="detail-img"
+                  src={newMentor.photo_url}
+                  alt=""
+                ></img>
               </div>
             </div>
             <div className="all-cards">

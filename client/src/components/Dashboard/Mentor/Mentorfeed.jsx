@@ -1,25 +1,12 @@
-import React, { useState } from 'react';
-import './Mentorfeed.css';
-import MentorDashboard from '../MentorDashboard';
-import Searchbar from '../Searchbar/Searchbar';
-import cationData from "../../../hooks/useApplicationData.js";
-import MenteeListItem from '../Mentee/MenteeListItem'
-import useApplicationData from '../../../hooks/useApplicationData.js';
+import React, { useState } from "react";
+import "./Mentorfeed.css";
+import MentorDashboard from "../MentorDashboard";
+import Searchbar from "../Searchbar/Searchbar";
+import MenteeListItem from "../Mentee/MenteeListItem";
 
 export default function Menteefeed(props) {
-
-  // const { state } = useApplicationData();
-
-  // console.log("State:", state.mentees);
-  
   const data = props.state.mentees;
   const [allData, setData] = useState(data);
-
-  // const allData = Data.filter((user) => {
-  //   if (user.isactive === true) {
-  //     return user;
-  //   }
-  // })
 
   const generateLocationDataForDropdown = () => {
     return [...new Set(data.map((item) => item.location))];
@@ -54,41 +41,28 @@ export default function Menteefeed(props) {
     });
 
     setData(filteredData);
-  };  
+  };
 
   return (
     <div>
       <MentorDashboard />
-    <div className="menteefeed-wrapper"> 
-    
-    {/* <div className="container">
-      <div className="row"> */}
+      <div className="menteefeed-wrapper">
         <div className="col-sm-3">
-         <Searchbar 
+          <Searchbar
             locations={generateLocationDataForDropdown()}
             onNameFilter={handleFilterName}
             onSkillFilter={handleFilterSkill}
-            onLocationFilter={handleFilterLocation} 
-          /> 
+            onLocationFilter={handleFilterLocation}
+          />
         </div>
         <div className="col-sm-9">
-      {/* { allData.length === 0 ? */}
-        <div className="mentor-container">
+          <div className="mentor-container">
             {allData.map((item) => (
               <MenteeListItem item={item} key={item.id} />
             ))}
           </div>
-      {/* : 
-          <div className="mentee-container">
-            {allData.map((item) => (
-              <MenteeListItem item={item} key={item.id} />
-            ))}
-          </div>
-       }  */}
         </div>
       </div>
     </div>
-    // </div>
-    // </div>
   );
 }

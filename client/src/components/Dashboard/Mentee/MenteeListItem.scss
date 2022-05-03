@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:wght@400;700&display=swap");
 
 $dark-mentee: rgb(255, 255, 255);
 $light-mentee: #fbfbfb;
 
-$animation-speed-fast: .8s;
+$animation-speed-fast: 0.8s;
 $animation-speed-slow: 1s;
 
 body {
   height: 100vh;
   background-color: #ffffff;
-  font-family: 'Libre Baskerville', serif;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Libre Baskerville", serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .booking-mentee {
@@ -26,7 +26,6 @@ body {
   margin-bottom: 25px;
 }
 
-
 .card-mentee {
   margin: 1em;
   width: 230px;
@@ -40,20 +39,17 @@ body {
   display: flex;
   justify-content: center;
 
-  
   &.dark-mentee {
-    // margin-top: 30px;
-    
     .purchase-button-mentee {
       border: 1px solid rgb(255, 255, 255);
     }
   }
-  
+
   &.light-mentee {
     background-color: $light-mentee;
     color: $dark-mentee;
     .purchase-button-mentee {
-      border: 1px solid  #538075;
+      border: 1px solid #538075;
     }
   }
 }
@@ -64,23 +60,19 @@ body {
 
 .card-wrapper-mentee {
   width: 20em;
-  // display: flex;
-  // flex-wrap: wrap;
-  // margin-top: 20px;
 }
 
-
-.card-wrapper-mentee:hover{
+.card-wrapper-mentee:hover {
   .card-mentee {
     transform: rotateY(179deg);
     z-index: 2;
-    
+
     .text-overlay-mentee {
       opacity: 0;
       transform-style: preserve-3d;
       z-index: 1;
     }
-    
+
     .purchase-button-container-mentee {
       opacity: 1;
     }
@@ -89,11 +81,11 @@ body {
 
 .text-overlay-mentee {
   transform: perspective(1000px) translateY(0) translateZ(80px);
-  transition: transform $animation-speed-fast ease-in-out, opacity $animation-speed-slow ease;
+  transition: transform $animation-speed-fast ease-in-out,
+    opacity $animation-speed-slow ease;
   pointer-events: none;
   width: 100%;
   perspective: inherit;
-  
 }
 
 h1 {
@@ -101,7 +93,7 @@ h1 {
 }
 
 h2 {
-  font-size: .9rem;
+  font-size: 0.9rem;
   text-align: center;
   font-weight: 500;
 }
@@ -114,7 +106,6 @@ h2 {
 }
 
 .purchase-button-container-mentee {
-  // color: rgb(125, 184, 157);
   position: absolute;
   display: flex;
   justify-content: center;
@@ -123,25 +114,25 @@ h2 {
   left: 0;
   top: 0;
   transform: perspective(1000px) rotateY(179deg) translateY(0) translateZ(80px);
-  // opacity: 0;
   z-index: -1;
-  transition: transform $animation-speed-fast ease-in-out, opacity $animation-speed-slow ease;
+  transition: transform $animation-speed-fast ease-in-out,
+    opacity $animation-speed-slow ease;
   width: 100%;
   height: 100%;
-  
+
   .purchase-button-mentee {
     padding: 10px 40px;
     border-radius: 50px;
     font-size: 1.2rem;
-    transition: background-color .25s ease, color .25s ease;
+    transition: background-color 0.25s ease, color 0.25s ease;
     cursor: pointer;
-    
-    &.light-mentee:hover{
+
+    &.light-mentee:hover {
       background-color: #538075;
       color: $light-mentee;
     }
-    
-    &.dark-mentee:hover{
+
+    &.dark-mentee:hover {
       background-color: rgb(255, 255, 255);
       color: $dark-mentee;
     }
@@ -156,19 +147,14 @@ h2 {
   text-align: center;
   flex-direction: column;
   color: black;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 small {
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 100;
   color: #858585;
 }
-
-// .fa-solid{
-//   font-size: 3rem;
-//   margin-bottom: 2rem;
-// }
 
 .back-h2-mentee {
   font-size: 2rem;
@@ -185,10 +171,8 @@ small {
   align-items: center;
   justify-content: center;
   height: 110vh;
-  // width: 10vh;
-  // margin-left: 200px;
   position: sticky;
-} 
+}
 
 span .mentee-about .mentee-skill .mentee-location {
   width: 60%;
@@ -197,8 +181,3 @@ span .mentee-about .mentee-skill .mentee-location {
 .mentee-location {
   margin-bottom: 7px;
 }
-
-// span .mentee-about {
-//   font-style: normal;
-// }
-

@@ -1,17 +1,12 @@
-import React, { useState,useContext } from 'react';
-import NavBar from '../NavBar/NavBar';
+import React from "react";
+import NavBar from "../NavBar/NavBar";
 
-import './Dashboard.css';
-
+import "./Dashboard.css";
 
 export default function Dashboard() {
- 
-  return(
+  return (
     <div>
       <NavBar />
     </div>
-
-
-  )
-
-  }
+  );
+}

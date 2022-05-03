@@ -9,19 +9,12 @@ import HomeNav from "../NavBar/HomeNav";
 import useApplicationData from "../../hooks/useApplicationData";
 
 export default function Login(props) {
-  // const { setIsLoggedIn, onUpdate } = props;
   const [email, setEmail] = useState();
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [user,setUser] = useState("");
-  
   const navigate = useNavigate();
- 
-
   const { login } = useContext(UserContext);
-
   const { state } = useApplicationData();
-  
 
   const validateForm = () => {
     if (!email) {
@@ -39,12 +32,10 @@ export default function Login(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-// if -- err.response exist -- do in catch function, send unknown error otherwise .
-
     if (validateForm()) {
       axios
         .post(
-          'http://localhost:8080/login/login',
+          "http://localhost:8080/login/login",
           {
             email: email,
             password: password,
@@ -52,46 +43,48 @@ export default function Login(props) {
           { withCredentials: true }
         )
         .then(() => {
-          
           const mentee = state.mentees.filter((user) => {
             if (user.email === email) {
               return user;
             }
-          })
-          console.log("heyy mentee",mentee)
-          
+          });
+          console.log("heyy mentee", mentee);
+
           const mentor = state.mentors.filter((user) => {
             if (user.email === email) {
               return user;
             }
           });
-          console.log("what is mentor",mentor)
-         
+          console.log("what is mentor", mentor);
+
           if (typeof mentee[0] === "object") {
-            console.log("mentee login",mentee)
-            
+            console.log("mentee login", mentee);
+
             login(mentee[0]);
-            
-            // login(mentee.)
-          } else if(typeof mentor[0] === "object") {
-            // navigate('/dashboard/mentor/mentorfeed');
-            console.log("mentee login",mentor)
+
+            // login(mentee)
+          } else if (typeof mentor[0] === "object") {
+            console.log("mentee login", mentor);
             login(mentor[0]);
           }
-          const menteeEmail = state.mentees.map((menteeEmails) => menteeEmails.email);
-          const mentorEmail = state.mentors.map((mentorEmails) => mentorEmails.email);
+          const menteeEmail = state.mentees.map(
+            (menteeEmails) => menteeEmails.email
+          );
+          const mentorEmail = state.mentors.map(
+            (mentorEmails) => mentorEmails.email
+          );
           if (menteeEmail.includes(email.toLowerCase())) {
-            navigate('/dashboard/mentee/menteefeed');
+            navigate("/dashboard/mentee/menteefeed");
           }
           if (mentorEmail.includes(email.toLowerCase())) {
-            navigate('/dashboard/mentor/mentorfeed');
+            navigate("/dashboard/mentor/mentorfeed");
           }
         })
-        .catch(err => {
-          alert(err.response.data.message)     
+        .catch((err) => {
+          alert(err.response.data.message);
         });
     }
-  }
+  };
 
   return (
     <div>
@@ -99,8 +92,12 @@ export default function Login(props) {
       <div className="login-wrapper">
         <div className="orange-main">
           <div className="register-btn">
-        <button className="button-52" type="submit"><Link to="/register"><span className="register-btn-text">Register</span></Link></button>
-        </div>
+            <button className="button-52" type="submit">
+              <Link to="/register">
+                <span className="register-btn-text">Register</span>
+              </Link>
+            </button>
+          </div>
           <div className="transparent-text"></div>
           <div className="sage-block">
             <div className="head-main">
@@ -134,11 +131,7 @@ export default function Login(props) {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                   ></input>
-                  <button
-                    className="button-52"
-                    type="submit"
-                    // onClick={() => login(email)}
-                  >
+                  <button className="button-52" type="submit">
                     Submit
                   </button>
                 </form>
@@ -147,6 +140,6 @@ export default function Login(props) {
           </div>
         </div>
       </div>
-    </div> 
-  )
+    </div>
+  );
 }

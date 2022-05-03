@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap");
 
-:root{
---color: #333; 
+:root {
+  --color: #333;
 }
 
 body {
-  font-family: 'Red Hat Text', sans-serif;
+  font-family: "Red Hat Text", sans-serif;
 }
 
 .about_container {
@@ -17,38 +17,38 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color:rgb(161, 187, 169);
+  background-color: rgb(161, 187, 169);
   background-size: cover;
   background-position: center;
-  
-/*  this is where the magic happens:  */
+
+  /*  this is where the magic happens:  */
   background-attachment: fixed;
 }
 
 .first {
   background-color: transparent;
-  background-image:url(https://murals-weblinc.netdna-ssl.com/product_images/misty-treetops-wall-mural-71958163/5ecd4551585ab7011b49b343/product_large_image.jpg?c=1590510929);
+  background-image: url(https://murals-weblinc.netdna-ssl.com/product_images/misty-treetops-wall-mural-71958163/5ecd4551585ab7011b49b343/product_large_image.jpg?c=1590510929);
   background-attachment: fixed;
   height: 1200px;
 }
 
 .third {
   background-color: transparent;
-  background-image:url(https://murals-weblinc.netdna-ssl.com/product_images/misty-treetops-wall-mural-71958163/5ecd4551585ab7011b49b343/product_large_image.jpg?c=1590510929);
+  background-image: url(https://murals-weblinc.netdna-ssl.com/product_images/misty-treetops-wall-mural-71958163/5ecd4551585ab7011b49b343/product_large_image.jpg?c=1590510929);
   background-attachment: fixed;
   height: 1200px;
 }
 
 .fourth {
   background-color: transparent;
-  background-image:url(https://i.pinimg.com/736x/60/66/3d/60663d570edc947c0f5a514419e460ca.jpg);
+  background-image: url(https://i.pinimg.com/736x/60/66/3d/60663d570edc947c0f5a514419e460ca.jpg);
   background-attachment: fixed;
   height: 1200px;
 }
 
 .fifth {
   background-color: transparent;
-  background-image:url(https://images.unsplash.com/photo-1601748615907-674b3ce9142e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z3JlZW4lMjBzZWF8ZW58MHx8MHx8&w=1000&q=80);
+  background-image: url(https://images.unsplash.com/photo-1601748615907-674b3ce9142e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z3JlZW4lMjBzZWF8ZW58MHx8MHx8&w=1000&q=80);
   background-attachment: fixed;
   height: 1200px;
 }
@@ -64,49 +64,6 @@ header {
   margin-left: 25px;
   margin-right: 25px;
 }
-
-// .button-62 {
-//   font-size: 16px;
-//   font-weight: 200;
-//   letter-spacing: 1px;
-//   padding: 13px 20px 13px;
-//   outline: 0;
-//   color: white;
-//   border: 1px solid black;
-//   border-radius: 0.25rem;
-//   cursor: pointer;
-//   position: relative;
-//   background-color: rgba(0, 0, 0, 0);
-//   user-select: none;
-//   -webkit-user-select: none;
-//   touch-action: manipulation;
-//   top: -22px;
-//   margin-left: 25px;
-//   margin-right: 25px;
-// }
-
-// .button-62:after {
-//   content: "";
-//   background-color: #538075;
-//   width: 100%;
-//   z-index: 0;
-//   position: absolute;
-//   height: 100%;
-//   top: 7px;
-//   left: 7px;
-//   transition: 0.2s;
-// }
-
-// .button-62:hover:after {
-//   top: 0px;
-//   left: 0px;
-// }
-
-// @media (min-width: 768px) {
-//   .button-62 {
-//     padding: 13px 50px 13px;
-//   }
-// }
 
 .about-btn {
   display: flex;
@@ -129,8 +86,8 @@ header {
   justify-content: center;
 }
 
-a:link{
-  color:white;
+a:link {
+  color: white;
   text-decoration: none;
 }
 
@@ -158,19 +115,6 @@ p {
   color: #538075;
 }
 
-// .about_a {
-//   display: inline-block;
-//   padding: 1em 3.5em;
-//   background-color: var(--color);
-//   color: white;
-//   text-decoration: none;
-//   text-transform: uppercase;
-//   border-radius: 0.3em;
-//   font-weight: 700;
-//   letter-spacing: .5px;
-//   font-size: .875rem;
-// }
-
 .blank,
 .other {
   width: 100%;
@@ -179,7 +123,7 @@ p {
 }
 
 .second {
-  background-image:url(https://images.unsplash.com/photo-1535025075092-5a1cf795130b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWlzdHklMjBmb3Jlc3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60);
+  background-image: url(https://images.unsplash.com/photo-1535025075092-5a1cf795130b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWlzdHklMjBmb3Jlc3R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60);
   background-attachment: fixed;
   height: 1200px;
 }
@@ -195,10 +139,6 @@ h1.h1-title {
   height: 60px;
 }
 
-// .card > .about_a {
-//   margin-bottom: 2em;
-// }
-
 .card {
   margin-bottom: 2em;
   width: 300px;
@@ -210,10 +150,10 @@ h1.h1-title {
   background-color: whitesmoke;
   flex-direction: column;
   align-items: center;
-  border-radius: .5em;
-  -webkit-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
-  -moz-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
-  box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 29px 38px -15px rgba(0, 0, 0, 0.43);
 }
 
 .paragraphs {
@@ -233,7 +173,7 @@ h1.h1-title {
   background-size: cover;
   background-position: center;
   margin-top: 20px;
-  border-radius: .3em;
+  border-radius: 0.3em;
   height: 22em;
 }
 

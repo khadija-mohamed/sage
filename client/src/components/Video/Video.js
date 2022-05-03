@@ -3,8 +3,6 @@ import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../NavBar/NavBar";
 
-import logo from "../Dashboard/logo.svg";
-
 export default function Video() {
   const apiRef = useRef();
   const [logItems, updateLog] = useState([]);
@@ -128,9 +126,7 @@ export default function Video() {
           margin: "2px",
           background: "rgb(83, 128, 117)",
         }}
-      >
-        {/* <img className="o3" src={logo} alt="logo" /> */}
-      </h1>
+      ></h1>
       <Navbar />
       <JitsiMeeting
         roomName={generateRoomName()}

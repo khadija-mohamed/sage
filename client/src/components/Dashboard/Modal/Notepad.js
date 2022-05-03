@@ -1,12 +1,12 @@
 import React from "react";
-import './Notepad.css'
+import "./Notepad.css";
 
 class NotePad extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       notesText: "",
-      noteList: []
+      noteList: [],
     };
   }
 
@@ -15,7 +15,7 @@ class NotePad extends React.Component {
     const obj = { notes };
     this.setState({
       notesText: "",
-      noteList: this.state.noteList.concat(obj)
+      noteList: this.state.noteList.concat(obj),
     });
     console.log("noteList", this.state.noteList);
   };
@@ -23,14 +23,14 @@ class NotePad extends React.Component {
   onChangeValue = () => {
     const notes = document.getElementById("notes-value").value;
     this.setState({
-      notesText: notes
+      notesText: notes,
     });
   };
 
-  onDeleteNote = index => {
+  onDeleteNote = (index) => {
     const deleteNotes = this.state.noteList.filter(index);
     this.setState({
-      noteList: deleteNotes
+      noteList: deleteNotes,
     });
   };
 

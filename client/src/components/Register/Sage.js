@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-
 import "./Sage.css";
 import HomeNav from "../NavBar/HomeNav";
 
@@ -15,7 +14,6 @@ export default function Sage() {
   const [location, setLocation] = useState("");
   const [description, setDescription] = useState("");
   const [skill, setSkill] = useState("");
-
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -144,9 +142,6 @@ export default function Sage() {
                 </label>
                 <label className="button">
                   <p>Upload a Photo: (use a url link)</p>
-                  {/* <div class="imgbutton">
-          <input type="file" id="img"/>
-          </div> */}
                   <input
                     type="text"
                     id="input"

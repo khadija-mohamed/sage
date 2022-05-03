@@ -1,8 +1,5 @@
-// import logo from "./logo.svg";
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css'
-// import axios from "axios";
-// import React, { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "../src/components/Dashboard/Dashboard";
 import Login from "../src/components/Login/Login";
@@ -12,7 +9,7 @@ import Sagee from "./components/Register/Sagee";
 import Menteefeed from "./components/Dashboard/Mentee/Menteefeed";
 import Menteeprofile from "./components/Dashboard/Mentee/Menteeprofile";
 import Menteefind from "./components/Dashboard/Mentee/Menteefind";
-import Logout from "../src/components/Logout/Logout"
+import Logout from "../src/components/Logout/Logout";
 import Landing from "./components/Landing/Landing";
 import Mentorfeed from "./components/Dashboard/Mentor/Mentorfeed";
 import Mentorprofile from "./components/Dashboard/Mentor/Mentorprofile";
@@ -24,71 +21,77 @@ import MenteeEditprofile from "./components/Dashboard/Mentee/MenteeEditprofile";
 import MentorEditprofile from "./components/Dashboard/Mentor/MentorEditprofile";
 import Menteedetail from "./components/Dashboard/Mentee/Menteedetail";
 import About from "./components/About/About";
-// import Calendar from "./components/Calendar";
 import { UserContext } from "./UserContext";
 import { useState } from "react";
 
 function App() {
-  const { state} = useApplicationData();
-  // const mentorsData = state.mentors;
-  // const menteesData = state.mentees;
-  // const data = mentorsData.concat(menteesData);
+  const { state } = useApplicationData();
 
-  const [user, setUser] = useState({ id:'',first_name:'', last_name: ' ',email: '', location:'', skill:'', description:'',isactive:true, photo_url:'',auth: false });
+  const [user, setUser] = useState({
+    id: "",
+    first_name: "",
+    last_name: " ",
+    email: "",
+    location: "",
+    skill: "",
+    description: "",
+    isactive: true,
+    photo_url: "",
+    auth: false,
+  });
 
-  // const [user, setUser] = useState({ email: '',auth:false})
   const login = (data) => {
     setUser((user) => ({
-      id:data.id,
-      first_name:data.first_name,
-      last_name:data.last_name,
-      email:data.email,
+      id: data.id,
+      first_name: data.first_name,
+      last_name: data.last_name,
+      email: data.email,
       location: data.location,
-      skill:data.skill,
-      description:data.description,
-      isactive:data.isactive,
-      photo_url:data.photo_url,
+      skill: data.skill,
+      description: data.description,
+      isactive: data.isactive,
+      photo_url: data.photo_url,
       auth: true,
     }));
   };
+
   const update = (data) => {
     setUser((user) => ({
-      first_name:data.first_name,
-      last_name:data.last_name,
-      email:data.email,
+      first_name: data.first_name,
+      last_name: data.last_name,
+      email: data.email,
       location: data.location,
-      skill:data.skill,
-      description:data.description,
-      isactive:data.isactive,
-      photo_url:data.photo_url,
+      skill: data.skill,
+      description: data.description,
+      isactive: data.isactive,
+      photo_url: data.photo_url,
       auth: true,
     }));
   };
 
   const logout = (data) => {
     setUser(() => ({
-      id:data,
-      first_name:data,
-      last_name:data,
-      email:data,
+      id: data,
+      first_name: data,
+      last_name: data,
+      email: data,
       location: data,
-      skill:data,
-      description:data,
-      isactive:true,
-      photo_url:data,
+      skill: data,
+      description: data,
+      isactive: true,
+      photo_url: data,
       auth: false,
     }));
   };
 
   return (
     <div className="index">
-
-      <UserContext.Provider value={{ user, login, logout ,update}}>
+      <UserContext.Provider value={{ user, login, logout, update }}>
         <BrowserRouter>
           <Routes>
             <Route path="/dashboard" index element={<Dashboard />} />
             <Route path="/" element={<Landing />} />
-            <Route path="/login" element={<Login state={state}/>} />
+            <Route path="/login" element={<Login state={state} />} />
             <Route path="/register" element={<Register />} />
             <Route path="/register/sage" element={<Sage />} />
             <Route path="/register/sagee" element={<Sagee />} />
@@ -116,14 +119,14 @@ function App() {
               path="/dashboard/mentee/menteefind"
               element={<Menteefind />}
             />
-            <Route path="/logout" element={<Logout />}/>
+            <Route path="/logout" element={<Logout />} />
             <Route
               path="/dashboard/mentor/mentorfeed"
               element={<Mentorfeed state={state} />}
             />
             <Route
               path="/dashboard/mentor/mentorprofile"
-              element={<Mentorprofile state={state}/>}
+              element={<Mentorprofile state={state} />}
             />
             <Route
               path="/dashboard/mentor/mentorprofile/editprofile/:mentorid"

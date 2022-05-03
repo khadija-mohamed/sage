@@ -1,31 +1,18 @@
-// import React from "react";
-
 import "./Menteedetail.css";
-import {Link, useParams} from 'react-router-dom';
-import React from 'react'; 
+import { useParams } from "react-router-dom";
+import React from "react";
 import Dashboard from "../Dashboard";
 
-
-
 export default function Menteedetail(props) {
-  
-  const { menteeid} = useParams();
-  
+  const { menteeid } = useParams();
   const data = props.state.mentees;
-  
-  const newMentee = data.find(menteeObj => {
-    
-    return menteeObj.id == menteeid
+  const newMentee = data.find((menteeObj) => {
+    return menteeObj.id = menteeid;
+  });
 
-  })
-  
-  
-
-  return !newMentee ?(
-    <div className='card'>card</div>
-  )
-   
-  :   (
+  return !newMentee ? (
+    <div className="card">card</div>
+  ) : (
     <div>
       <div>
         <Dashboard />
@@ -36,7 +23,11 @@ export default function Menteedetail(props) {
           <div className="card10">
             <div className="mentee-name-photo">
               <div className="mentee-detail-img">
-                <img className="detail-img" src={newMentee.photo_url} alt=""></img>
+                <img
+                  className="detail-img"
+                  src={newMentee.photo_url}
+                  alt=""
+                ></img>
               </div>
             </div>
             <div className="all-cards">

@@ -1,5 +1,5 @@
 .main {
-  width:100vw ;
+  width: 100vw;
   height: 100vh;
   margin: 0;
 }
@@ -25,7 +25,6 @@
   z-index: 2;
 }
 
-
 .o3 {
   height: 200px;
   width: 200px;
@@ -41,7 +40,8 @@
 }
 
 h1 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: 300;
 }
 
@@ -106,14 +106,14 @@ h4 {
   margin-top: 10px;
 }
 
-.space{
+.space {
   width: 7rem;
   height: auto;
   display: inline-block;
 }
 
-a:link{
-  color:white;
+a:link {
+  color: white;
   text-decoration: none;
 }
 

@@ -1,14 +1,13 @@
-.row-my-5{
+.row-my-5 {
   margin: 1em auto;
   margin-top: 1em;
   padding: 1em;
 }
 
-
-.container{
-margin: auto 0;
-margin-left: 14em;
-padding: 1em;
+.container {
+  margin: auto 0;
+  margin-left: 14em;
+  padding: 1em;
 }
 
 header {
@@ -21,15 +20,15 @@ h2 {
   font-size: 20px;
 }
 
-.skill{
+.skill {
   font: bold;
 }
 
 .border-bottom {
-font: bold;
+  font: bold;
 }
 
-input#name.form-control { 
+input#name.form-control {
   position: relative;
   padding: 10px 0 0;
   width: 70px;
@@ -43,7 +42,7 @@ input#name.form-control {
   padding: 5px 0;
   background: transparent;
   border: none transparent;
-outline: none;
+  outline: none;
 }
 
 form-control:focus {
@@ -58,7 +57,7 @@ form-control:focus {
   width: 40vh;
 }
 
-.form-control-button{
+.form-control-button {
   font-size: 16px;
   letter-spacing: 1px;
   outline: 0;
@@ -70,7 +69,6 @@ form-control:focus {
   user-select: none;
   border-radius: 0.25rem;
 }
-
 
 .form-control-button:after {
   content: "";
@@ -94,9 +92,3 @@ form-control:focus {
     padding: 10px 15px 10px;
   }
 }
-
-// span {
-//   font-size: 14px;
-//   font: inherit;
-//   font-style: italic;
-// }

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-
 import "./Sagee.css";
 import HomeNav from "../NavBar/HomeNav";
 
@@ -15,7 +14,6 @@ export default function Sagee() {
   const [location, setLocation] = useState("");
   const [description, setDescription] = useState("");
   const [skill, setSkill] = useState("");
-
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -144,7 +142,7 @@ export default function Sagee() {
                 </label>
                 <label className="button">
                   <p>Upload a Photo: (use a url link)</p>
-                 
+
                   <input
                     type="text"
                     id="sageephoto"

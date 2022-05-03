@@ -19,7 +19,7 @@ module.exports = (db) => {
         user.photo_url,
         user.description,
         user.skill,
-        true
+        true,
       ]
     );
     return result.rows[0];
@@ -90,7 +90,12 @@ module.exports = (db) => {
     }
     const user = await potentialLogin(email);
     if (user) {
-      return res.status(400).send({ status: "error", message: "User already registered, please login to continue." });
+      return res
+        .status(400)
+        .send({
+          status: "error",
+          message: "User already registered, please login to continue.",
+        });
     }
     const salt = bcrypt.genSaltSync(10);
     const hashedPassword = bcrypt.hashSync(password, salt);
@@ -120,10 +125,6 @@ module.exports = (db) => {
 
   // sage registration
   router.post("/register/sage", async (req, res, next) => {
-    let templateVars = {
-      user: req.session,
-    };
-
     const {
       first_name,
       last_name,
@@ -153,7 +154,12 @@ module.exports = (db) => {
     }
     const user = await potentialLogin(email);
     if (user) {
-      return res.status(400).send({ status: "error", message: "User already registered, please login to continue." });
+      return res
+        .status(400)
+        .send({
+          status: "error",
+          message: "User already registered, please login to continue.",
+        });
     }
     const salt = bcrypt.genSaltSync(10);
     const hashedPassword = bcrypt.hashSync(password, salt);
@@ -168,7 +174,7 @@ module.exports = (db) => {
       description,
       skill,
     };
-    
+
     try {
       await registerNewSage(input);
       req.session.email = input.email;
@@ -223,69 +229,56 @@ module.exports = (db) => {
 //edit mentee profile
 
 router.get("/mentee/:id/edit", (req, res) => {
+  const { id } = req.params;
 
-  const {id} = req.params;
- 
-  pool.query(`SELECT * FROM mentees WHERE id = $1`, [id])
-      .then(data => {
-        
-   
-      return res.json(data.rows[0]);
+  pool.query(`SELECT * FROM mentees WHERE id = $1`, [id]).then((data) => {
+    return res.json(data.rows[0]);
   });
 });
 
-
 router.post("/mentee/:id/edit", (req, res) => {
-  let templateVars = {
-    user: req.session
-  }
-  const {id} = req.params;
-  const {photo_url, location, description, skill,isactive } = req.body
-  
+  const { id } = req.params;
+  const { photo_url, location, description, skill, isactive } = req.body;
 
+  pool
+    .query(
+      `Update mentees SET  location = $1, description = $2, skill = $3, photo_url = $4, isactive = $5 WHERE id = $6`,
+      [location, description, skill, photo_url, isactive, id]
+    )
+    .then(() => {
+      console.log("item was added edited");
+      res.send("error");
+    });
 
- pool.query( `Update mentees SET  location = $1, description = $2, skill = $3, photo_url = $4, isactive = $5 WHERE id = $6`,[location, description, skill,photo_url, isactive,id])
- .then(() => {
-   console.log('item was added edited');
-  res.send("whhhh")
-  
-});
-
-return router;
- 
+  return router;
 });
 
 //edit mentor profile
 
 router.get("/mentor/:id/edit", (req, res) => {
+  const { id } = req.params;
 
-  const {id} = req.params;
- 
-  pool.query(`SELECT * FROM mentors WHERE id = $1`, [id])
-      .then(data => {
-        
-   
-      return res.json(data.rows[0]);
+  pool.query(`SELECT * FROM mentors WHERE id = $1`, [id]).then((data) => {
+    return res.json(data.rows[0]);
   });
 });
 
-
 router.post("/mentor/:id/edit", (req, res) => {
   let templateVars = {
-    user: req.session
-  }
-  const {id} = req.params;
-  const {photo_url, location, description, skill,isactive } = req.body
-  
+    user: req.session,
+  };
+  const { id } = req.params;
+  const { photo_url, location, description, skill, isactive } = req.body;
 
+  pool
+    .query(
+      `Update mentors SET  location = $1, description = $2, skill = $3, photo_url = $4, isactive = $5 WHERE id = $6`,
+      [location, description, skill, photo_url, isactive, id]
+    )
+    .then(() => {
+      console.log("mentees was added edited");
+      res.send("error");
+    });
 
- pool.query( `Update mentors SET  location = $1, description = $2, skill = $3, photo_url = $4, isactive = $5 WHERE id = $6`,[location, description, skill,photo_url, isactive,id])
- .then(() => {
-   console.log('mentees was added edited');
-  res.send("whhhh")
-  
-});
-
-return router;
- 
+  return router;
 });

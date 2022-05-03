@@ -11,12 +11,11 @@ const menteesRouter = require("./routes/mentees");
 const mentorsRouter = require("./routes/mentors");
 const authRouter = require("./routes/auth");
 const searchRouter = require("./routes/search");
-// const filterRouter = require("./routes/filter");
-const appointmentsRouter = require("./routes/appoinments")
+const appointmentsRouter = require("./routes/appoinments");
 
 const app = express();
 
-app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
+app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
 // app.use(cors());
 
@@ -41,14 +40,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.use("/", indexRouter);
-
-// app.listen(8080, () => console.log('API is running on http://localhost:8080'));
-
 app.use("/mentees", menteesRouter(db));
 app.use("/mentors", mentorsRouter(db));
 app.use("/login", authRouter(db));
-app.use("/search",searchRouter(db));
-// app.use("/filter", filterRouter(db));
+app.use("/search", searchRouter(db));
 app.use("/appointments", appointmentsRouter(db));
 
 module.exports = app;
