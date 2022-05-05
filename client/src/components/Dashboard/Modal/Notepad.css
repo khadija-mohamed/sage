@@ -65,3 +65,12 @@ textarea#notes-value {
 textarea {
   resize: none;
 }
+
+@media screen and (max-width: 1440px) {
+  .Note-pad {
+    margin-left: 8em;
+  }
+  textarea {
+    width: 30em;
+  }
+}

@@ -23,9 +23,18 @@ export default function Menteeprofile(props) {
           <div className="card-wrapper2">
             <div className="card2">
               <div className="card_photo">
-                <img src={userObj.photo_url} alt=""></img>
+                <img
+                  style={{
+                    height: "30em",
+                    borderRadius: "10%",
+                    boxShadow: "rgb(203 200 200) 10px 10px 8px",
+                    marginLeft: "60px",
+                  }}
+                  src={userObj.photo_url}
+                  alt=""
+                ></img>
               </div>
-              <h3>
+              <h3 className="profile-name">
                 {userObj.first_name} {userObj.last_name}
               </h3>
               <div className="card_description">
@@ -38,23 +47,25 @@ export default function Menteeprofile(props) {
                 <p>{userObj.location}</p>
               </div>
               <div className="outlinecard">
-                <div className="register-btn">
-                  <button
-                    className="button-52"
-                    onClick={() => {
-                      setModalOpen(true);
-                    }}
-                  >
-                    Edit profile
-                  </button>
-                  {modalOpen && (
-                    <MenteeEditprofile
-                      setOpenModal={setModalOpen}
-                      key={userObj.id}
-                      mentee={userObj}
-                    />
-                  )}
+                <div className="edit-button">
+                  <div className="register-btn">
+                    <button
+                      className="button-52"
+                      onClick={() => {
+                        setModalOpen(true);
+                      }}
+                    >
+                      Edit profile
+                    </button>
+                  </div>
                 </div>
+                {modalOpen && (
+                  <MenteeEditprofile
+                    setOpenModal={setModalOpen}
+                    key={userObj.id}
+                    mentee={userObj}
+                  />
+                )}
               </div>
               <OutlinedCard />
             </div>

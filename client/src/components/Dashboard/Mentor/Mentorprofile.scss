@@ -1,57 +1,141 @@
-.mentorprofile {
-  margin: auto 0;
+@media screen and (min-width: 1441px) {
+  .mentorprofile {
+    margin: auto 0;
+  }
+
+  .menteeprofile-wrapper {
+    height: 120vh;
+  }
+
+  .card-wrapper2 {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 230px;
+    margin-top: 14em;
+    margin: 6em auto;
+    height: 325px;
+    position: relative;
+    perspective: 1000px;
+  }
+
+  .fw-iframe {
+    display: flex;
+    position: relative;
+    margin-left: 2em;
+    top: 5em;
+  }
+
+  .carousel {
+    display: flex;
+    top: 5em;
+    margin-left: 2em;
+  }
+
+  .carousel.slide {
+    width: 80vh;
+  }
+
+  .card-wrapper2 {
+    top: 0;
+    display: flex;
+  }
+
+  .outlinecard {
+    display: flex;
+    height: 80px;
+    justify-content: center;
+  }
+
+  .spotify {
+    margin: auto;
+    margin-right: 8.7rem;
+  }
+
+  .notepad {
+    margin: auto;
+    margin-right: 1em;
+  }
 }
 
-.menteeprofile-wrapper {
-  height: 120vh;
-}
+@media screen and (max-width: 1440px) {
+  .mentorprofile {
+    margin: auto 0;
+  }
 
-.card-wrapper2 {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  width: 230px;
-  margin-top: 14em;
-  margin: 6em auto;
-  height: 325px;
-  position: relative;
-  perspective: 1000px;
-}
+  .menteeprofile-wrapper {
+    height: 120vh;
+  }
 
-.fw-iframe {
-  display: flex;
-  position: relative;
-  margin-left: 2em;
-  top: 5em;
-}
+  .card-wrapper2 {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 230px;
+    margin-top: 14em;
+    margin: 6em auto;
+    height: 325px;
+    position: relative;
+    perspective: 1000px;
+  }
 
-.carousel {
-  display: flex;
-  top: 5em;
-  margin-left: 2em;
-}
+  .fw-iframe {
+    display: flex;
+    position: relative;
+    margin-left: 4em;
+    width: 25%;
+    top: 5em;
+    height: 300px;
+  }
 
-.carousel.slide {
-  width: 80vh;
-}
+  .carousel {
+    display: flex;
+    top: 5em;
+    // margin-left: 2em;
+  }
 
-.card-wrapper2 {
-  top: 0;
-  display: flex;
-}
+  .carousel.slide {
+    width: 80vh;
+  }
 
-.outlinecard {
-  display: flex;
-  height: 80px;
-  justify-content: center;
-}
+  .card-wrapper2 {
+    top: 0;
+    display: flex;
+  }
 
-.spotify {
-  margin: auto;
-  margin-right: 8.7rem;
-}
+  .outlinecard {
+    display: flex;
+    height: 80px;
+    justify-content: center;
+  }
 
-.notepad {
-  margin: auto;
-  margin-right: 1em;
+  .spotify {
+    margin: auto;
+    margin-right: 8.7rem;
+    position: relative;
+    top: 70px;
+    width: 350px;
+    height: 425px;
+  }
+
+  .notepad {
+    // margin: auto;
+    // margin-right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 300px;
+    position: relative;
+    // bottom: 19px;
+    top: 70px;
+  }
+
+  .profile-name,
+  .card_description,
+  .card_tag,
+  .edit-button {
+    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+  }
 }

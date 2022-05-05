@@ -14,3 +14,9 @@
 strong {
   font-style: inherit;
 }
+
+@media screen and (max-width: 1440px) {
+  .carouselblock {
+    width: 60vh;
+  }
+}
