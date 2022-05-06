@@ -36,7 +36,7 @@ Open up `localhost:3000/` in your browser to access the application.
 * Express
 * DotENV
 * NodeJS
-* PostgeSQL
+* PostgreSQL
 * React
 * React-Router
 * Axios
