@@ -20,7 +20,6 @@ module.exports = (db) => {
         categories: req.query.categories,
         itemName: req.query.itemName,
       };
-      console.log("search results", templateVars.items);
       res.render("search", templateVars);
     });
   });

@@ -48,23 +48,19 @@ export default function Login(props) {
               return user;
             }
           });
-          console.log("heyy mentee", mentee);
 
           const mentor = state.mentors.filter((user) => {
             if (user.email === email) {
               return user;
             }
           });
-          console.log("what is mentor", mentor);
 
           if (typeof mentee[0] === "object") {
-            console.log("mentee login", mentee);
 
             login(mentee[0]);
 
             // login(mentee)
           } else if (typeof mentor[0] === "object") {
-            console.log("mentee login", mentor);
             login(mentor[0]);
           }
           const menteeEmail = state.mentees.map(
