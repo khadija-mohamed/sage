@@ -117,16 +117,6 @@ export default function Video() {
 
   return (
     <>
-      <h1
-        style={{
-          fontFamily:
-            "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif",
-          textAlign: "center",
-          border: "2px solid white",
-          margin: "2px",
-          background: "rgb(83, 128, 117)",
-        }}
-      ></h1>
       <Navbar />
       <JitsiMeeting
         roomName={generateRoomName()}
