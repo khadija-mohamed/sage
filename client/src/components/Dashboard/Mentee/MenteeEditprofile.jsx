@@ -121,7 +121,7 @@ export default function MenteeEditprofile(props) {
                     required
                   />
                 </label>
-                <label className="button">
+                {/* <label className="button">
                   <p>isActive</p>
                   <select
                     className="form-control-button"
@@ -136,7 +136,7 @@ export default function MenteeEditprofile(props) {
                     <option value="True">Active</option>
                     <option value="False">Not Active</option>
                   </select>
-                </label>
+                </label> */}
 
                 <div className="footer">
                   <button
