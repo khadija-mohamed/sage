@@ -1,7 +1,7 @@
 import { JitsiMeeting } from "@jitsi/react-sdk";
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../NavBar/NavBar";
+import NavBar from "../NavBar/NavBar";
 
 export default function Video() {
   const apiRef = useRef();
@@ -117,7 +117,7 @@ export default function Video() {
 
   return (
     <>
-      <Navbar />
+      <NavBar />
       <JitsiMeeting
         roomName={generateRoomName()}
         spinner={renderSpinner}
