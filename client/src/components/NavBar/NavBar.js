@@ -3,7 +3,7 @@ import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 import $ from "jquery";
 
-const Navbar = () => {
+const NavBar = () => {
   function animation() {
     const tabsNewAnim = $("#navbarSupportedContent");
     const activeItemNewAnim = tabsNewAnim.find(".active");
@@ -72,7 +72,7 @@ const Navbar = () => {
             <div className="right"></div>
           </div>
 
-          <li className="nav-item">
+          <li className="nav-item active">
             <NavLink
               className="nav-link"
               to="/dashboard/mentee/menteefeed"
@@ -112,4 +112,4 @@ const Navbar = () => {
     </nav>
   );
 };
-export default Navbar;
+export default NavBar;
