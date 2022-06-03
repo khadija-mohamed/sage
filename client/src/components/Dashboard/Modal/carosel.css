@@ -19,4 +19,8 @@ strong {
   .carouselblock {
     width: 60vh;
   }
+
+  .carouselcontainer {
+    margin-left: -30px;
+  }
 }
