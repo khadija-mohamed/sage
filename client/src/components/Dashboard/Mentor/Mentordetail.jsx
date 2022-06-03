@@ -4,12 +4,12 @@ import React from "react";
 import Dashboard from "../Dashboard";
 
 export default function Mentordetail(props) {
-  const { mentorid } = useParams();
+  let { mentorid } = useParams();
 
   const data = props.state.mentors;
 
   const newMentor = data.find((mentorObj) => {
-    return mentorObj.id = mentorid;
+    return mentorObj.id == mentorid;
   });
 
   return !newMentor ? (
@@ -17,10 +17,9 @@ export default function Mentordetail(props) {
   ) : (
     <div>
       <div>
-        <Dashboard />
       </div>
-
       <div className="whole-container">
+      <Dashboard />
         <div className="card-wrapper10">
           <div className="card10">
             <div className="mentor-name-photo">
