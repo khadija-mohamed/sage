@@ -2,7 +2,7 @@ import React from "react";
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const HomeNav = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-mainbg">
       <NavLink className="navbar-brand navbar-logo" to="/" exact>
@@ -15,4 +15,4 @@ const Navbar = () => {
     </nav>
   );
 };
-export default Navbar;
+export default HomeNav;
