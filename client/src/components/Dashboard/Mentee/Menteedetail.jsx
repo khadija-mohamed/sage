@@ -1,13 +1,13 @@
 import "./Menteedetail.css";
 import { useParams } from "react-router-dom";
 import React from "react";
-import Dashboard from "../Dashboard";
+import MentorNavBar from "../../NavBar/MentorNavBar"
 
 export default function Menteedetail(props) {
-  const { menteeid } = useParams();
+  let { menteeid } = useParams();
   const data = props.state.mentees;
   const newMentee = data.find((menteeObj) => {
-    return menteeObj.id = menteeid;
+    return menteeObj.id == menteeid;
   });
 
   return !newMentee ? (
@@ -15,9 +15,8 @@ export default function Menteedetail(props) {
   ) : (
     <div>
       <div>
-        <Dashboard />
+      <MentorNavBar />
       </div>
-
       <div className="whole-container">
         <div className="card-wrapper10">
           <div className="card10">
