@@ -31,7 +31,7 @@ function Sagecarousel() {
               “The secret of life, though, is to fall seven times and to get up
               eight times.”
             </p>
-            <h3>Paulo Coelho, The Alchemist</h3>
+            <h3 style={{ color: "#538075", webkitTextStroke: "0.5px #ffffff" }}>Paulo Coelho, The Alchemist</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
