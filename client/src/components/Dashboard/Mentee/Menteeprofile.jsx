@@ -22,41 +22,60 @@ export default function Menteeprofile(props) {
         <Grid item xs={12} sm={6} md={3}>
           <div className="card-wrapper2">
             <div className="card2">
-              <div className="card_photo">
-                <img
-                  style={{
-                    height: "30em",
-                    borderRadius: "10%",
-                    boxShadow: "rgb(203 200 200) 10px 10px 8px",
-                    marginLeft: "60px",
-                  }}
-                  src={userObj.photo_url}
-                  alt=""
-                ></img>
-              </div>
-              <h3 className="profile-name">
-                {userObj.first_name} {userObj.last_name}
-              </h3>
-              <div className="card_description">
-                <p>{userObj.description}</p>
-              </div>
-              <div className="card_tag">
-                <p>{userObj.skill}</p>
-              </div>
-              <div className="card_tag">
-                <p>{userObj.location}</p>
-              </div>
-              <div className="outlinecard">
-                <div className="edit-button">
-                  <div className="register-btn">
-                    <button
-                      className="button-52"
-                      onClick={() => {
-                        setModalOpen(true);
-                      }}
-                    >
-                      Edit profile
-                    </button>
+              <div className="profile-details">
+                <div className="card_photo">
+                  <img
+                    style={{
+                      height: "30em",
+                      borderRadius: "10%",
+                      boxShadow: "rgb(203 200 200) 10px 10px 8px",
+                      marginLeft: "60px",
+                    }}
+                    src={userObj.photo_url}
+                    alt=""
+                  ></img>
+                </div>
+                <h3 className="profile-name">
+                  {userObj.first_name} {userObj.last_name}
+                </h3>
+                <div className="profile-text-container">
+                  <div className="card_description">
+                    <div>
+                      <p>About Me: </p>
+                    </div>
+                    <div>
+                      <span>{userObj.description}</span>
+                    </div>
+                  </div>
+                  <div className="card_tag">
+                    <div>
+                      <p>Skills: </p>
+                    </div>
+                    <div>
+                      <span>{userObj.skill}</span>
+                    </div>
+                  </div>
+                  <div className="card_tag">
+                    <div>
+                      <p>Location: </p>
+                    </div>
+                    <div>
+                      <span>{userObj.location}</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="outlinecard">
+                  <div className="edit-button">
+                    <div className="register-btn">
+                      <button
+                        className="button-52"
+                        onClick={() => {
+                          setModalOpen(true);
+                        }}
+                      >
+                        Edit profile
+                      </button>
+                    </div>
                   </div>
                 </div>
                 {modalOpen && (
