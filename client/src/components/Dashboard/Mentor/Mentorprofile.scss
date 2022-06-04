@@ -113,7 +113,7 @@
     margin: auto;
     margin-right: 8.7rem;
     position: relative;
-    top: 70px;
+    top: -100px;
     width: 350px;
     height: 425px;
   }
@@ -127,7 +127,11 @@
     margin-left: 300px;
     position: relative;
     // bottom: 19px;
-    top: 70px;
+    top: 15px;
+  }
+
+  .profile-name {
+    padding-bottom: 10px;
   }
 
   .profile-name,
@@ -137,5 +141,30 @@
     margin-left: 60px;
     display: flex;
     justify-content: center;
+  }
+
+  .card_description p,
+  .card_tag p {
+    padding-top: 0px;
+    font-weight: bold;
+  }
+
+  .card_description,
+  .card_tag {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 50px;
+  }
+
+  .profile-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
