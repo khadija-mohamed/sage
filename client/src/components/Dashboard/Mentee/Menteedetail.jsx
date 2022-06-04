@@ -1,7 +1,7 @@
 import "./Menteedetail.css";
 import { useParams } from "react-router-dom";
 import React from "react";
-import MentorNavBar from "../../NavBar/MentorNavBar"
+import MenteeDetailsNavBar from "../../NavBar/MenteeDetailsNavBar";
 
 export default function Menteedetail(props) {
   let { menteeid } = useParams();
@@ -15,7 +15,7 @@ export default function Menteedetail(props) {
   ) : (
     <div>
       <div>
-      <MentorNavBar />
+      <MenteeDetailsNavBar />
       </div>
       <div className="whole-container">
         <div className="card-wrapper10">
