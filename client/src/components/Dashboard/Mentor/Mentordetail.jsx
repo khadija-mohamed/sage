@@ -1,7 +1,7 @@
 import "./Mentordetail.css";
 import { Link, useParams } from "react-router-dom";
 import React from "react";
-import Dashboard from "../Dashboard";
+import MentorDetailsNavBar from "../../NavBar/MentorDetailsNavBar";
 
 export default function Mentordetail(props) {
   let { mentorid } = useParams();
@@ -19,7 +19,7 @@ export default function Mentordetail(props) {
       <div>
       </div>
       <div className="whole-container">
-      <Dashboard />
+      <MentorDetailsNavBar />
         <div className="card-wrapper10">
           <div className="card10">
             <div className="mentor-name-photo">
