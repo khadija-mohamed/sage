@@ -67,7 +67,7 @@ export default function Menteeprofile(props) {
                   />
                 )}
               </div>
-              <OutlinedCard />
+              {/* <OutlinedCard /> */}
             </div>
           </div>
         </Grid>

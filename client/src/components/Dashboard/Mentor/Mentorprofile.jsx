@@ -66,7 +66,7 @@ export default function Mentorprofile() {
                   />
                 )}
               </div>
-              <OutlinedCard />
+              {/* <OutlinedCard /> */}
             </div>
           </div>
         </Grid>
