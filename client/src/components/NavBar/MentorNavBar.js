@@ -72,7 +72,7 @@ const MentorNavBar = () => {
             <div className="right"></div>
           </div>
 
-          <li className="nav-item active">
+          <li className="nav-item">
             <NavLink
               className="nav-link"
               to="/dashboard/mentor/mentorfeed"
