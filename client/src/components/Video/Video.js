@@ -122,7 +122,7 @@ export default function Video() {
         roomName={generateRoomName()}
         spinner={renderSpinner}
         config={{
-          subject: "Demo Day",
+          subject: "Sage",
           hideConferenceSubject: false,
         }}
         onApiReady={(externalApi) => handleApiReady(externalApi)}
