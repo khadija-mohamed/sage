@@ -21,8 +21,8 @@ const calendar = ({ date, description, endTime, mentor, name, startTime }) => {
     startTime,
   });
   const oAuth2Client = new OAuth2(
-    "521684474640-t2uq1kgpptdlf9uk30r5rsrai0s7ahdh.apps.googleusercontent.com",
-    "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"
+    "347321739169-8mtaa7702ek9sse3htcbcf00a69t201s.apps.googleusercontent.com",
+    "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"
   );
 
   oAuth2Client.setCredentials({
@@ -49,7 +49,7 @@ const calendar = ({ date, description, endTime, mentor, name, startTime }) => {
   // Create a dummy event for temp uses in our calendar
   const event = {
     summary: `Sage Meet with ${name} and ${mentor}`,
-    location: `On Sage`,
+    location: `http://localhost:3000/dashboard/video`,
     description,
     colorId: 1,
     start: {
