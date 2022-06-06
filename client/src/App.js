@@ -30,7 +30,7 @@ function App() {
   const [user, setUser] = useState({
     id: "",
     first_name: "",
-    last_name: " ",
+    last_name: "",
     email: "",
     location: "",
     skill: "",
