@@ -5,11 +5,11 @@ import Dashboard from "../Dashboard";
 import { Grid } from "@mui/material";
 import MenteeEditprofile from "./MenteeEditprofile";
 import Sagecarousel from "../Modal/carosel";
-import OutlinedCard from "../Modal/card";
+// import OutlinedCard from "../Modal/card";
 import Spotify from "../Modal/spotify";
 import NotePad from "../Modal/Notepad";
 
-export default function Menteeprofile(props) {
+export default function Menteeprofile() {
   const { user } = useContext(UserContext);
 
   const [modalOpen, setModalOpen] = useState(false);

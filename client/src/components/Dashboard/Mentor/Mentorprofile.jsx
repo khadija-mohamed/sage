@@ -5,7 +5,7 @@ import MentorDashboard from "../MentorDashboard";
 import { Grid } from "@mui/material";
 import MentorEditprofile from "./MentorEditprofile";
 import Sagecarousel from "../Modal/carosel";
-import OutlinedCard from "../Modal/card";
+// import OutlinedCard from "../Modal/card";
 import Spotify from "../Modal/spotify";
 import NotePad from "../Modal/Notepad";
 
