@@ -48,15 +48,15 @@ export default function MentorEditprofile(props) {
           </button>
         </div>
 
-        <div className="orange-main">
+        <div className="edit-orange-main">
           <div className="transparent-text"></div>
 
           <div className="head-main">
-            <div className="login">
+            <div className="edit-profile-form">
               <h4> Update your profile</h4>
-              <form onSubmit={handleSubmit} action="">
-                <label>
-                  <p>Location</p>
+              <form className="update-form" onSubmit={handleSubmit} action="">
+                <label className="edit-label">
+                  <p className="edit-title">Location</p>
                   <input
                     type="text"
                     id="description"
@@ -71,8 +71,8 @@ export default function MentorEditprofile(props) {
                   />
                 </label>
 
-                <label>
-                  <p>About</p>
+                <label className="edit-label">
+                  <p className="edit-title">About</p>
                   <input
                     type="text"
                     id="description"
@@ -87,8 +87,8 @@ export default function MentorEditprofile(props) {
                   />
                 </label>
 
-                <label>
-                  <p>Skills</p>
+                <label className="edit-label">
+                  <p className="edit-title">Skills</p>
                   <input
                     type="text"
                     id="skill"
@@ -103,8 +103,8 @@ export default function MentorEditprofile(props) {
                   />
                 </label>
 
-                <label className="button">
-                  <p>Enter a Photo URL</p>
+                <label className="edit-label">
+                  <p className="edit-title">Enter a Photo URL</p>
 
                   <input
                     type="text"
@@ -147,7 +147,7 @@ export default function MentorEditprofile(props) {
                     Cancel
                   </button>
 
-                  <button type="submit">Submit</button>
+                  <button id="submitBtn" type="submit">Submit</button>
                 </div>
               </form>
             </div>
