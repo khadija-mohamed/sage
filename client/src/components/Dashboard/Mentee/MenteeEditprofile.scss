@@ -67,19 +67,19 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .modalBackground {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(200, 200, 200);
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  // .modalBackground {
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(200, 200, 200);
+  //   position: fixed;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
   
   .modalContainer {
-    width: 500px;
-    height: 700px;
+    width: 350px;
+    height: 500px;
     border-radius: 12px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -87,7 +87,8 @@
     flex-direction: column;
     padding: 25px;
     position: relative;
-    left: 70px;
+    left: 60px;
+    bottom: 820px;
   }
   
   .titleCloseBtn {
@@ -101,6 +102,7 @@
     border: none;
     font-size: 25px;
     cursor: pointer;
+    z-index: 100;
   }
   
   .modalContainer .body {
@@ -132,6 +134,49 @@
   }
   
   #cancelBtn {
+    display: flex;
+    align-items: center;
     background-color: crimson;
+    height: 35px;
+    width: 90px;
+  }
+
+  #submitBtn {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    width: 90px;
+  }
+
+  .edit-profile-form {
+    font-size: 14px;
+  }
+
+  .update-form {
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+    background: transparent;
+    padding: 20px 22px;
+  }
+
+  .edit-label {
+    height: 95px;
+  }
+
+  .edit-title {
+    max-width: 52ch;
+    line-height: 1.5;
+    padding: 0em;
+    margin: 0px;
+  }
+
+  .edit-orange-main {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1px;
+    position: relative;
+    bottom: 60px;
   }
 }
