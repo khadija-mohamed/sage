@@ -21,8 +21,8 @@ const calendar = ({ date, description, endTime, mentor, name, startTime }) => {
     startTime,
   });
   const oAuth2Client = new OAuth2(
-    "347321739169-8mtaa7702ek9sse3htcbcf00a69t201s.apps.googleusercontent.com",
-    "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"
+    GOOGLE_AUTH,
+    GOOGLE_SECRET
   );
 
   oAuth2Client.setCredentials({
